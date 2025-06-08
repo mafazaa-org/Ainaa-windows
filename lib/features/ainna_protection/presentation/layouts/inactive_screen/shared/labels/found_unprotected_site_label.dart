@@ -13,14 +13,11 @@ class FoundUnprotectedSiteLabel extends StatelessWidget {
           style: context.textStyles.bodyLarge,
           children: [
             WidgetSpan(
-              child: GestureDetector(
+              child: AppTextButton(
                 onTap: () {
                   showReportProblem(context);
                 },
-                child: Text(
-                  ' ${appLocalizations.tel_us}',
-                  style: context.textStyles.secondaryActionLabel,
-                ),
+                text: ' ${appLocalizations.tel_us}',
               ),
               alignment: PlaceholderAlignment.middle,
             ),

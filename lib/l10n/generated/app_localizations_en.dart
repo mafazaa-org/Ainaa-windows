@@ -88,4 +88,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get will_contact_you_soon => 'سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.';
+
+  @override
+  String get want_to_activate_protection => 'هل ترغب في تفعيل الحماية على جهازك؟';
+
+  @override
+  String get want_to_activate_protection_desc => 'بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.';
+
+  @override
+  String get confirm_activate_protection => 'فعّل الحماية';
+
+  @override
+  String get later => 'لاحقًا';
 }

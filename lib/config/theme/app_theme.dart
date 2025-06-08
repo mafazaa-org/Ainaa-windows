@@ -1,4 +1,5 @@
 import 'package:blocker_windows/constants/app_colors.dart';
+import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
 import 'package:blocker_windows/constants/app_text_theme.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ final class AppTheme {
       showCheckmark: false,
       // color: WidgetStateProperty.all(appColors.transparent),
       // selectedColor: appColors.secondary.withAlpha(150),
-      selectedColor: appColors.transparent,
+      selectedColor: appColors.primary.withAlpha(8),
       selectedShadowColor: appColors.transparent,
       disabledColor: appColors.transparent,
       surfaceTintColor: appColors.transparent,
@@ -80,6 +81,7 @@ final class AppTheme {
       style: ElevatedButton.styleFrom(
         alignment: Alignment.center,
         backgroundColor: appColors.primary,
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.sl),
         shape: RoundedRectangleBorder(borderRadius: AppStyles.borderRadiusML),
       ),
     );

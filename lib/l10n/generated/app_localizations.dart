@@ -256,6 +256,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.'**
   String get will_contact_you_soon;
+
+  /// No description provided for @want_to_activate_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'هل ترغب في تفعيل الحماية على جهازك؟'**
+  String get want_to_activate_protection;
+
+  /// No description provided for @want_to_activate_protection_desc.
+  ///
+  /// In en, this message translates to:
+  /// **'بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.'**
+  String get want_to_activate_protection_desc;
+
+  /// No description provided for @confirm_activate_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'فعّل الحماية'**
+  String get confirm_activate_protection;
+
+  /// No description provided for @later.
+  ///
+  /// In en, this message translates to:
+  /// **'لاحقًا'**
+  String get later;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

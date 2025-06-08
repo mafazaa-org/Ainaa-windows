@@ -20,31 +20,32 @@ class BuildCardLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
-      child: Column(
-        spacing: AppSpacing.sl,
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          BuildCardIconLayout(isSelected: isSelected),
-          Text(option.name.get(), style: context.textStyles.headingSmall),
-          // wrapped in SizedBox to allow multi line text
-          SizedBox(
-            child: Text(
-              option.description.get(),
-              style: context.textStyles.bodySmall,
-              overflow: TextOverflow.visible,
-              maxLines: 3,
-              softWrap: true,
+      width: double.maxFinite,
+      child: SingleChildScrollView(
+        child: Column(
+          spacing: AppSpacing.sl,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            BuildCardIconLayout(isSelected: isSelected),
+            Text(option.name.get(), style: context.textStyles.headingSmall),
+            // wrapped in SizedBox to allow multi line text
+            SizedBox(
+              child: Text(
+                option.description.get(),
+                style: context.textStyles.bodySmall,
+                overflow: TextOverflow.visible,
+                maxLines: 3,
+                softWrap: true,
+              ),
             ),
-          ),
-          Wrap(
-            spacing: AppSpacing.sm,
-            runSpacing: AppSpacing.sm,
-            children:
-                option.tags.map((tag) => BuildCardTagLayout(tag)).toList(),
-          ),
-        ],
+            Wrap(
+              spacing: AppSpacing.sm,
+              runSpacing: AppSpacing.sm,
+              children:
+                  option.tags.map((tag) => BuildCardTagLayout(tag)).toList(),
+            ),
+          ],
+        ),
       ),
     );
   }

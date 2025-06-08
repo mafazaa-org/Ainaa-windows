@@ -6,6 +6,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
   final Color secondaryText;
   final Color mainActionLabel;
   final Color secondaryActionLabel;
+  final Color escapeActionLabel;
   final Color errorText;
   final Color successText;
   final Color warningText;
@@ -16,6 +17,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     required this.secondaryText,
     required this.mainActionLabel,
     required this.secondaryActionLabel,
+    required this.escapeActionLabel,
     required this.errorText,
     required this.successText,
     required this.warningText,
@@ -28,6 +30,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     Color? secondaryText,
     Color? mainActionLabel,
     Color? secondaryActionLabel,
+    Color? escapeActionLabel,
     Color? errorText,
     Color? successText,
     Color? warningText,
@@ -38,6 +41,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       secondaryText: secondaryText ?? this.secondaryText,
       mainActionLabel: mainActionLabel ?? this.mainActionLabel,
       secondaryActionLabel: secondaryActionLabel ?? this.secondaryActionLabel,
+      escapeActionLabel: escapeActionLabel ?? this.escapeActionLabel,
       errorText: errorText ?? this.errorText,
       successText: successText ?? this.successText,
       warningText: warningText ?? this.warningText,
@@ -58,6 +62,8 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
       mainActionLabel: Color.lerp(mainActionLabel, other.mainActionLabel, t)!,
       secondaryActionLabel:
           Color.lerp(secondaryActionLabel, other.secondaryActionLabel, t)!,
+      escapeActionLabel:
+          Color.lerp(escapeActionLabel, other.escapeActionLabel, t)!,
       errorText: Color.lerp(errorText, other.errorText, t)!,
       successText: Color.lerp(successText, other.successText, t)!,
       warningText: Color.lerp(warningText, other.warningText, t)!,
@@ -71,6 +77,7 @@ class AppTextTheme extends ThemeExtension<AppTextTheme> {
     secondaryText: Color(0xFF353535),
     mainActionLabel: Color(0xFFFFFFFF),
     secondaryActionLabel: Color(0xFFE0462D),
+    escapeActionLabel: Color(0xFF7B7B7B),
     errorText: Colors.deepOrange,
     successText: Colors.green,
     warningText: Colors.orange,

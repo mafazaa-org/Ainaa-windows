@@ -53,5 +53,13 @@
     "send":"إرسال",
     "@send":{},
     "will_contact_you_soon":"سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.",
-    "@will_contact_you_soon":{}
+    "@will_contact_you_soon":{},
+    "want_to_activate_protection":"هل ترغب في تفعيل الحماية على جهازك؟",
+    "@want_to_activate_protection":{},
+    "want_to_activate_protection_desc":"بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.",
+    "@want_to_activate_protection_desc":{},
+    "confirm_activate_protection":"فعّل الحماية",
+    "@confirm_activate_protection":{},
+    "later":"لاحقًا",
+    "@later":{}
 }

@@ -1,6 +1,5 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/constants/app_styles.dart';
 import 'package:blocker_windows/core/shared_widgets/app_secondary_button.dart';
 import 'package:blocker_windows/core/shared_widgets/app_text_field.dart';
 import 'package:blocker_windows/core/utils/text_form_validations.dart';

@@ -40,7 +40,7 @@ final class AppTextStyles {
   );
 
   TextStyle get displayMedium => TextStyle(
-    fontSize: 14.0.h,
+    fontSize: 18.0.h,
     fontWeight: FontWeight.w700,
     color: appTextTheme.secondaryText,
   );
@@ -89,6 +89,15 @@ final class AppTextStyles {
     fontWeight: FontWeight.w700,
     color: appTextTheme.secondaryActionLabel,
   );
+
+  TextStyle get confirmActionLabel => TextStyle(
+    fontSize: 14.0.h,
+    fontWeight: FontWeight.w600,
+    color: appTextTheme.mainActionLabel,
+  );
+
+  TextStyle get escapeActionLabel =>
+      confirmActionLabel.copyWith(color: appTextTheme.escapeActionLabel);
 
   TextStyle get navLabel => TextStyle(
     fontSize: 20.0.h,

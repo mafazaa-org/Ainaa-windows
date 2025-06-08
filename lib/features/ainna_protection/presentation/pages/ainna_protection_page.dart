@@ -1,4 +1,3 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:blocker_windows/core/app_meta_data/domain/entities/app_meta_data_entity.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/active_ainna_protection_head_layout.dart';
