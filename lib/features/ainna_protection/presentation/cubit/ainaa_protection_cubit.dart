@@ -18,8 +18,12 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
   Future<void> activate(String activationType, String phoneNumber) async {
     try {
       emit(AinaaProtectionInactive(isLoading: true));
-      await _repository.activate(activationType);
-      emit(AinaaProtectionActive(DateTime.now(), activationType));
+      final response = await _repository.activate(activationType);
+      response.when(
+        success:
+            (_) => emit(AinaaProtectionActive(DateTime.now(), activationType)),
+        failure: (error) => emit(AinaaProtectionInactive(errorMessage: error)),
+      );
     } catch (e) {
       emit(
         AinaaProtectionInactive(

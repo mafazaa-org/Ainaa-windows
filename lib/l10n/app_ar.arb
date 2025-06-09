@@ -61,5 +61,7 @@
     "confirm_activate_protection":"فعّل الحماية",
     "@confirm_activate_protection":{},
     "later":"لاحقًا",
-    "@later":{}
+    "@later":{},
+    "ok":"حسنا",
+    "@ok":{}
 }

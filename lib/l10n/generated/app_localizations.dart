@@ -280,6 +280,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'لاحقًا'**
   String get later;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'حسنا'**
+  String get ok;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

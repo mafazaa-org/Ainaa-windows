@@ -100,4 +100,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get later => 'لاحقًا';
+
+  @override
+  String get ok => 'حسنا';
 }

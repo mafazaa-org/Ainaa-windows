@@ -9,7 +9,8 @@ sealed class AinaaProtectionState extends Equatable {
 final class AinaaProtectionInactive extends AinaaProtectionState {
   final bool isLoading;
   final LocalizedString? errorMessage;
-  AinaaProtectionInactive({this.isLoading = false, this.errorMessage});
+  AinaaProtectionInactive({this.isLoading = false, this.errorMessage})
+    : assert(!(isLoading && errorMessage != null));
 
   @override
   List<Object?> get props => [isLoading, errorMessage];

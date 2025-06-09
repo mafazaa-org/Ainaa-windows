@@ -112,7 +112,6 @@ final class AppTheme {
       dividerColor: appColors.darkOverlay,
       elevatedButtonTheme: elevatedButtonThemeData,
       iconTheme: iconThemeData,
-
       // textButtonTheme: TextButtonThemeData(
       //   style: TextButton.styleFrom(
       //     minimumSize: Size.zero, // allows text to control height
