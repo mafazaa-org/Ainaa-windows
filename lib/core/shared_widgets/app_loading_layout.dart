@@ -10,7 +10,7 @@ class AppLoadingLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: CircularProgressIndicator(
-        color: color ?? context.theme.primaryColor,
+        color: color ?? context.theme.indicatorColor,
         value: value,
         constraints: BoxConstraints.tight(Size(24, 24)),
       ),

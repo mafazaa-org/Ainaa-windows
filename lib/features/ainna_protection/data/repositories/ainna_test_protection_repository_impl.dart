@@ -12,7 +12,9 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
   Future<AinnaProtectActionStatus> activate(String activationType) async {
     await Future.delayed(const Duration(seconds: 2));
     // return Future.value(Success(true));
-    final error = LocalizedString(errorMockData.responseTimeOut);
+    final error = LocalizedString.fromArString(
+      errorMockData.responseTimeOut['ar'],
+    );
     return Future.value(Failure(error));
   }
 

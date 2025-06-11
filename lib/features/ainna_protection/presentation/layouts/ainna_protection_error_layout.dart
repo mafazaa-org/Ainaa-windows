@@ -1,5 +1,5 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_confirm_popup.dart';
+import 'package:blocker_windows/core/shared_widgets/app_confirm_popup.dart';
 import 'package:blocker_windows/core/types/localized_string.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';

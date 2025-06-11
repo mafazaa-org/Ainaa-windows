@@ -1,17 +1,45 @@
-// general helper class to store localized strings
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/rendering.dart';
+
+import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+
+/// A utility class for managing localized strings
+///
+/// {@tool snippet}
+///
+/// Factory constructor for Arabic-only strings
+///
+/// ```dart
+/// final greeting = LocalizedString.fromArString('مرحبا');
+/// print(greeting.get());  // 'مرحبا'
+///
+/// ```
+///
+/// {@end-tool}
 
 class LocalizedString {
-  final Map<String, String> _map;
+  static const _locales = AppLocalizations.supportedLocales;
+  final Map<Locale, String> _map;
 
-  LocalizedString(this._map);
+  const LocalizedString._(this._map);
 
-  String get([String? langCode]) => _map[langCode] ?? _map['ar'] ?? '';
+  String get([Locale? langLocal]) =>
+      _map[langLocal] ?? _map[Locale('ar')] ?? '';
 
   // currently expecting arabic 'ar'
-  factory LocalizedString.fromArString(String arString) =>
-      LocalizedString({'ar': arString});
+  factory LocalizedString.fromArString(String? arString) =>
+      LocalizedString._({Locale('ar'): arString ?? ''});
 
   // if localization implemented
-  //   factory LocalizedString.fromJson(Map<String, dynamic> json) =>
-  //       LocalizedString(Map<String, String>.from(json));
+  factory LocalizedString.fromJson(Map<String, String> json) {
+    final languageCode =
+        _locales.map((element) => element.languageCode).toList();
+    final map = <Locale, String>{};
+    json.forEach((key, value) {
+      if (languageCode.contains(key)) {
+        map[Locale(key)] = value;
+      }
+    });
+    return LocalizedString._(map);
+  }
 }

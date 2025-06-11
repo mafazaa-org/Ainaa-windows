@@ -1,8 +1,8 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_confirm_button.dart';
+import 'package:blocker_windows/core/shared_widgets/app_confirm_button.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
-import 'package:blocker_windows/constants/app_text_button.dart';
+import 'package:blocker_windows/core/shared_widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 
 /// A widget that shows the layout in pop up window like [showDialog].
@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 ///
 /// This example shows a dialog to confirm an action
 ///
+/// ```dart
 /// showDialog(
 ///   context: context,
 ///   builder:
@@ -34,7 +35,7 @@ import 'package:flutter/material.dart';
 ///         ),
 ///       ),
 /// );
-///
+/// ```
 /// {@end-tool}
 ///
 

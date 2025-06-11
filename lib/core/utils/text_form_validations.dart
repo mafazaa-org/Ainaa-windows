@@ -1,12 +1,11 @@
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/foundation.dart';
-import 'package:logger/logger.dart';
 
 // TODO: form validation
 final class TextFormValidations {
   static String? phoneNumber(AppLocalizations appLocalizations, String? value) {
-    var logger = Logger(printer: PrettyPrinter());
-    logger.d('validating: $value');
+    // var logger = Logger(printer: PrettyPrinter());
+    // logger.d('validating: $value');
     if (value == null || value.isEmpty) {
       return appLocalizations.require_phone_number;
     }
@@ -18,13 +17,19 @@ final class TextFormValidations {
   }
 
   static String? url(AppLocalizations appLocalizations, String? value) {
-    debugPrint('validating: $value');
-
     if (value == null || value.isEmpty) {
       return appLocalizations.invalid_url;
     }
 
-    // Add protocol if missing
+    if (value == 'https://' || value == 'http://') {
+      return appLocalizations.invalid_url;
+    }
+
+    if (value.contains(':') &&
+        (!value.startsWith('http://') && !value.startsWith('https://'))) {
+      return appLocalizations.invalid_url;
+    }
+
     if (!value.startsWith('http://') && !value.startsWith('https://')) {
       value = 'https://$value';
     }
@@ -36,15 +41,13 @@ final class TextFormValidations {
       if (uri.isAbsolute &&
           (uri.scheme == 'http' || uri.scheme == 'https') &&
           uri.host.isNotEmpty &&
-          uri.host.contains('.') && // Basic TLD check
+          !uri.host.contains('localhost') && // Explicitly block localhost
+          !uri.host.contains('127.0.0.1') &&
           !uri.host.startsWith('.') &&
           !uri.host.endsWith('.')) {
-        debugPrint('valid value: $value');
         return null;
       }
-    } catch (_) {
-      debugPrint('parsing failed');
-    }
+    } catch (_) {}
 
     return appLocalizations.invalid_url;
   }
