@@ -286,6 +286,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'حسنا'**
   String get ok;
+
+  /// No description provided for @join_us.
+  ///
+  /// In en, this message translates to:
+  /// **'انضمام'**
+  String get join_us;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

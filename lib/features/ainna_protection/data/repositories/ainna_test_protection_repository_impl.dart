@@ -11,11 +11,11 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
   @override
   Future<AinnaProtectActionStatus> activate(String activationType) async {
     await Future.delayed(const Duration(seconds: 2));
-    // return Future.value(Success(true));
-    final error = LocalizedString.fromArString(
-      errorMockData.responseTimeOut['ar'],
-    );
-    return Future.value(Failure(error));
+    return Future.value(Success(true));
+    // final error = LocalizedString.fromArString(
+    //   errorMockData.responseTimeOut['ar'],
+    // );
+    // return Future.value(Failure(error));
   }
 
   @override

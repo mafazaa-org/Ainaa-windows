@@ -91,7 +91,7 @@ class AppConfirmLayout extends StatelessWidget {
                 child: AppTextButton(
                   text: cancelText ?? '',
                   onTap: onCancelTap,
-                  textStyle: context.textStyles.escapeActionLabel,
+                  textStyle: context.textStyles.textActionTertiary,
                 ),
               ),
             ],

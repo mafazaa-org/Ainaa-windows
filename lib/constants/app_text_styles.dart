@@ -1,48 +1,53 @@
-import 'package:blocker_windows/constants/app_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'app_text_colors.dart'; // Ensure this points to your AppTextColors class
 
-final class AppTextStyles {
-  final BuildContext context;
+@immutable
+class AppTextStyles extends ThemeExtension<AppTextStyles> {
+  final AppTextColors appTextColors;
 
-  AppTextStyles(this.context);
+  const AppTextStyles(this.appTextColors);
 
-  AppTextTheme get appTextTheme => Theme.of(context).extension<AppTextTheme>()!;
+  TextStyle get headingHuge => TextStyle(
+    fontSize: 64.0.h,
+    fontWeight: FontWeight.w700,
+    color: appTextColors.textHeading,
+  );
 
   TextStyle get headingExtraLarge => TextStyle(
-    fontSize: 36.0.h,
+    fontSize: 36.0.sp,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get headingLarge => TextStyle(
     fontSize: 32.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get headingMedium => TextStyle(
     fontSize: 24.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.primaryText,
+    color: appTextColors.textPrimary,
   );
 
   TextStyle get headingSmall => TextStyle(
     fontSize: 20.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.primaryText,
+    color: appTextColors.textPrimary,
   );
 
   TextStyle get displayLarge => TextStyle(
     fontSize: 20.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get displayMedium => TextStyle(
     fontSize: 18.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get displaySmall => TextStyle(
@@ -54,19 +59,19 @@ final class AppTextStyles {
   TextStyle get bodyLarge => TextStyle(
     fontSize: 16.0.h,
     fontWeight: FontWeight.w400,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get bodyMedium => TextStyle(
     fontSize: 14.0.h,
     fontWeight: FontWeight.w400,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get bodySmall => TextStyle(
     fontSize: 12.0.h,
     fontWeight: FontWeight.w400,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get caption => TextStyle(
@@ -75,34 +80,48 @@ final class AppTextStyles {
     color: Colors.grey,
   );
 
-  TextStyle get mainActionLabel => TextStyle(
+  TextStyle get textActionPrimary => TextStyle(
     fontSize: 32.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.mainActionLabel,
+    color: appTextColors.textActionPrimary,
   );
 
   TextStyle get mainActionSmallLabel =>
-      mainActionLabel.copyWith(fontSize: 20.0.h);
+      textActionPrimary.copyWith(fontSize: 20.0.h);
 
-  TextStyle get secondaryActionLabel => TextStyle(
+  TextStyle get textActionSecondary => TextStyle(
     fontSize: 16.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextTheme.secondaryActionLabel,
+    color: appTextColors.textActionSecondary,
   );
 
   TextStyle get confirmActionLabel => TextStyle(
     fontSize: 14.0.h,
     fontWeight: FontWeight.w600,
-    color: appTextTheme.mainActionLabel,
+    color: appTextColors.textActionPrimary,
   );
 
-  TextStyle get escapeActionLabel =>
-      confirmActionLabel.copyWith(color: appTextTheme.escapeActionLabel);
+  TextStyle get textActionTertiary =>
+      confirmActionLabel.copyWith(color: appTextColors.textActionTertiary);
 
   TextStyle get navLabel => TextStyle(
     fontSize: 20.0.h,
-    color: appTextTheme.secondaryText,
+    color: appTextColors.textSecondary,
     fontWeight: FontWeight.w700,
     decoration: TextDecoration.underline,
   );
+
+  @override
+  AppTextStyles copyWith({AppTextColors? appTextColors}) {
+    return AppTextStyles(appTextColors ?? this.appTextColors);
+  }
+
+  @override
+  AppTextStyles lerp(ThemeExtension<AppTextStyles>? other, double t) {
+    if (other is! AppTextStyles) return this;
+
+    return AppTextStyles(
+      AppTextColors.lerpColors(appTextColors, other.appTextColors, t),
+    );
+  }
 }

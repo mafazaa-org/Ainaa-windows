@@ -23,7 +23,7 @@ class AinnaProtectionPage extends StatelessWidget {
         child: BlocConsumer<AinaaProtectionCubit, AinaaProtectionState>(
           listener:
               (context, state) => switch (state) {
-                AinaaProtectionInactive(
+                AinaaProtectionState(
                   isLoading: final isLoading,
                   errorMessage: final errorMessage,
                 ) =>
@@ -43,7 +43,6 @@ class AinnaProtectionPage extends StatelessWidget {
                         LoadingOverlay.hide(context),
                       },
                   },
-                _ => null,
               },
           builder:
               (context, state) => switch (state) {

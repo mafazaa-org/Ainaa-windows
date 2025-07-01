@@ -28,7 +28,7 @@ class _BuildTopLayout extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AppGradientText(
+                AppTextGradientPrimary(
                   appLocalizations.report_problem,
                   textStyle: context.textStyles.headingLarge,
                 ),

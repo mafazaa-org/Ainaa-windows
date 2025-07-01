@@ -18,7 +18,7 @@ class AppTextButton extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: textStyle ?? context.textStyles.secondaryActionLabel,
+        style: textStyle ?? context.textStyles.textActionSecondary,
       ),
     );
   }

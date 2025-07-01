@@ -16,7 +16,7 @@ class AppBarHead extends StatelessWidget implements PreferredSizeWidget {
     context.isDesktop
         ? kToolbarHeight * 1.3
         : context.isTablet
-        ? kToolbarHeight * 1.5
+        ? kToolbarHeight * 1.6
         : kToolbarHeight,
   );
 }

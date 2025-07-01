@@ -1,7 +1,7 @@
 import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
 import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_icons.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
+import 'package:blocker_windows/core/shared_widgets/ainna_icon.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/confirm_ainna_protection.dart';
@@ -52,14 +52,10 @@ class _BuildLayoutContent extends StatelessWidget {
       spacing: AppSpacing.sm,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
-          AppIcons.shield,
-          size: 24.0,
-          color: context.theme.scaffoldBackgroundColor,
-        ),
+        AinnaIcon(),
         Text(
           appLocalizations.activate_protection,
-          style: context.textStyles.mainActionLabel,
+          style: context.textStyles.textActionPrimary,
         ),
       ],
     );

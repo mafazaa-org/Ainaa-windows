@@ -1,7 +1,8 @@
 import 'package:blocker_windows/constants/app_colors.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
-import 'package:blocker_windows/constants/app_text_theme.dart';
+import 'package:blocker_windows/constants/app_text_colors.dart';
+import 'package:blocker_windows/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -86,6 +87,9 @@ final class AppTheme {
       ),
     );
     final iconThemeData = IconThemeData(color: appColors.onPrimary);
+    final iconButtonTheme = IconButtonThemeData(
+      style: IconButton.styleFrom(foregroundColor: appColors.background),
+    );
 
     return ThemeData(
       fontFamily: 'Almarai',
@@ -112,6 +116,7 @@ final class AppTheme {
       dividerColor: appColors.darkOverlay,
       elevatedButtonTheme: elevatedButtonThemeData,
       iconTheme: iconThemeData,
+      iconButtonTheme: iconButtonTheme,
       // textButtonTheme: TextButtonThemeData(
       //   style: TextButton.styleFrom(
       //     minimumSize: Size.zero, // allows text to control height
@@ -120,7 +125,10 @@ final class AppTheme {
       //   ),
       // ),
       // Texts colors
-      extensions: <ThemeExtension<dynamic>>[AppTextTheme.light],
+      extensions: <ThemeExtension<dynamic>>[
+        AppTextColors.light,
+        AppTextStyles(AppTextColors.light),
+      ],
     );
   }
 

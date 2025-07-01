@@ -3,6 +3,7 @@ import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/core/shared_widgets/app_logo.dart';
 import 'package:blocker_windows/core/shared_widgets/sharpe_line_painter.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/cubit/ainaa_protection_cubit.dart';
+import 'package:blocker_windows/features/support/presentation/pages/support_head_page.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

@@ -103,4 +103,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get ok => 'حسنا';
+
+  @override
+  String get join_us => 'انضمام';
 }

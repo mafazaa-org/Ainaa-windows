@@ -83,7 +83,7 @@
 //         Icon(AppIcons.shield, size: 24.0, color: theme.scaffoldBackgroundColor),
 //         Text(
 //           appLocalizations.activate_protection,
-//           style: context.textStyles.mainActionLabel,
+//           style: context.textStyles.textActionPrimary,
 //         ),
 //       ],
 //     );

@@ -25,5 +25,12 @@ final class AppStyles {
         gapPadding: 4.0,
       );
 
+  static BoxShadow boxPrimaryShadow({required Color color}) => BoxShadow(
+    color: color,
+    blurRadius: 12,
+    spreadRadius: 0,
+    offset: Offset(0, 4),
+  );
+
   const AppStyles._();
 }

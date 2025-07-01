@@ -15,7 +15,7 @@ final class AppColors {
   final Color decoration;
   final Color onPrimary;
 
-  const AppColors({
+  const AppColors._({
     required this.primary,
     required this.secondary,
     required this.background,
@@ -45,7 +45,7 @@ final class AppColors {
         900: Color(0xFFB71C1C),
       });
 
-  static const light = AppColors(
+  static const light = AppColors._(
     primary: primarySwatch,
     // primary: Color(0xFFE0462D),
     secondary: Color(0xFFFFF0EE),

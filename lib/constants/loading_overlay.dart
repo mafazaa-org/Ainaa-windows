@@ -29,6 +29,7 @@ final class LoadingOverlay {
   }
 
   static void hide(BuildContext context) {
+    logger.d('hide');
     if (_overlayEntry != null) {
       _overlayEntry!.remove(); // Remove the overlay from the stack
       _overlayEntry = null;

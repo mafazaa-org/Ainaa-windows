@@ -10,7 +10,13 @@ class _BuildSupportUsButton extends StatelessWidget {
 
     return GestureDetector(
       // for debugging purposes
-      onTap: () => context.read<AinaaProtectionCubit>().resetState(),
+      onTap:
+          () => Navigator.push(
+            context,
+            MaterialPageRoute<void>(
+              builder: (BuildContext context) => SupportHeadPage(),
+            ),
+          ),
       child: Container(
         alignment: AlignmentDirectional.centerStart,
         width: screenWidth * .25,

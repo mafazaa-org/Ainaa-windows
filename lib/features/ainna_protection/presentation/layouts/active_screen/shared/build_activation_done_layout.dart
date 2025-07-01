@@ -1,4 +1,4 @@
-part of 'build_content_layout.dart';
+part of 'content/build_content_layout.dart';
 
 class BuildActivationDoneLayout extends StatelessWidget {
   const BuildActivationDoneLayout({super.key});
@@ -19,11 +19,11 @@ class BuildActivationDoneLayout extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(AppIcons.shield, color: context.theme.scaffoldBackgroundColor),
+            AinnaIcon(),
             Text(
               ' ${appLocalizations.activation_done}',
               style: context.textStyles.headingMedium.copyWith(
-                color: context.appTextTheme.mainActionLabel,
+                color: context.appTextColors.textActionPrimary,
               ),
             ),
           ],
