@@ -27,13 +27,13 @@ class AppLocalizationsAr extends AppLocalizations {
   String get activate_protection => 'تفعيل الحماية';
 
   @override
+  String get reactivate_protection => 'اعاده تفعيل الحماية';
+
+  @override
   String get found_problem_ques => 'اكتشفت ثغرة او موقع غير محجوب؟';
 
   @override
   String get tel_us => 'اخبرنا بها';
-
-  @override
-  String get require_phone_number => '';
 
   @override
   String get require_valid_phone_number => 'أدخل رقم هاتف صحيح';

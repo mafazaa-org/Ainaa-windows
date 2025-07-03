@@ -3,7 +3,7 @@ import 'package:blocker_windows/constants/app_icons.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
 import 'package:blocker_windows/core/shared_widgets/app_gradient_text.dart';
-import 'package:blocker_windows/core/shared_widgets/app_secondary_button.dart';
+import 'package:blocker_windows/core/shared_widgets/app_elevated_button.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/report_problem_layout/report_form_layout/build_report_form_layout.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';

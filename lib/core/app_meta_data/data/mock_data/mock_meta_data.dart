@@ -6,6 +6,7 @@ class MockMetaData {
   static const mockAinnaProtectionLevel = [
     AinnaProtectionLevelModel(
       activationType: 'الحماية المنخفضة',
+      optionBatchPath: 'batch\\protect-low.bat',
       name: 'الحماية المنخفضة',
       description:
           'تحجب لك فقط الأساسيات التي قد تُزعجك أو تُعدّ غير مناسبة، مع إبقاء معظم المحتوى متاحاً لتصفحٍ أكثر حرية مثل:',
@@ -21,6 +22,7 @@ class MockMetaData {
     ),
     AinnaProtectionLevelModel(
       activationType: 'الحماية العالية',
+      optionBatchPath: 'batch\\protect-high.bat',
       name: 'الحماية العالية',
       description:
           'توفر لك حماية شاملة من معظم أنواع المحتوى غير المرغوب فيه، مما يضمن تجربة تصفح أكثر أمانًا وراحة مثل:',

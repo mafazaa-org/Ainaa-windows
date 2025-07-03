@@ -5,6 +5,7 @@ typedef AinnaProtectionLevelModels = List<AinnaProtectionLevelModel>;
 
 class AinnaProtectionLevelModel {
   final String activationType;
+  final String optionBatchPath;
   final String name;
   final String description;
   final List<String> tags;
@@ -12,6 +13,7 @@ class AinnaProtectionLevelModel {
 
   const AinnaProtectionLevelModel({
     required this.activationType,
+    required this.optionBatchPath,
     required this.name,
     required this.description,
     required this.tags,
@@ -20,6 +22,7 @@ class AinnaProtectionLevelModel {
 
   AinnaProtectionLevel toEntity() => AinnaProtectionLevel(
     activationType: activationType,
+    optionBatchPath: optionBatchPath,
     name: LocalizedString.fromArString(name),
     description: LocalizedString.fromArString(description),
     tags: tags.map(LocalizedString.fromArString).toList(),

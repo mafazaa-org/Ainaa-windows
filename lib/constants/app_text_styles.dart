@@ -29,7 +29,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
   TextStyle get headingMedium => TextStyle(
     fontSize: 24.0.h,
     fontWeight: FontWeight.w700,
-    color: appTextColors.textPrimary,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get headingSmall => TextStyle(

@@ -2,7 +2,7 @@ import 'package:blocker_windows/config/dependency_injection/dependency_injection
 import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/core/shared_widgets/ainna_icon.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/cubit/ainaa_protection_cubit.dart';
+import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/confirm_ainna_protection.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
@@ -17,20 +17,25 @@ class BuildAinnaProtectionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final chosenProtectionProvider = context.watch<ChosenProtectionProvider>();
-    final chosenOption = chosenProtectionProvider.chosenOption;
+    final activationType = chosenProtectionProvider.chosenOption;
+    final optionBatchPath = chosenProtectionProvider.optionBatchPath;
     final phoneNumber = chosenProtectionProvider.phoneNumber;
     return SizedBox(
       height: 72.spMin,
       width: double.maxFinite,
       child: ElevatedButton(
         onPressed:
-            isFieldValid && chosenOption != null && phoneNumber != null
+            isFieldValid &&
+                    activationType != null &&
+                    optionBatchPath != null &&
+                    phoneNumber != null
                 ? () {
                   confirmAinnaProtection(
                     context,
                     onConfirm: () {
                       getIt<AinaaProtectionCubit>().activate(
-                        chosenOption,
+                        activationType,
+                        optionBatchPath,
                         phoneNumber,
                       );
                     },

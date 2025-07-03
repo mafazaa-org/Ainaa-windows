@@ -5,6 +5,7 @@ typedef AinnaProtectionLevels = List<AinnaProtectionLevel>;
 
 class AinnaProtectionLevel extends Equatable {
   final String activationType;
+  final String optionBatchPath;
   final LocalizedString name;
   final LocalizedString description;
   final List<LocalizedString> tags;
@@ -12,6 +13,7 @@ class AinnaProtectionLevel extends Equatable {
 
   const AinnaProtectionLevel({
     required this.activationType,
+    required this.optionBatchPath,
     required this.name,
     required this.description,
     required this.tags,
@@ -19,5 +21,5 @@ class AinnaProtectionLevel extends Equatable {
   });
 
   @override
-  List<Object?> get props => [activationType, name];
+  List<Object?> get props => [activationType, name, optionBatchPath];
 }

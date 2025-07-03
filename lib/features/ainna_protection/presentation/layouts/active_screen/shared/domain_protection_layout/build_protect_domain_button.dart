@@ -1,8 +1,9 @@
 part of 'build_specific_domain_protection_layout.dart';
 
-class _BuildSaveDomainButton extends StatelessWidget {
+class _BuildProtectDomainButton extends StatelessWidget {
+  final String? value;
   final bool isValid;
-  const _BuildSaveDomainButton({required this.isValid});
+  const _BuildProtectDomainButton({required this.value, required this.isValid});
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +13,15 @@ class _BuildSaveDomainButton extends StatelessWidget {
       width: double.maxFinite,
       padding: EdgeInsets.only(top: AppSpacing.sl),
       child: AppElevatedButton(
+        text: appLocalizations.save,
         onPressed:
-            isValid
+            (isValid && value != null)
                 ? () {
-                  //TODO: action to add the url to the protection list
+                  context.read<AinaaDomainProtectionCubit>().domainProtection(
+                    value!,
+                  );
                 }
                 : null,
-        text: appLocalizations.save,
       ),
     );
   }

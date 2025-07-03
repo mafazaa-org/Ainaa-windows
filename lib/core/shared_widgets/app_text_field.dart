@@ -54,6 +54,7 @@ class AppTextField extends StatelessWidget {
           autofillHints: autofillHints,
           enableInteractiveSelection: enableInteractiveSelection,
           inputFormatters: inputFormatters,
+          scrollPadding: EdgeInsets.zero,
           decoration: _inputDecoration(
             context,
             errorText: errorText,
@@ -78,6 +79,7 @@ class AppTextField extends StatelessWidget {
         color: context.theme.hintColor,
       ),
       suffixIcon: suffixIcon,
+      // contentPadding: EdgeInsets.all(4),
     );
   }
 }

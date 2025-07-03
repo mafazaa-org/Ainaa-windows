@@ -7,6 +7,7 @@ final class AppIcons {
   static const removeCircle = Icons.remove_circle_rounded;
   static const shield = Icons.shield;
   static const close = Icons.close;
+  static const back = Icons.arrow_back_rounded;
 
   const AppIcons._();
 }

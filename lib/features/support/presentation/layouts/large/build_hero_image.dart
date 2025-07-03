@@ -37,7 +37,13 @@ class _BuildHeroImage extends StatelessWidget {
             height: 43.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [BackButton(), AppLogo(useAlternative: true)],
+              children: [
+                AppIconButton(
+                  icon: AppIcons.back,
+                  onPressed: () => Navigator.maybePop(context),
+                ),
+                AppLogo(useAlternative: true),
+              ],
             ),
           ),
         ],

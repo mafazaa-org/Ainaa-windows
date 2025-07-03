@@ -18,7 +18,7 @@ class BuildProtectWebsite extends StatelessWidget {
         border: Border.all(color: context.theme.dividerColor),
       ),
       child: Column(
-        spacing: AppSpacing.lg,
+        spacing: AppSpacing.xl,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           BuildWantSpecificAppActivationLabel(),

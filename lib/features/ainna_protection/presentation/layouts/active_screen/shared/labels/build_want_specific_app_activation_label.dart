@@ -1,5 +1,4 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/core/shared_widgets/app_gradient_text.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -9,9 +8,9 @@ class BuildWantSpecificAppActivationLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     final appLocalizations = AppLocalizations.of(context)!;
 
-    return AppTextGradientPrimary(
+    return Text(
       appLocalizations.want_specific_app_activation,
-      textStyle: context.textStyles.headingMedium,
+      style: context.textStyles.headingMedium,
     );
   }
 }

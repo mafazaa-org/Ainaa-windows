@@ -8,9 +8,7 @@ class _BuildDomainProtectionFormLayout extends StatelessWidget {
     final appLocalizations = AppLocalizations.of(context)!;
     return AppTextField(
       label: appLocalizations.please_enter_needed_specific_app_activation_url,
-      textStyle: context.textStyles.bodyLarge.copyWith(
-        color: context.theme.primaryColor,
-      ),
+      textStyle: context.textStyles.bodyLarge,
       hintText: appLocalizations.url_example,
       errorText: field.errorText,
       keyboardType: TextInputType.url,

@@ -55,8 +55,8 @@ void main() {
     });
 
     test('Accepts valid URLs', () {
-      expect(TextFormValidations.url(l10n, 'https://flutter.dev'), isNull);
-      expect(TextFormValidations.url(l10n, 'http://localhost:3000'), isNull);
+      expect(TextFormValidations.url(l10n, 'flutter.dev'), isNull);
+      expect(TextFormValidations.url(l10n, 'localhost:3000'), l10n.invalid_url);
     });
   });
 

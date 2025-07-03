@@ -131,6 +131,12 @@ abstract class AppLocalizations {
   /// **'تفعيل الحماية'**
   String get activate_protection;
 
+  /// No description provided for @reactivate_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'اعاده تفعيل الحماية'**
+  String get reactivate_protection;
+
   /// No description provided for @found_problem_ques.
   ///
   /// In en, this message translates to:
@@ -142,12 +148,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'اخبرنا بها'**
   String get tel_us;
-
-  /// No description provided for @require_phone_number.
-  ///
-  /// In en, this message translates to:
-  /// **''**
-  String get require_phone_number;
 
   /// No description provided for @require_valid_phone_number.
   ///
