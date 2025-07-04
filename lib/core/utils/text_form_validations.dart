@@ -8,11 +8,22 @@ final class TextFormValidations {
     if (value == null || value.isEmpty) {
       return appLocalizations.require_valid_phone_number;
     }
-    final regex = RegExp(r'^\+?[0-9]{8,15}$');
+    final regex = RegExp(r'^\+?[0-9]{10,18}$');
     if (!regex.hasMatch(value)) {
       return appLocalizations.require_valid_phone_number;
     }
     return null;
+  }
+
+  static bool validPhoneNumber(String? value) {
+    if (value == null || value.isEmpty) {
+      return false;
+    }
+    final regex = RegExp(r'^\+?[0-9]{10,18}$');
+    if (!regex.hasMatch(value)) {
+      return false;
+    }
+    return true;
   }
 
   static String? url(AppLocalizations appLocalizations, String? value) {

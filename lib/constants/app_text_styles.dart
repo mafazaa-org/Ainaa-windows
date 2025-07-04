@@ -15,7 +15,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
   );
 
   TextStyle get headingExtraLarge => TextStyle(
-    fontSize: 36.0.sp,
+    fontSize: 36.0.h,
     fontWeight: FontWeight.w700,
     color: appTextColors.textSecondary,
   );

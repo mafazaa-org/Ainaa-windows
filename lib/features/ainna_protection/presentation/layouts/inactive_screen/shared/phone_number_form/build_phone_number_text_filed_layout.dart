@@ -1,26 +1,41 @@
 part of 'build_phone_number_form_layout.dart';
 
 class BuildPhoneNumberTextFiledLayout extends StatelessWidget {
-  final FormFieldState<String> field;
-  const BuildPhoneNumberTextFiledLayout(this.field, {super.key});
+  const BuildPhoneNumberTextFiledLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
+    String? phoneNumber;
+    String? dialCode;
     final appLocalizations = AppLocalizations.of(context)!;
-    final chosenProtectionProvider = context.read<ChosenProtectionProvider>();
-    return AppTextField(
+    return AppPhoneNumberTextField(
       label: appLocalizations.phone_number,
-      hintText: appLocalizations.please_enter_phone_number,
-      errorText: field.errorText,
-      // initialValue: ,
-      keyboardType: TextInputType.phone,
-      onChanged: (value) {
-        field.didChange(value);
-        if (field.isValid) {
-          chosenProtectionProvider.updatePhoneNumber(value);
+      onInputChanged: (PhoneNumber number) {
+        phoneNumber = number.phoneNumber;
+        dialCode = number.dialCode;
+        if (phoneNumber != null && dialCode != null) {
+          phoneNumber = phoneNumber!.substring(dialCode!.length);
+          // debugPrint('dialCode: $dialCode');
+          context.read<ChosenProtectionProvider>().updatePhoneNumber(
+            phoneNumber,
+          );
+          //TODO: send the phone number and country dial code
         }
       },
-      autofillHints: [AutofillHints.telephoneNumber],
     );
+    // return AppTextField(
+    //   label: appLocalizations.phone_number,
+    //   hintText: appLocalizations.please_enter_phone_number,
+    //   errorText: field.errorText,
+    //   // initialValue: ,
+    //   keyboardType: TextInputType.phone,
+    //   onChanged: (value) {
+    //     field.didChange(value);
+    //     if (field.isValid) {
+    //       chosenProtectionProvider.updatePhoneNumber(value);
+    //     }
+    //   },
+    //   autofillHints: [AutofillHints.telephoneNumber],
+    // );
   }
 }

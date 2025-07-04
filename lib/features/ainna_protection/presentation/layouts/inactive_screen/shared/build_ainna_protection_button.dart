@@ -12,11 +12,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildAinnaProtectionButton extends StatelessWidget {
   // final GlobalKey<FormState> formKey;
-  final bool isFieldValid;
-  const BuildAinnaProtectionButton(this.isFieldValid, {super.key});
+  // final bool isFieldValid;
+  const BuildAinnaProtectionButton({super.key});
   @override
   Widget build(BuildContext context) {
     final chosenProtectionProvider = context.watch<ChosenProtectionProvider>();
+    final isValidNumber = chosenProtectionProvider.validPhoneNumber;
     final activationType = chosenProtectionProvider.chosenOption;
     final optionBatchPath = chosenProtectionProvider.optionBatchPath;
     final phoneNumber = chosenProtectionProvider.phoneNumber;
@@ -25,7 +26,7 @@ class BuildAinnaProtectionButton extends StatelessWidget {
       width: double.maxFinite,
       child: ElevatedButton(
         onPressed:
-            isFieldValid &&
+            isValidNumber &&
                     activationType != null &&
                     optionBatchPath != null &&
                     phoneNumber != null

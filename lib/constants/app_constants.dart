@@ -26,5 +26,52 @@ final class AppConstants {
   static const double xlDesktopMinWidth = 1441.0;
   static const double xlDesktopMaxWidth = 3840.0;
 
+  static const List<String> countriesAlpha2Codes = [
+    'EG', // Egypt
+    'AF', // Afghanistan
+    'AL', // Albania
+    'DZ', // Algeria
+    'AZ', // Azerbaijan
+    'BD', // Bangladesh
+    'BH', // Bahrain
+    'BN', // Brunei
+    'CI', // Côte d'Ivoire (Ivory Coast)
+    'DJ', // Djibouti
+    'GM', // Gambia
+    'GN', // Guinea
+    'ID', // Indonesia
+    'IQ', // Iraq
+    'IR', // Iran
+    'JO', // Jordan
+    'KZ', // Kazakhstan
+    'KW', // Kuwait
+    'KG', // Kyrgyzstan
+    'LB', // Lebanon
+    'LY', // Libya
+    'MY', // Malaysia
+    'MV', // Maldives
+    'ML', // Mali
+    'MA', // Morocco
+    'MR', // Mauritania
+    'NE', // Niger
+    'NG', // Nigeria
+    'OM', // Oman
+    'PK', // Pakistan
+    'PS', // Palestine
+    'QA', // Qatar
+    'SA', // Saudi Arabia
+    'SD', // Sudan
+    'SO', // Somalia
+    'SY', // Syria
+    'TJ', // Tajikistan
+    'TZ', // Tanzania
+    'TH', // Thailand (southern provinces)
+    'TR', // Turkey
+    'TM', // Turkmenistan
+    'AE', // United Arab Emirates
+    'UZ', // Uzbekistan
+    'YE', // Yemen
+  ];
+
   const AppConstants._();
 }
