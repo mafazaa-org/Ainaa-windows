@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/app_meta_data/domain/entities/entities.dart';
+import 'package:blocker_windows/core/app_init_data/domain/entities/entities.dart';
 import 'package:blocker_windows/core/types/localized_string.dart';
 
 typedef AinnaProtectionLevelModels = List<AinnaProtectionLevelModel>;

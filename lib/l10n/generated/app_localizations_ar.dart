@@ -21,7 +21,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get protect_your_device_now => 'قم بحماية جهازك الآن';
 
   @override
-  String get enter_phone_number_desc => 'ادخل رقم الهاتف ثم اضغط على الزر بالأسفل لتفعيل الحماية الفورية لجهازك';
+  String get enter_phone_number_desc =>
+      'ادخل رقم الهاتف ثم اضغط على الزر بالأسفل لتفعيل الحماية الفورية لجهازك';
 
   @override
   String get activate_protection => 'تفعيل الحماية';
@@ -42,10 +43,12 @@ class AppLocalizationsAr extends AppLocalizations {
   String get activation_done => 'مبارك! تفعيل الحماية';
 
   @override
-  String get want_specific_app_activation => 'هل  تريد تفعيل الحماية على تطبيق معين؟';
+  String get want_specific_app_activation =>
+      'هل  تريد تفعيل الحماية على تطبيق معين؟';
 
   @override
-  String get please_enter_needed_specific_app_activation_url => 'من فضلك أدخل اسم دومين تريد ايضا تفعيل الحماية عليه';
+  String get please_enter_needed_specific_app_activation_url =>
+      'من فضلك أدخل اسم دومين تريد ايضا تفعيل الحماية عليه';
 
   @override
   String get url_example => 'www.example.com';
@@ -87,13 +90,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get send => 'إرسال';
 
   @override
-  String get will_contact_you_soon => 'سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.';
+  String get will_contact_you_soon =>
+      'سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.';
 
   @override
-  String get want_to_activate_protection => 'هل ترغب في تفعيل الحماية على جهازك؟';
+  String get want_to_activate_protection =>
+      'هل ترغب في تفعيل الحماية على جهازك؟';
 
   @override
-  String get want_to_activate_protection_desc => 'بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.';
+  String get want_to_activate_protection_desc =>
+      'بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.';
 
   @override
   String get confirm_activate_protection => 'فعّل الحماية';

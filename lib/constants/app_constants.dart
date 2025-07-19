@@ -1,6 +1,6 @@
 final class AppConstants {
   static const String appName = 'Ainna';
-  static const String appVersion = '0.0.1';
+  static const String appVersion = '0.1.0';
 
   static const double mobileMinWidth = 320.0;
   static const double mobileMaxWidth = 480.0;

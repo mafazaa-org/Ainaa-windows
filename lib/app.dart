@@ -1,7 +1,8 @@
 import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
 import 'package:blocker_windows/config/theme/app_theme.dart';
 import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/core/app_meta_data/cubit/get_app_meta_data_cubit.dart';
+import 'package:blocker_windows/core/app_init_data/get_app_meta_data_cubit/get_app_meta_data_cubit.dart';
+import 'package:blocker_windows/core/app_init_data/get_app_version_cubit/get_app_version_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_domain_protection_cubit/ainaa_domain_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
         BlocProvider(create: (_) => getIt<GetAppMetaDataCubit>()),
         BlocProvider(create: (_) => getIt<AinaaProtectionCubit>()),
         BlocProvider(create: (_) => getIt<AinaaDomainProtectionCubit>()),
+        BlocProvider(create: (_) => getIt<GetAppRequiredVersionCubit>()),
       ],
       child: MultiProvider(
         providers: [

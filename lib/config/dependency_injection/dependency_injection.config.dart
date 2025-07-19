@@ -9,12 +9,18 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:blocker_windows/core/app_meta_data/cubit/get_app_meta_data_cubit.dart'
-    as _i315;
-import 'package:blocker_windows/core/app_meta_data/data/repositories/app_meta_data_test_repository_impl.dart'
-    as _i943;
-import 'package:blocker_windows/core/app_meta_data/domain/repositories/app_meta_data_repository.dart'
-    as _i264;
+import 'package:blocker_windows/core/app_init_data/data/repositories/app_meta_data_test_repository_impl.dart'
+    as _i811;
+import 'package:blocker_windows/core/app_init_data/data/repositories/app_required_version_repository_impl.dart'
+    as _i668;
+import 'package:blocker_windows/core/app_init_data/domain/repositories/app_meta_data_repository.dart'
+    as _i1037;
+import 'package:blocker_windows/core/app_init_data/domain/repositories/app_required_version_repository.dart'
+    as _i252;
+import 'package:blocker_windows/core/app_init_data/get_app_meta_data_cubit/get_app_meta_data_cubit.dart'
+    as _i433;
+import 'package:blocker_windows/core/app_init_data/get_app_version_cubit/get_app_version_cubit.dart'
+    as _i635;
 import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_protection_repository_impl.dart'
     as _i640;
 import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_test_protection_repository_impl.dart'
@@ -43,15 +49,18 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i912.ChosenProtectionProvider>(
       () => _i912.ChosenProtectionProvider(),
     );
-    gh.singleton<_i264.AppMetaDataRepository>(
-      () => _i943.AppMetaDataTestRepositoryImpl(),
+    gh.singleton<_i252.AppRequiredVersionRepository>(
+      () => _i668.AppRequiredVersionRepositoryImpl(),
     );
-    gh.singleton<_i315.GetAppMetaDataCubit>(
-      () => _i315.GetAppMetaDataCubit(gh<_i264.AppMetaDataRepository>()),
+    gh.singleton<_i1037.AppMetaDataRepository>(
+      () => _i811.AppMetaDataTestRepositoryImpl(),
     );
     gh.singleton<_i304.AinnaProtectionRepository>(
       () => _i714.AinnaTestProtectionRepositoryImpl(),
       registerFor: {_dev},
+    );
+    gh.singleton<_i433.GetAppMetaDataCubit>(
+      () => _i433.GetAppMetaDataCubit(gh<_i1037.AppMetaDataRepository>()),
     );
     gh.singleton<_i304.AinnaProtectionRepository>(
       () => _i640.AinnaProtectionRepositoryImpl(),
@@ -64,6 +73,11 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.singleton<_i384.AinaaProtectionCubit>(
       () => _i384.AinaaProtectionCubit(gh<_i304.AinnaProtectionRepository>()),
+    );
+    gh.singleton<_i635.GetAppRequiredVersionCubit>(
+      () => _i635.GetAppRequiredVersionCubit(
+        gh<_i252.AppRequiredVersionRepository>(),
+      ),
     );
     return this;
   }

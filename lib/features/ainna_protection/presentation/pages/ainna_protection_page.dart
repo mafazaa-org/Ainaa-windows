@@ -1,6 +1,6 @@
 import 'package:blocker_windows/constants/confirm_overlay.dart';
 import 'package:blocker_windows/constants/loading_overlay.dart';
-import 'package:blocker_windows/core/app_meta_data/domain/entities/app_meta_data_entity.dart';
+import 'package:blocker_windows/core/app_init_data/domain/entities/app_meta_data_entity.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/active_ainna_protection_head_layout.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/inactive_ainna_protection_head_layout.dart';

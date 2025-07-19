@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/app_meta_data/data/models/models.dart';
+import 'package:blocker_windows/core/app_init_data/data/models/models.dart';
 
 class MockMetaData {
   static const mockMetaData = AppMetaDataModel(mockAinnaProtectionLevel);
