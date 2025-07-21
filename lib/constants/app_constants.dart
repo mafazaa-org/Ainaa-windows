@@ -1,5 +1,7 @@
 final class AppConstants {
   static const String appName = 'Ainna';
+  static const String batchName = 'protect.bat';
+  static const String batchUrl = 'assets/batch/$batchName';
   static const String appVersion = '0.1.0';
 
   static const double mobileMinWidth = 320.0;

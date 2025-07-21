@@ -1,25 +1,26 @@
+import 'package:blocker_windows/core/app_init_data/domain/entities/ainna_protection_level_entity.dart';
+import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 import 'package:blocker_windows/core/utils/text_form_validations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
 class ChosenProtectionProvider extends ChangeNotifier {
-  String? _option;
-  String? _optionBatchPath;
+  AinnaProtectionLevel? _ainnaProtectionLevel;
+  final AinnaProtectionAdditionalOptions _additionalOptions = const {};
   String? _phoneNumber;
 
-  String? get chosenOption => _option;
-  String? get optionBatchPath => _optionBatchPath;
+  AinnaActivationType? get chosenOption =>
+      _ainnaProtectionLevel?.activationType;
+  String? get optionBatchPath => _ainnaProtectionLevel?.optionBatchPath;
   String? get phoneNumber => _phoneNumber;
   bool get validPhoneNumber =>
       TextFormValidations.validPhoneNumber(phoneNumber);
 
-  void updateChosenOption(String newOption, String newOptionBatchPath) {
-    if (newOption != chosenOption) {
-      _option = newOption;
-      _optionBatchPath = newOptionBatchPath;
-      notifyListeners();
-    }
+  void updateChosenOption(AinnaProtectionLevel ainnaProtectionLevel) {
+    _ainnaProtectionLevel = ainnaProtectionLevel;
+    notifyListeners();
   }
 
   void updatePhoneNumber(String? newPhoneNumber) {
@@ -30,9 +31,16 @@ class ChosenProtectionProvider extends ChangeNotifier {
     }
   }
 
+  bool addAdditionalOption(AinnaProtectionAdditionalOption option) {
+    return _additionalOptions.add(option);
+  }
+
+  bool removeAdditionalOption(AinnaProtectionAdditionalOption option) {
+    return _additionalOptions.remove(option);
+  }
+
   void reset() {
-    _option = null;
-    _optionBatchPath = null;
+    _ainnaProtectionLevel = null;
     _phoneNumber = null;
   }
 }

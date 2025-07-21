@@ -39,10 +39,7 @@ class BuildProtectionOptionLayout extends StatelessWidget {
             (_) =>
                 isSelected
                     ? null
-                    : chosenProtectionProvider.updateChosenOption(
-                      option.activationType,
-                      option.optionBatchPath,
-                    ),
+                    : chosenProtectionProvider.updateChosenOption(option),
       ),
     );
   }

@@ -1,10 +1,11 @@
 import 'package:blocker_windows/core/app_init_data/domain/entities/entities.dart';
 import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
 
 typedef AinnaProtectionLevelModels = List<AinnaProtectionLevelModel>;
 
 class AinnaProtectionLevelModel {
-  final String activationType;
+  final AinnaActivationType activationType;
   final String optionBatchPath;
   final String name;
   final String description;

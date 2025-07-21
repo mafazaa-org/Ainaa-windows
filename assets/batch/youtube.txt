@@ -1,0 +1,7 @@
+#mafazaa-youtube-enable-start
+172.217.19.142 www.youtube.com
+142.250.200.238 m.youtube.com
+172.217.21.10 youtubei.googleapis.com
+172.217.21.10 youtube.googleapis.com
+142.250.201.46 www.youtube-nocookie.com
+#mafazaa-youtube-enable-end

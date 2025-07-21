@@ -1,10 +1,11 @@
 import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
 import 'package:equatable/equatable.dart';
 
 typedef AinnaProtectionLevels = List<AinnaProtectionLevel>;
 
 class AinnaProtectionLevel extends Equatable {
-  final String activationType;
+  final AinnaActivationType activationType;
   final String optionBatchPath;
   final LocalizedString name;
   final LocalizedString description;

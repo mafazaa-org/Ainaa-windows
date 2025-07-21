@@ -1,3 +1,5 @@
+import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 import 'package:blocker_windows/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
 import 'package:blocker_windows/core/types/localized_string.dart';
 import 'package:equatable/equatable.dart';
@@ -16,13 +18,17 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
   final logger = Logger(printer: PrettyPrinter());
 
   Future<void> activate(
-    String activationType,
+    AinnaActivationType activationType,
     String activationBatchPath,
     String phoneNumber,
   ) async {
     try {
       emit(AinaaProtectionInactive(isLoading: true));
-      final response = await _repository.activate(activationBatchPath);
+      final response = await _repository.activate(
+        activationType: activationType,
+        options: {},
+        activationBatchPath: activationBatchPath,
+      );
       response.when(
         success:
             (_) => emit(
@@ -30,6 +36,8 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
                 activatedAt: DateTime.now(),
                 activationType: activationType,
                 activationBatchPath: activationBatchPath,
+                //TODO: config adding a multiple options
+                options: {},
               ),
             ),
         failure: (error) => emit(AinaaProtectionInactive(errorMessage: error)),
@@ -46,7 +54,7 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
   Future<void> deactivate() async {
     try {
       emit(AinaaProtectionInactive(isLoading: true));
-      await _repository.deActivate();
+      await _repository.deactivate();
       emit(AinaaProtectionInactive());
     } catch (e) {
       emit(
@@ -61,7 +69,9 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
     if (state case AinaaProtectionActive activeState) {
       emit(activeState.copyWith(isLoading: true));
       final response = await _repository.reactivate(
-        activeState.activationBatchPath,
+        activationType: activeState.activationType,
+        options: activeState.options,
+        activationBatchPath: activeState.activationBatchPath,
       );
       response.when(
         success: (_) => emit(activeState.copyWith(isLoading: false)),
@@ -83,11 +93,15 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
     if (json['type'] == 'active' &&
         json.containsKey('activationType') &&
         json.containsKey('activationBatchPath') &&
-        json.containsKey('activatedAt')) {
+        json.containsKey('activatedAt') &&
+        json.containsKey('options')) {
       return AinaaProtectionActive(
         activatedAt: DateTime.fromMillisecondsSinceEpoch(json['activatedAt']),
-        activationType: json['activationType'],
+        activationType: AinnaActivationTypeJson.fromJson(
+          json['activationType'],
+        ),
         activationBatchPath: json['activationBatchPath'],
+        options: AinnaProtectionAdditionalOptionsJson.fromJson(json['options']),
       );
     }
     return AinaaProtectionInactive();
@@ -99,8 +113,9 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
       return {
         'type': 'active',
         'activatedAt': state.activatedAt.millisecondsSinceEpoch,
-        'activationType': state.activationType,
+        'activationType': state.activationType.toJson(),
         'activationBatchPath': state.activationBatchPath,
+        'options': state.options.toJson(),
       };
     } else {
       return {'type': 'inactive'};
@@ -115,9 +130,7 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
 
   //for debugging purposes
   void resetState() {
-    HydratedBloc.storage.delete(
-      "AinaaProtectionCubit",
-    ); // Key matches your cubit name
+    HydratedBloc.storage.delete("AinaaProtectionCubit");
 
     emit(AinaaProtectionInactive());
   }

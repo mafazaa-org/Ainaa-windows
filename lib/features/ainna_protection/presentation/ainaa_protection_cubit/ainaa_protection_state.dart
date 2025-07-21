@@ -22,12 +22,14 @@ class AinaaProtectionInactive extends AinaaProtectionState {
 
 class AinaaProtectionActive extends AinaaProtectionState {
   final DateTime activatedAt;
-  final String activationType;
+  final AinnaActivationType activationType;
   final String activationBatchPath;
+  final AinnaProtectionAdditionalOptions options;
   const AinaaProtectionActive({
     required this.activatedAt,
     required this.activationType,
     required this.activationBatchPath,
+    required this.options,
     super.isLoading = false,
     super.errorMessage,
   });
@@ -39,14 +41,16 @@ class AinaaProtectionActive extends AinaaProtectionState {
     activatedAt,
     activationType,
     activationBatchPath,
+    options,
   ];
 
   AinaaProtectionActive copyWith({
     bool? isLoading,
     LocalizedString? errorMessage,
     DateTime? activatedAt,
-    String? activationType,
+    AinnaActivationType? activationType,
     String? activationBatchPath,
+    AinnaProtectionAdditionalOptions? options,
   }) {
     return AinaaProtectionActive(
       isLoading: isLoading ?? false,
@@ -54,6 +58,7 @@ class AinaaProtectionActive extends AinaaProtectionState {
       activatedAt: activatedAt ?? this.activatedAt,
       activationType: activationType ?? this.activationType,
       activationBatchPath: activationBatchPath ?? this.activationBatchPath,
+      options: options ?? this.options,
     );
   }
 }

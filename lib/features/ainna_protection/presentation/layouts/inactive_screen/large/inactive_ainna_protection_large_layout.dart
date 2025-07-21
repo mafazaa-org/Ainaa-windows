@@ -17,7 +17,12 @@ class InactiveAinnaProtectionLargeLayout extends StatelessWidget {
     return Stack(
       alignment: Alignment.topCenter,
       children: [
-        AppLogoBackground(),
+        Positioned(
+          top: AppSpacing.xl,
+          left: 0,
+          right: 0,
+          child: AppLogoBackground(),
+        ),
         SingleChildScrollView(
           padding: EdgeInsets.symmetric(
             horizontal: width * .05,
