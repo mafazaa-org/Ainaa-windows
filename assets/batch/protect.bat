@@ -2,6 +2,7 @@
 
 :: Main script for managing blocker functionalities
 
+
 :start
 
     if "%~1"=="" (
@@ -40,6 +41,8 @@
     NET SESSION >nul 2>&1
     if %errorlevel% == 0 (
         echo running protect...
+
+        pushd "%TEMP%"
     ) else (
         echo Requesting administrator permissions...
         :: Re-launch as admin
@@ -125,6 +128,7 @@
 
     @rem hosts file script
 
+
     if /i not "%~2"=="high" if /i not "%~2"=="low" (
         echo Error: Level must be either "high" or "low"
         exit /b 1
@@ -134,7 +138,7 @@
         echo Error: YouTube setting must be either "true" or "false"
         exit /b 1
     )
-
+    
     set "level=%~2"
     set "youtube=%~3"
 
@@ -150,12 +154,13 @@
 
     set "act=applying"
     set "past_act=applied"
-
+    
     call :hostsFileScript
 
     call :apply_dns
 
     echo exiting
+
     exit /b 0
 
 :: --- common used functions ---
@@ -163,7 +168,7 @@
 :: --- hosts file script ---
 :hostsFileScript
     echo %act% layer %layer% protection
-    set file=C:\Windows\System32\drivers\etc\hosts
+    set file_path=C:\Windows\System32\drivers\etc\hosts
 
     :: Check if hosts already exists in the file
     findstr /x /c:"#mafazaa-hosts-start" "%file_path%" >nul
