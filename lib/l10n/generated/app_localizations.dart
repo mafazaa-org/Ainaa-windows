@@ -319,6 +319,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'يمكنك التحديث للحصول علي اخر التحسينات'**
   String get optional_update_app_msg;
+
+  /// No description provided for @update.
+  ///
+  /// In en, this message translates to:
+  /// **'تحديث'**
+  String get update;
+
+  /// No description provided for @something_went_wrong.
+  ///
+  /// In en, this message translates to:
+  /// **'حدثت شيء ما، حاول مره اخري'**
+  String get something_went_wrong;
 }
 
 class _AppLocalizationsDelegate

@@ -19,7 +19,7 @@ import 'package:flutter/material.dart';
 ///   context: context,
 ///   builder:
 ///       (context) => Dialog(
-///         child: AppConfirmLayout(
+///         child: AppDialogLayout(
 ///           text: "Are you Sure",
 ///           actionText: "Yes",
 ///           onPressed: () {
@@ -38,7 +38,7 @@ import 'package:flutter/material.dart';
 /// {@end-tool}
 ///
 
-class AppConfirmLayout extends StatelessWidget {
+class AppDialogLayout extends StatelessWidget {
   final String text;
   final String? subText;
   final String actionText;
@@ -50,7 +50,7 @@ class AppConfirmLayout extends StatelessWidget {
   ///
   /// typically used with [showDialog] and [Dialog]
 
-  const AppConfirmLayout({
+  const AppDialogLayout({
     super.key,
     required this.text,
     this.subText,

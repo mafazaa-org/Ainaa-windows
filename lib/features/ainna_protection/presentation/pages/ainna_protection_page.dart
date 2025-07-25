@@ -1,4 +1,4 @@
-import 'package:blocker_windows/constants/confirm_overlay.dart';
+import 'package:blocker_windows/constants/dialog_overlay.dart';
 import 'package:blocker_windows/constants/loading_overlay.dart';
 import 'package:blocker_windows/features/app_meta_data/domain/entities/app_meta_data_entity.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
@@ -30,7 +30,7 @@ class AinnaProtectionPage extends StatelessWidget {
                   {
                     if (errorMessage != null)
                       {
-                        ConfirmOverlay.show(
+                        DialogOverlay.show(
                           context,
                           child: AinnaProtectionErrorLayout(
                             errorMessage,
@@ -41,7 +41,7 @@ class AinnaProtectionPage extends StatelessWidget {
                     else if (isLoading)
                       {LoadingOverlay.show(context)}
                     else
-                      {ConfirmOverlay.hide(), LoadingOverlay.hide()},
+                      {DialogOverlay.hide(), LoadingOverlay.hide()},
                   },
               },
           builder:

@@ -100,7 +100,6 @@ final class AppTheme {
       highlightColor: appColors.transparent,
       // remove ripple effect
       splashFactory: NoSplash.splashFactory,
-      indicatorColor: appColors.decoration,
       popupMenuTheme: PopupMenuThemeData(
         shape: RoundedRectangleBorder(borderRadius: AppStyles.borderRadiusM),
       ),
@@ -117,6 +116,7 @@ final class AppTheme {
       elevatedButtonTheme: elevatedButtonThemeData,
       iconTheme: iconThemeData,
       iconButtonTheme: iconButtonTheme,
+      secondaryHeaderColor: appColors.decoration,
       // textButtonTheme: TextButtonThemeData(
       //   style: TextButton.styleFrom(
       //     minimumSize: Size.zero, // allows text to control height

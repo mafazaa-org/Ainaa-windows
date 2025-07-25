@@ -24,6 +24,7 @@ class AppActionButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: mainAction ? primaryColor : transparentColor,
+        elevation: mainAction ? 1.0 : 0.0,
         shape: RoundedRectangleBorder(
           side: mainAction ? BorderSide.none : BorderSide(color: primaryColor),
           borderRadius: AppStyles.borderRadiusXS,

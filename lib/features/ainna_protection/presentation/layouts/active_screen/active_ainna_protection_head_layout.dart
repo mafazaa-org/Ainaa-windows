@@ -1,5 +1,5 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/confirm_overlay.dart';
+import 'package:blocker_windows/constants/dialog_overlay.dart';
 import 'package:blocker_windows/constants/loading_overlay.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_domain_protection_cubit/ainaa_domain_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/large/active_ainna_protection_large_screen.dart';
@@ -15,7 +15,7 @@ class ActiveAinnaProtectionHeadLayout extends StatelessWidget {
     return BlocListener<AinaaDomainProtectionCubit, AinaaDomainProtectionState>(
       listener: (context, state) {
         if (state.errorMessage != null) {
-          ConfirmOverlay.show(
+          DialogOverlay.show(
             context,
             child: AinnaProtectionErrorLayout(
               state.errorMessage!,
@@ -26,7 +26,7 @@ class ActiveAinnaProtectionHeadLayout extends StatelessWidget {
           LoadingOverlay.show(context);
         } else {
           LoadingOverlay.hide();
-          ConfirmOverlay.hide();
+          DialogOverlay.hide();
         }
       },
 

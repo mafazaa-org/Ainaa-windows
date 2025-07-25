@@ -34,7 +34,7 @@ class AppBarLargeLayout extends StatelessWidget {
           CustomPaint(
             size: Size(double.maxFinite, 0.5), // Width x Height
             painter: SharpLinePainter(
-              context.theme.indicatorColor,
+              context.theme.secondaryHeaderColor,
               context.theme.scaffoldBackgroundColor,
             ),
           ),

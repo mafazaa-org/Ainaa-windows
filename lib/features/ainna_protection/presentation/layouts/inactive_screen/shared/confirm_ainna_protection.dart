@@ -12,7 +12,7 @@ void confirmAinnaProtection(
     barrierDismissible: false,
     builder:
         (context) => Dialog(
-          child: AppConfirmLayout(
+          child: AppDialogLayout(
             text: appLocalizations.want_to_activate_protection,
             subText: appLocalizations.want_to_activate_protection_desc,
             actionText: appLocalizations.confirm_activate_protection,
@@ -21,7 +21,7 @@ void confirmAinnaProtection(
               onConfirm.call();
             },
             cancelText: appLocalizations.later,
-            onCancelTap: () => Navigator.maybePop(context),
+            onCancelPressed: () => Navigator.maybePop(context),
           ),
         ),
   );

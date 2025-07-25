@@ -16,7 +16,7 @@ class AinnaProtectionErrorLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final appLocalizations = AppLocalizations.of(context)!;
     return Dialog(
-      child: AppConfirmLayout(
+      child: AppDialogLayout(
         text: errorMessage.get(),
         actionText: appLocalizations.ok,
         onPressed: onPressed,

@@ -126,4 +126,10 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get optional_update_app_msg =>
       'يمكنك التحديث للحصول علي اخر التحسينات';
+
+  @override
+  String get update => 'تحديث';
+
+  @override
+  String get something_went_wrong => 'حدثت شيء ما، حاول مره اخري';
 }
