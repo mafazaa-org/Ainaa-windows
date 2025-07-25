@@ -101,8 +101,11 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     color: appTextColors.textActionPrimary,
   );
 
-  TextStyle get textActionTertiary =>
-      confirmActionLabel.copyWith(color: appTextColors.textActionTertiary);
+  TextStyle get confirmActionSecondary =>
+      confirmActionLabel.copyWith(color: appTextColors.textActionSecondary);
+
+  TextStyle get confirmActionTertiary =>
+      confirmActionLabel.copyWith(color: appTextColors.confirmActionTertiary);
 
   TextStyle get navLabel => TextStyle(
     fontSize: 20.0.h,

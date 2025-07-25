@@ -7,7 +7,7 @@ class AppTextColors extends ThemeExtension<AppTextColors> {
   final Color textHeading;
   final Color textActionPrimary;
   final Color textActionSecondary;
-  final Color textActionTertiary;
+  final Color confirmActionTertiary;
   final Color errorText;
   final Color successText;
   final Color warningText;
@@ -19,7 +19,7 @@ class AppTextColors extends ThemeExtension<AppTextColors> {
     required this.textHeading,
     required this.textActionPrimary,
     required this.textActionSecondary,
-    required this.textActionTertiary,
+    required this.confirmActionTertiary,
     required this.errorText,
     required this.successText,
     required this.warningText,
@@ -33,7 +33,7 @@ class AppTextColors extends ThemeExtension<AppTextColors> {
     Color? textHeading,
     Color? textActionPrimary,
     Color? textActionSecondary,
-    Color? textActionTertiary,
+    Color? confirmActionTertiary,
     Color? errorText,
     Color? successText,
     Color? warningText,
@@ -45,7 +45,8 @@ class AppTextColors extends ThemeExtension<AppTextColors> {
       textHeading: textHeading ?? this.textHeading,
       textActionPrimary: textActionPrimary ?? this.textActionPrimary,
       textActionSecondary: textActionSecondary ?? this.textActionSecondary,
-      textActionTertiary: textActionTertiary ?? this.textActionTertiary,
+      confirmActionTertiary:
+          confirmActionTertiary ?? this.confirmActionTertiary,
       errorText: errorText ?? this.errorText,
       successText: successText ?? this.successText,
       warningText: warningText ?? this.warningText,
@@ -62,8 +63,8 @@ class AppTextColors extends ThemeExtension<AppTextColors> {
           Color.lerp(a.textActionPrimary, b.textActionPrimary, t)!,
       textActionSecondary:
           Color.lerp(a.textActionSecondary, b.textActionSecondary, t)!,
-      textActionTertiary:
-          Color.lerp(a.textActionTertiary, b.textActionTertiary, t)!,
+      confirmActionTertiary:
+          Color.lerp(a.confirmActionTertiary, b.confirmActionTertiary, t)!,
       errorText: Color.lerp(a.errorText, b.errorText, t)!,
       successText: Color.lerp(a.successText, b.successText, t)!,
       warningText: Color.lerp(a.warningText, b.warningText, t)!,
@@ -89,7 +90,7 @@ class AppTextColors extends ThemeExtension<AppTextColors> {
     textHeading: Color(0xFFFFFFFF),
     textActionPrimary: Color(0xFFFFFFFF),
     textActionSecondary: Color(0xFFE0462D),
-    textActionTertiary: Color(0xFF7B7B7B),
+    confirmActionTertiary: Color(0xFF7B7B7B),
     errorText: Colors.deepOrange,
     successText: Colors.green,
     warningText: Colors.orange,

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 
 ///Global confirm overlay that is sit above all widget tree
-///Show confirm overlay [ConfirmOverlay.show]
-///Hide confirm overlay [ConfirmOverlay.hide]
+///Show confirm overlay [DialogOverlay.show]
+///Hide confirm overlay [DialogOverlay.hide]
 
-final class ConfirmOverlay {
+final class DialogOverlay {
   static OverlayEntry? _overlayEntry;
   static final Logger _logger = Logger();
 
@@ -17,13 +17,13 @@ final class ConfirmOverlay {
   }) {
     try {
       if (_overlayEntry != null) {
-        _logger.w('ConfirmOverlay already visible');
+        _logger.w('DialogOverlay already visible');
         return;
       }
 
       _overlayEntry = OverlayEntry(
         builder:
-            (context) => _ConfirmOverlayContent(
+            (context) => _DialogOverlayContent(
               barrierColor:
                   barrierColor ?? Theme.of(context).shadowColor.withAlpha(120),
               dismissible: barrierDismissible,
@@ -33,9 +33,9 @@ final class ConfirmOverlay {
       );
 
       Overlay.of(context, rootOverlay: true).insert(_overlayEntry!);
-      // _logger.d('ConfirmOverlay shown');
+      // _logger.d('DialogOverlay shown');
     } catch (e, stack) {
-      _logger.e('Failed to show ConfirmOverlay', error: e, stackTrace: stack);
+      _logger.e('Failed to show DialogOverlay', error: e, stackTrace: stack);
       rethrow;
     }
   }
@@ -45,23 +45,23 @@ final class ConfirmOverlay {
     try {
       _overlayEntry?.remove();
       _overlayEntry = null;
-      // _logger.d('ConfirmOverlay hidden');
+      // _logger.d('DialogOverlay hidden');
     } catch (e, stack) {
-      _logger.e('Failed to hide ConfirmOverlay', error: e, stackTrace: stack);
+      _logger.e('Failed to hide DialogOverlay', error: e, stackTrace: stack);
       rethrow;
     }
   }
 
-  const ConfirmOverlay._();
+  const DialogOverlay._();
 }
 
-class _ConfirmOverlayContent extends StatelessWidget {
+class _DialogOverlayContent extends StatelessWidget {
   final Widget child;
   final Color barrierColor;
   final bool dismissible;
   final VoidCallback onDismiss;
 
-  const _ConfirmOverlayContent({
+  const _DialogOverlayContent({
     required this.child,
     required this.barrierColor,
     required this.dismissible,
