@@ -2,24 +2,40 @@ import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
 import 'package:flutter/material.dart';
 
-class AppConfirmButton extends StatelessWidget {
-  const AppConfirmButton({
+class AppActionButton extends StatelessWidget {
+  const AppActionButton({
     super.key,
     required this.onPressed,
     required this.actionText,
+    this.mainAction = true,
   });
 
   final void Function()? onPressed;
   final String actionText;
+  final bool mainAction;
 
   @override
   Widget build(BuildContext context) {
+    final theme = context.theme;
+    final textStyles = context.textStyles;
+    final primaryColor = theme.primaryColor;
+    final transparentColor = theme.scaffoldBackgroundColor;
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: AppStyles.borderRadiusXS),
+        backgroundColor: mainAction ? primaryColor : transparentColor,
+        shape: RoundedRectangleBorder(
+          side: mainAction ? BorderSide.none : BorderSide(color: primaryColor),
+          borderRadius: AppStyles.borderRadiusXS,
+        ),
       ),
-      child: Text(actionText, style: context.textStyles.confirmActionLabel),
+      child: Text(
+        actionText,
+        style:
+            mainAction
+                ? textStyles.confirmActionLabel
+                : textStyles.confirmActionSecondary,
+      ),
     );
   }
 }

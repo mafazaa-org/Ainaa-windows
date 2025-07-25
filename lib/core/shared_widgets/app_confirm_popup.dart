@@ -2,14 +2,13 @@ import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:blocker_windows/core/shared_widgets/app_confirm_button.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
-import 'package:blocker_windows/core/shared_widgets/app_text_button.dart';
 import 'package:flutter/material.dart';
 
 /// A widget that shows the layout in pop up window like [showDialog].
 ///
 /// Contains a text and optional sub text,
 /// with two action buttons when agreeing to the dialog [onPressed]
-/// and when the dialog is not accepted [onCancelTap]
+/// and when the dialog is not accepted [onCancelPressed]
 ///
 /// {@tool snippet}
 ///
@@ -28,7 +27,7 @@ import 'package:flutter/material.dart';
 ///             .... //an action
 ///           },
 ///           cancelText: "No",
-///           onCancelTap: () {
+///           onCancelPressed: () {
 ///              .... //an action
 ///              Navigator.maybePop(context),
 ///           }
@@ -45,7 +44,7 @@ class AppConfirmLayout extends StatelessWidget {
   final String actionText;
   final String? cancelText;
   final void Function()? onPressed;
-  final void Function()? onCancelTap;
+  final void Function()? onCancelPressed;
 
   /// Create a pop up layout.
   ///
@@ -58,7 +57,7 @@ class AppConfirmLayout extends StatelessWidget {
     required this.actionText,
     required this.onPressed,
     this.cancelText,
-    this.onCancelTap,
+    this.onCancelPressed,
   });
 
   @override
@@ -85,13 +84,13 @@ class AppConfirmLayout extends StatelessWidget {
           Row(
             spacing: AppSpacing.sl,
             children: [
-              AppConfirmButton(onPressed: onPressed, actionText: actionText),
+              AppActionButton(onPressed: onPressed, actionText: actionText),
               Visibility(
                 visible: cancelText != null,
-                child: AppTextButton(
-                  text: cancelText ?? '',
-                  onTap: onCancelTap,
-                  textStyle: context.textStyles.textActionTertiary,
+                child: AppActionButton(
+                  onPressed: onCancelPressed,
+                  actionText: cancelText ?? '',
+                  mainAction: false,
                 ),
               ),
             ],
