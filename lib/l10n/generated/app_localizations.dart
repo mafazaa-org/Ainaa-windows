@@ -295,6 +295,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'انضمام'**
   String get join_us;
+
+  /// No description provided for @must_update_app.
+  ///
+  /// In en, this message translates to:
+  /// **'تحديث إلزامي'**
+  String get must_update_app;
+
+  /// No description provided for @must_update_app_to_continue_usage.
+  ///
+  /// In en, this message translates to:
+  /// **'يجب تحديث التطبيق لمواصلة الاستخدام'**
+  String get must_update_app_to_continue_usage;
+
+  /// No description provided for @optional_update_app.
+  ///
+  /// In en, this message translates to:
+  /// **'تحديث جديد متاح'**
+  String get optional_update_app;
+
+  /// No description provided for @optional_update_app_msg.
+  ///
+  /// In en, this message translates to:
+  /// **'يمكنك التحديث للحصول علي اخر التحسينات'**
+  String get optional_update_app_msg;
 }
 
 class _AppLocalizationsDelegate

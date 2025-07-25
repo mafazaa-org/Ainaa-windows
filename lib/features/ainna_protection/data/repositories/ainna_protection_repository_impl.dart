@@ -17,10 +17,10 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     required String activationBatchPath,
-  }) {
+  }) async {
     try {
       // TODO: test the batch in windows
-      runAinnaActivateEmbeddedBatchFile(
+      await runAinnaActivateEmbeddedBatchFile(
         activationType: activationType,
         options: options,
         // activationBatchPath: activationBatchPath,

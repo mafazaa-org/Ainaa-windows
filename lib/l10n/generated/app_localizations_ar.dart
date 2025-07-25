@@ -112,4 +112,18 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get join_us => 'انضمام';
+
+  @override
+  String get must_update_app => 'تحديث إلزامي';
+
+  @override
+  String get must_update_app_to_continue_usage =>
+      'يجب تحديث التطبيق لمواصلة الاستخدام';
+
+  @override
+  String get optional_update_app => 'تحديث جديد متاح';
+
+  @override
+  String get optional_update_app_msg =>
+      'يمكنك التحديث للحصول علي اخر التحسينات';
 }

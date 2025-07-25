@@ -17,7 +17,7 @@ class ActiveAinnaProtectionHeadLayout extends StatelessWidget {
         if (state.errorMessage != null) {
           ConfirmOverlay.show(
             context,
-            AinnaProtectionErrorLayout(
+            child: AinnaProtectionErrorLayout(
               state.errorMessage!,
               context.read<AinaaDomainProtectionCubit>().restErrorMsg,
             ),
@@ -25,8 +25,8 @@ class ActiveAinnaProtectionHeadLayout extends StatelessWidget {
         } else if (state.isProcessing) {
           LoadingOverlay.show(context);
         } else {
-          LoadingOverlay.hide(context);
-          ConfirmOverlay.hide(context);
+          LoadingOverlay.hide();
+          ConfirmOverlay.hide();
         }
       },
 

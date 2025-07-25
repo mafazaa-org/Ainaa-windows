@@ -9,31 +9,48 @@ import 'package:logger/logger.dart';
 
 final class LoadingOverlay {
   static OverlayEntry? _overlayEntry;
-  static final Logger logger = Logger();
+  static final Logger _logger = Logger();
 
   static void show(BuildContext context) {
-    logger.d('in show');
-    if (_overlayEntry != null) return;
+    try {
+      if (_overlayEntry != null) {
+        // _logger.d('Loading overlay already visible');
+        return;
+      }
 
-    _overlayEntry = OverlayEntry(
-      builder:
-          (context) => Container(
-            color: context.theme.shadowColor.withAlpha(120),
-            alignment: Alignment.center,
-            child: AppLoadingLayout(),
-          ),
-    );
+      _overlayEntry = OverlayEntry(
+        builder: (context) => _buildOverlayContent(context),
+      );
 
-    // Insert the overlay into the overlay stack
-    Overlay.of(context).insert(_overlayEntry!);
+      Overlay.of(context).insert(_overlayEntry!);
+      // _logger.d('Loading overlay shown');
+    } catch (e, stack) {
+      _logger.e('Failed to show loading overlay', error: e, stackTrace: stack);
+    }
   }
 
-  static void hide(BuildContext context) {
-    logger.d('hide');
-    if (_overlayEntry != null) {
-      _overlayEntry!.remove(); // Remove the overlay from the stack
-      _overlayEntry = null;
+  static void hide() {
+    try {
+      if (_overlayEntry != null) {
+        _overlayEntry!.remove();
+        _overlayEntry = null;
+        // _logger.d('Loading overlay hidden');
+      }
+    } catch (e, stack) {
+      _logger.e('Failed to hide loading overlay', error: e, stackTrace: stack);
     }
+  }
+
+  static Widget _buildOverlayContent(BuildContext context) {
+    return Stack(
+      children: [
+        ModalBarrier(
+          color: context.theme.shadowColor.withAlpha(120),
+          dismissible: false,
+        ),
+        Center(child: AppLoadingLayout()),
+      ],
+    );
   }
 
   const LoadingOverlay._();

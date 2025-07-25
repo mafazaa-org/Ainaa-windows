@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/app_init_data/domain/entities/ainna_protection_level_entity.dart';
+import 'package:blocker_windows/features/app_meta_data/domain/entities/ainna_protection_level_entity.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 import 'package:blocker_windows/core/utils/text_form_validations.dart';

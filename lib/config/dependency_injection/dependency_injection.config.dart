@@ -9,17 +9,17 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:blocker_windows/core/app_init_data/data/repositories/app_meta_data_test_repository_impl.dart'
+import 'package:blocker_windows/features/app_meta_data/data/repositories/app_meta_data_test_repository_impl.dart'
     as _i811;
-import 'package:blocker_windows/core/app_init_data/data/repositories/app_required_version_repository_impl.dart'
+import 'package:blocker_windows/features/version_check/data/repositories/app_required_version_repository_impl.dart'
     as _i668;
-import 'package:blocker_windows/core/app_init_data/domain/repositories/app_meta_data_repository.dart'
+import 'package:blocker_windows/features/app_meta_data/domain/repositories/app_meta_data_repository.dart'
     as _i1037;
-import 'package:blocker_windows/core/app_init_data/domain/repositories/app_required_version_repository.dart'
+import 'package:blocker_windows/features/version_check/domain/repositories/app_required_version_repository.dart'
     as _i252;
-import 'package:blocker_windows/core/app_init_data/get_app_meta_data_cubit/get_app_meta_data_cubit.dart'
+import 'package:blocker_windows/features/app_meta_data/presentation/get_app_meta_data_cubit/get_app_meta_data_cubit.dart'
     as _i433;
-import 'package:blocker_windows/core/app_init_data/get_app_version_cubit/get_app_version_cubit.dart'
+import 'package:blocker_windows/features/version_check/presentation/get_app_version_cubit/get_app_version_cubit.dart'
     as _i635;
 import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_protection_repository_impl.dart'
     as _i640;

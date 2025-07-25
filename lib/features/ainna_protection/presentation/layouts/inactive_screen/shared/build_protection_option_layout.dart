@@ -1,5 +1,5 @@
 import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/core/app_init_data/domain/entities/ainna_protection_level_entity.dart';
+import 'package:blocker_windows/features/app_meta_data/domain/entities/ainna_protection_level_entity.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/card_layout/build_card_layout.dart';
 import 'package:flutter/material.dart';
