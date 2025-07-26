@@ -11,6 +11,7 @@ abstract class AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     required String activationBatchPath,
+    required String phoneNumber,
   });
   Future<AinnaProtectActionStatus> reactivate({
     required AinnaActivationType activationType,

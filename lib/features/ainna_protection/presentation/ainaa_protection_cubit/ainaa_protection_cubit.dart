@@ -28,6 +28,7 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
         activationType: activationType,
         options: {},
         activationBatchPath: activationBatchPath,
+        phoneNumber: phoneNumber,
       );
       response.when(
         success:

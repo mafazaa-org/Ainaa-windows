@@ -2,6 +2,7 @@ import 'package:blocker_windows/config/dependency_injection/dependency_injection
 import 'package:blocker_windows/core/resources/data_state.dart';
 import 'package:blocker_windows/core/types/localized_string.dart';
 import 'package:blocker_windows/features/ainna_protection/data/repositories/run_batches.dart';
+import 'package:blocker_windows/features/ainna_protection/data/repositories/submit_phone_number_via_form.dart';
 import 'package:blocker_windows/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
@@ -17,18 +18,18 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     required String activationBatchPath,
+    required String phoneNumber,
   }) async {
     try {
-      // TODO: test the batch in windows
       await runAinnaActivateEmbeddedBatchFile(
         activationType: activationType,
         options: options,
         // activationBatchPath: activationBatchPath,
       );
-      // TODO: send the phone number to the google cheet
+      await submitPhoneNumberViaForm(phoneNumber);
       return Future.value(Success(true));
     } catch (e) {
-      logger.w('Failed activate, to run .bat file: $e');
+      logger.w('Failed activate, to run .bat file: ${e.runtimeType}, $e');
       final error = LocalizedString.fromArString(e.toString());
       return Future.value(Failure(error));
     }

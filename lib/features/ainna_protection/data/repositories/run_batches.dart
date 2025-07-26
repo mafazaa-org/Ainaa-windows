@@ -1,6 +1,7 @@
 import 'dart:convert' show utf8;
 import 'dart:io' show File, Directory, Process;
 
+import 'package:blocker_windows/config/exceptions/upload_exception.dart';
 import 'package:blocker_windows/constants/app_constants.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
@@ -11,13 +12,13 @@ Future<void> runAinnaActivateEmbeddedBatchFile({
   required AinnaActivationType activationType,
   required AinnaProtectionAdditionalOptions options,
 }) async {
-  _runBatchScript(
+  await _runBatchScript(
     'apply ${activationType.name} ${options.contains(AinnaProtectionAdditionalOption.youtube)}',
   );
 }
 
 Future<void> runAinnaDeactivateEmbeddedBatchFile() async {
-  _runBatchScript("deactivate");
+  await _runBatchScript("deactivate");
 }
 
 Future<void> runDomainProtectionEmbeddedBatchFile(String url) async {
@@ -52,9 +53,13 @@ Future<void> _runBatchScript(String args) async {
     process.stderr.transform(utf8.decoder).listen(logger.w);
 
     final exitCode = await process.exitCode;
+    if (exitCode != 0) {
+      throw UploadException('Script failed: ${process.stderr}');
+    }
     logger.i('Process exited with code $exitCode');
   } catch (e) {
     logger.e('Error executing batch file: $e');
+    rethrow;
   } finally {
     await tempBatch.delete();
     await domainsFile.delete();

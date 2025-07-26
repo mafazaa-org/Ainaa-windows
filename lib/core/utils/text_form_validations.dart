@@ -8,7 +8,7 @@ final class TextFormValidations {
     if (value == null || value.isEmpty) {
       return appLocalizations.require_valid_phone_number;
     }
-    final regex = RegExp(r'^\+?[0-9]{10,18}$');
+    final regex = RegExp(r'^\+?[0-9]{9,14}$');
     if (!regex.hasMatch(value)) {
       return appLocalizations.require_valid_phone_number;
     }
@@ -19,7 +19,7 @@ final class TextFormValidations {
     if (value == null || value.isEmpty) {
       return false;
     }
-    final regex = RegExp(r'^\+?[0-9]{10,18}$');
+    final regex = RegExp(r'^\+?[0-9]{9,14}$');
     if (!regex.hasMatch(value)) {
       return false;
     }

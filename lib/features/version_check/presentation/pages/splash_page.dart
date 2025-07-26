@@ -36,7 +36,11 @@ class _SplashPageState extends State<SplashPage> {
                     Loading() => LoadingOverlay.show(context),
                     Unmatched() => _handleUnmatchedVersion(context, state),
                     Matched() => navigateToHome(context),
-                    _ => LoadingOverlay.hide(),
+                    AinnaFilesUnmatched() => _handleUpdatesTheFiles(
+                      context,
+                      state,
+                    ),
+                    // _ => LoadingOverlay.hide(),
                   },
 
               child: Column(

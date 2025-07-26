@@ -18,11 +18,13 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     required String activationBatchPath,
+    required String phoneNumber,
   }) async {
     logger.i(
       'activationBatchPath: $activationBatchPath \n activationType: ${activationType.name} \n options: $options',
     );
     await Future.delayed(const Duration(seconds: 2));
+    // await submitPhoneNumberViaForm(phoneNumber);
     return Future.value(Success(true));
     // final error = LocalizedString.fromArString(
     //   errorMockData.responseTimeOut['ar'],
