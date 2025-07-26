@@ -1,3 +1,4 @@
+import 'package:blocker_windows/constants/app_images_url.dart';
 import 'package:blocker_windows/constants/dialog_overlay.dart';
 import 'package:blocker_windows/constants/loading_overlay.dart';
 import 'package:blocker_windows/core/shared_widgets/app_logo.dart';
@@ -22,6 +23,19 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     context.read<GetAppRequiredVersionCubit>().loadAppVersion();
     context.read<GetAppMetaDataCubit>().loadInitialMetaData();
+    _preloadImages();
+  }
+
+  void _preloadImages() {
+    final images = [
+      AppImagesUrl.mainLogo,
+      AppImagesUrl.backgroundLogo,
+      AppImagesUrl.supportBackground,
+    ];
+
+    for (final path in images) {
+      precacheImage(AssetImage(path), context);
+    }
   }
 
   @override
