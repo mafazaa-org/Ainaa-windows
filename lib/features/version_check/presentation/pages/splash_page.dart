@@ -21,9 +21,9 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
+    _preloadImages();
     context.read<GetAppRequiredVersionCubit>().loadAppVersion();
     context.read<GetAppMetaDataCubit>().loadInitialMetaData();
-    _preloadImages();
   }
 
   void _preloadImages() {
