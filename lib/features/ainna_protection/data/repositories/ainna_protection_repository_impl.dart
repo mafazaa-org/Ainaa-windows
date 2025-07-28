@@ -17,10 +17,9 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     required String activationBatchPath,
-  }) {
+  }) async {
     try {
-      // TODO: test the batch in windows
-      runAinnaActivateEmbeddedBatchFile(
+      await runAinnaActivateEmbeddedBatchFile(
         activationType: activationType,
         options: options,
         // activationBatchPath: activationBatchPath,
@@ -35,10 +34,9 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
   }
 
   @override
-  Future<AinnaProtectActionStatus> deactivate() {
+  Future<AinnaProtectActionStatus> deactivate() async {
     try {
-      // TODO: test in windows
-      runAinnaDeactivateEmbeddedBatchFile();
+      await runAinnaDeactivateEmbeddedBatchFile();
       return Future.value(Success(true));
     } catch (e) {
       logger.w('Failed deactivate, to run .bat file: $e');
@@ -52,10 +50,9 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     required String activationBatchPath,
-  }) {
+  }) async {
     try {
-      // TODO: test reactivate the batch in windows
-      runAinnaActivateEmbeddedBatchFile(
+      await runAinnaActivateEmbeddedBatchFile(
         activationType: activationType,
         options: options,
         // activationBatchPath: activationBatchPath,
@@ -70,10 +67,9 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
   }
 
   @override
-  Future<AinnaDomainProtectActionStatus> domainProtection(String url) {
+  Future<AinnaDomainProtectActionStatus> domainProtection(String url) async {
     try {
-      // TODO: test reactivate the batch in windows
-      runDomainProtectionEmbeddedBatchFile(url);
+      await runDomainProtectionEmbeddedBatchFile(url);
       return Future.value(Success(url));
     } catch (e) {
       logger.w('Failed reactivate, to run .bat file: $e');

@@ -38,6 +38,8 @@ SolidCompression=yes
 WizardStyle=modern
 WizardImageFile=O:\mafazaa\ainaa\windows\installers\wizard_image.bmp
 
+DisableDirPage=yes
+AlwaysShowDirOnReadyPage=yes
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -52,6 +54,9 @@ Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\data\*"; Dest
 Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "O:\mafazaa\ainaa\windows\assets\batch\*"; DestDir: "{app}\batch"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[Dirs]
+Name: "{app}\logs";
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
