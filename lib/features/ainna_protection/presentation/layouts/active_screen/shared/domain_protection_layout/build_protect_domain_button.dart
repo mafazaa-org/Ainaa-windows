@@ -3,7 +3,10 @@ part of 'build_specific_domain_protection_layout.dart';
 class _BuildProtectDomainButton extends StatelessWidget {
   final String? value;
   final bool isValid;
-  const _BuildProtectDomainButton({required this.value, required this.isValid});
+  final FormFieldState<String> field;
+  _BuildProtectDomainButton({required this.field})
+    : isValid = field.isValid,
+      value = field.value;
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +19,13 @@ class _BuildProtectDomainButton extends StatelessWidget {
         text: appLocalizations.save,
         onPressed:
             (isValid && value != null)
-                ? () {
-                  context.read<AinaaDomainProtectionCubit>().domainProtection(
-                    value!,
-                  );
+                ? () async {
+                  final isSuccess = await context
+                      .read<AinaaDomainProtectionCubit>()
+                      .domainProtection(value!);
+                  if (isSuccess) {
+                    field.reset();
+                  }
                 }
                 : null,
       ),

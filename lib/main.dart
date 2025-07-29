@@ -16,7 +16,7 @@ void main() async {
     ),
   );
 
-  await configurationDependency(Env.prod);
+  await configurationDependency(Env.dev);
 
   //text styling according to sp
   await ScreenUtil.ensureScreenSize();

@@ -27,10 +27,7 @@ class BuildDomainProtectionFormLayout extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _BuildDomainProtectionFormLayout(field: field),
-            _BuildProtectDomainButton(
-              value: field.value,
-              isValid: field.isValid,
-            ),
+            _BuildProtectDomainButton(field: field),
           ],
         );
       },
