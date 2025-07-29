@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 final class AppStyles {
+  ///circular 6
   static BorderRadius get borderRadiusXS => BorderRadius.circular(6);
+
+  ///circular 8
   static BorderRadius get borderRadiusM => BorderRadius.circular(8);
+
+  ///circular 16
   static BorderRadius get borderRadiusML => BorderRadius.circular(16);
   static OutlineInputBorder outlineInputBorderXS({
     required Color color,

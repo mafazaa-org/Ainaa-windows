@@ -1,6 +1,7 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
+@Deprecated('Replaced by: Text("...", style: context.textStyles.headingLarge)')
 class AppTextGradientPrimary extends StatelessWidget {
   final String text;
   final Gradient? gradient;

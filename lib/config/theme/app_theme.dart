@@ -88,7 +88,10 @@ final class AppTheme {
     );
     final iconThemeData = IconThemeData(color: appColors.onPrimary);
     final iconButtonTheme = IconButtonThemeData(
-      style: IconButton.styleFrom(foregroundColor: appColors.background),
+      style: IconButton.styleFrom(
+        // backgroundColor: appColors.onPrimary,
+        foregroundColor: appColors.onPrimary,
+      ),
     );
 
     return ThemeData(
