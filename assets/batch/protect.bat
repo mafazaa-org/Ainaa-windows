@@ -1,12 +1,12 @@
 @echo off
-
+chcp 65001
 :: Main script for managing blocker functionalities
 goto :start
 
 :: --- log function ---
 :log
     setlocal
-    set "logDir=%ProgramFiles%\Mafazaa\Ainaa\logs"
+    set "logDir=%ProgramFiles%\مفازا\عينا سلسبيلا\logs"
    
     echo [%date% %time%] %* >> "%logDir%\protect.log"
     endlocal
@@ -240,6 +240,14 @@ goto :start
 
     if /i "%youtube%"=="false" (
 
+        call :log making sure youtube domains aren't in hosts file
+            
+        for /f "usebackq delims=" %%d in ("youtube.txt") do (
+        call :log removing "%%d" from hosts file
+            findstr /v /x /c:"%%d" "%file_path%" > "%file_path%.tmp"
+            move /y "%file_path%.tmp" "%file_path%" >nul
+        )
+        
         exit /b 0
     )
 
