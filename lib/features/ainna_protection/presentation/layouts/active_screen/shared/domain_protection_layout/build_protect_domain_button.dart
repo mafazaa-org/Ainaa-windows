@@ -4,7 +4,8 @@ class _BuildProtectDomainButton extends StatelessWidget {
   final String? value;
   final bool isValid;
   final FormFieldState<String> field;
-  _BuildProtectDomainButton({required this.field})
+  final TextEditingController controller;
+  _BuildProtectDomainButton(this.field, this.controller)
     : isValid = field.isValid,
       value = field.value;
 
@@ -24,6 +25,7 @@ class _BuildProtectDomainButton extends StatelessWidget {
                       .read<AinaaDomainProtectionCubit>()
                       .domainProtection(value!);
                   if (isSuccess) {
+                    controller.clear();
                     field.reset();
                   }
                 }

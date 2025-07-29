@@ -22,12 +22,16 @@ class BuildDomainProtectionFormLayout extends StatelessWidget {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) => (TextFormValidations.url(appLocalizations, value)),
       builder: (field) {
+        final controller = TextEditingController(text: field.value);
+        controller.selection = TextSelection.fromPosition(
+          TextPosition(offset: controller.text.length),
+        );
         return Column(
           spacing: AppSpacing.xs,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _BuildDomainProtectionFormLayout(field: field),
-            _BuildProtectDomainButton(field: field),
+            _BuildDomainProtectionFormLayout(field, controller),
+            _BuildProtectDomainButton(field, controller),
           ],
         );
       },
