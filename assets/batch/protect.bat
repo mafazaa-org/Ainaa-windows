@@ -14,6 +14,15 @@ goto :start
 
 
 :start
+    call :log :::: start ::::
+    call :log Working directory: %CD%
+    call :log the location of the batch script: %~dp0
+    call :log command run: %CMDCMDLINE%
+    call :log args: %*
+
+    cd %~dp0
+    call :log changed directory to the location of the batch script
+    call :log current working directory: %CD%
 
     if "%~1"=="" (
         goto :show_usage
@@ -50,13 +59,12 @@ goto :start
     :: Check for admin rights
     NET SESSION >nul 2>&1
     if %errorlevel% == 0 (
-        call :log :::: start ::::
         echo running protect...
     ) else (
         call :log Requesting administrator permissions...
         echo Requesting administrator permissions...
         :: Re-launch as admin
-        PowerShell -Command "Start-Process cmd -ArgumentList '/c %~dpnx0 %*' -Verb RunAs"
+        PowerShell -Command "Start-Process cmd -ArgumentList '/c %~dpnx0 %*' -Verb RunAs -WorkingDirectory '%~dp0' -Wait"
         
         call :log :::: finish ::::
         echo exiting
@@ -226,6 +234,22 @@ goto :start
     echo %act% layer %layer% protection
     set file_path=C:\Windows\System32\drivers\etc\hosts
 
+
+    call :log checking existence of domains.txt and youtube.txt
+
+    :: checks files
+    if exist "domains.txt" (
+        call :log domains.txt exists
+    ) else (
+        call :log Warning: domains.txt does not exist
+    )
+
+    if exist "youtube.txt" (
+        call :log youtube.txt exists
+    ) else (
+        call :log Warning: youtube.txt does not exist
+    )
+
     :: Check if hosts already exists in the file
     findstr /x /c:"#mafazaa-hosts-start" "%file_path%" >nul
     if %ERRORLEVEL% equ 1 (
@@ -272,7 +296,7 @@ goto :start
 
     @rem chrome script from the registry editor
     :regEditChromeScript
-    set /a layer=1
+    set /a layer=%layer%+1
 
     echo applying layer %layer% protection
     call :log applying DnsOverHttps for google chrome

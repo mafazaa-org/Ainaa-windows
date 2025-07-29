@@ -11,17 +11,17 @@ Future<void> runAinnaActivateEmbeddedBatchFile({
   required AinnaActivationType activationType,
   required AinnaProtectionAdditionalOptions options,
 }) async {
-  _runBatchScript(
+  await _runBatchScript(
     'apply ${activationType.name} ${options.contains(AinnaProtectionAdditionalOption.youtube)}',
   );
 }
 
 Future<void> runAinnaDeactivateEmbeddedBatchFile() async {
-  _runBatchScript("deactivate");
+  await _runBatchScript("deactivate");
 }
 
 Future<void> runDomainProtectionEmbeddedBatchFile(String url) async {
-  _runBatchScript('add_domain "0.0.0.0 $url"');
+  await _runBatchScript('add_domain "0.0.0.0 $url"');
 }
 
 Future<void> _runBatchScript(String args) async {
@@ -50,7 +50,7 @@ Future<void> _runBatchScript(String args) async {
 
     final process = await Process.start(
       'cmd.exe',
-      ['/k', 'protect.bat $args'],
+      ['/c', 'protect.bat $args'],
       runInShell: true,
       workingDirectory: destDir.path,
     );
@@ -64,6 +64,7 @@ Future<void> _runBatchScript(String args) async {
     logger.e('Error executing batch file: $e');
   } finally {
     if (await destDir.exists()) {
+      logger.i("deleting the temp dir");
       await destDir.delete(recursive: true);
     }
   }
