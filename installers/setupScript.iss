@@ -13,7 +13,7 @@
 AppId={{D81C4577-1109-45C7-9F20-D63EEB504A2D}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -32,7 +32,7 @@ DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputDir=O:\mafazaa\ainaa\windows\installers
-OutputBaseFilename=Ainaa_installer
+OutputBaseFilename=مثبت عينا سلسبيلا
 SetupIconFile=O:\mafazaa\ainaa\windows\assets\images\آيكون ابيض.ico
 SolidCompression=yes
 WizardStyle=modern
