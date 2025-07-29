@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/rendering.dart';
 
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:Ainaa/l10n/generated/app_localizations.dart';
 
 /// A utility class for managing localized strings
 ///

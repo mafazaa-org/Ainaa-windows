@@ -1,6 +1,6 @@
-import 'package:blocker_windows/config/exceptions/fetch_exceptions.dart';
-import 'package:blocker_windows/core/app_init_data/domain/entities/app_meta_data_entity.dart';
-import 'package:blocker_windows/core/resources/data_state.dart';
+import 'package:Ainaa/config/exceptions/fetch_exceptions.dart';
+import 'package:Ainaa/core/app_init_data/domain/entities/app_meta_data_entity.dart';
+import 'package:Ainaa/core/resources/data_state.dart';
 
 typedef GetAppMetaData = Result<AppMetaData, FetchException>;
 

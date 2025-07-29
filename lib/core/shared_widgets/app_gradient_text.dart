@@ -1,4 +1,4 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class AppTextGradientPrimary extends StatelessWidget {

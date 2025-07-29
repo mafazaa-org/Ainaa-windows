@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:Ainaa/core/types/localized_string.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/material.dart';
 

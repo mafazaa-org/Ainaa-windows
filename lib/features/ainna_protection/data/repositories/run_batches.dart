@@ -1,9 +1,9 @@
 import 'dart:convert' show utf8;
 import 'dart:io' show Directory, File, Platform, Process;
 
-import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
+import 'package:Ainaa/constants/app_constants.dart';
+import 'package:Ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:Ainaa/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:logger/logger.dart';
 

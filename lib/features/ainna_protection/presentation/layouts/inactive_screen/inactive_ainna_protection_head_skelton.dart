@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/app_init_data/domain/entities/app_meta_data_entity.dart';
+import 'package:Ainaa/core/app_init_data/domain/entities/app_meta_data_entity.dart';
 import 'package:flutter/material.dart';
 
 class InactiveAinnaProtectionHeadSkelton extends InheritedWidget {

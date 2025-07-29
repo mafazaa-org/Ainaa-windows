@@ -1,10 +1,10 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/core/app_init_data/get_app_meta_data_cubit/get_app_meta_data_cubit.dart';
-import 'package:blocker_windows/core/app_init_data/domain/entities/app_meta_data_entity.dart';
-import 'package:blocker_windows/core/app_init_data/get_app_version_cubit/get_app_version_cubit.dart';
-import 'package:blocker_windows/core/shared_widgets/app_loading_layout.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/pages/ainna_protection_page.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/core/app_init_data/get_app_meta_data_cubit/get_app_meta_data_cubit.dart';
+import 'package:Ainaa/core/app_init_data/domain/entities/app_meta_data_entity.dart';
+import 'package:Ainaa/core/app_init_data/get_app_version_cubit/get_app_version_cubit.dart';
+import 'package:Ainaa/core/shared_widgets/app_loading_layout.dart';
+import 'package:Ainaa/core/types/localized_string.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/pages/ainna_protection_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

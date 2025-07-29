@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:blocker_windows/constants/app_images_url.dart';
+import 'package:Ainaa/constants/app_images_url.dart';
 
 class AppLogo extends StatelessWidget {
   final bool useAlternative;

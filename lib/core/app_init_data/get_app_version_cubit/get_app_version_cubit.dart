@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:blocker_windows/core/app_init_data/domain/repositories/app_required_version_repository.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:Ainaa/core/app_init_data/domain/repositories/app_required_version_repository.dart';
+import 'package:Ainaa/core/types/localized_string.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';

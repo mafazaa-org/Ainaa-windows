@@ -1,5 +1,5 @@
-import 'package:blocker_windows/core/app_init_data/data/models/models.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:Ainaa/core/app_init_data/data/models/models.dart';
+import 'package:Ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
 
 class MockMetaData {
   static const mockMetaData = AppMetaDataModel(mockAinnaProtectionLevel);

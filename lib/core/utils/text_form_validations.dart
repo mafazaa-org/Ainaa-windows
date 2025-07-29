@@ -1,4 +1,4 @@
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:Ainaa/l10n/generated/app_localizations.dart';
 
 // TODO: form validation
 final class TextFormValidations {

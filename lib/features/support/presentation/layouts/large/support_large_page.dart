@@ -1,12 +1,12 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_icons.dart';
-import 'package:blocker_windows/constants/app_images_url.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/core/shared_widgets/app_icon_button.dart';
-import 'package:blocker_windows/core/shared_widgets/app_logo.dart';
-import 'package:blocker_windows/features/support/data/mock_data/support_mock_data_impl.dart';
-import 'package:blocker_windows/features/support/presentation/layouts/shared/financial_support_action_card.dart';
-import 'package:blocker_windows/features/support/presentation/layouts/shared/join_us_action_card.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/constants/app_icons.dart';
+import 'package:Ainaa/constants/app_images_url.dart';
+import 'package:Ainaa/constants/app_spacing.dart';
+import 'package:Ainaa/core/shared_widgets/app_icon_button.dart';
+import 'package:Ainaa/core/shared_widgets/app_logo.dart';
+import 'package:Ainaa/features/support/data/mock_data/support_mock_data_impl.dart';
+import 'package:Ainaa/features/support/presentation/layouts/shared/financial_support_action_card.dart';
+import 'package:Ainaa/features/support/presentation/layouts/shared/join_us_action_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

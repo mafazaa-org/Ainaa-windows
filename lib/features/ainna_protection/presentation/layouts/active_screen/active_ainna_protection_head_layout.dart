@@ -1,9 +1,9 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/confirm_overlay.dart';
-import 'package:blocker_windows/constants/loading_overlay.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_domain_protection_cubit/ainaa_domain_protection_cubit.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/large/active_ainna_protection_large_screen.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/ainna_protection_error_layout.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/constants/confirm_overlay.dart';
+import 'package:Ainaa/constants/loading_overlay.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/ainaa_domain_protection_cubit/ainaa_domain_protection_cubit.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/active_screen/large/active_ainna_protection_large_screen.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/ainna_protection_error_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

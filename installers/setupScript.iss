@@ -4,8 +4,8 @@
 #define MyAppName "عينا سلسبيلا"
 #define MyAppVersion "v0"
 #define MyAppPublisher "مفازا"
-#define MyAppURL "https://mafazaa.com"
-#define MyAppExeName "blocker_windows.exe"
+#define MyAppURL "https://ainaa.mafazaa.com"
+#define MyAppExeName "ainaa.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.

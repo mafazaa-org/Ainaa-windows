@@ -1,6 +1,6 @@
 @echo off
 chcp 65001
-:: Main script for managing blocker functionalities
+:: Main script for managing blocking functionalities
 goto :start
 
 :: --- log function ---

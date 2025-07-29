@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:Ainaa/core/types/localized_string.dart';
 
 class SupportMockDataImpl {
   static LocalizedString heading = LocalizedString.fromJson({

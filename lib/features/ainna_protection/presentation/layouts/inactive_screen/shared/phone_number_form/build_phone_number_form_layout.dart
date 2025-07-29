@@ -1,9 +1,9 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/core/shared_widgets/app_phone_number_text_field.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/build_ainna_protection_button.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/constants/app_spacing.dart';
+import 'package:Ainaa/core/shared_widgets/app_phone_number_text_field.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/inactive_screen/shared/build_ainna_protection_button.dart';
+import 'package:Ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart'

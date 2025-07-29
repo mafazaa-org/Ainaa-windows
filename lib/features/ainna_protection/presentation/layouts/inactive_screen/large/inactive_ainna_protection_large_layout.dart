@@ -1,9 +1,9 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/core/shared_widgets/app_logo_background.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/phone_number_form/build_phone_number_form_layout.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/shared.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/shared/found_unprotected_site_label.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/constants/app_spacing.dart';
+import 'package:Ainaa/core/shared_widgets/app_logo_background.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/inactive_screen/shared/phone_number_form/build_phone_number_form_layout.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/inactive_screen/shared/shared.dart';
+import 'package:Ainaa/features/ainna_protection/presentation/layouts/shared/found_unprotected_site_label.dart';
 import 'package:flutter/material.dart';
 part 'build_choose_protection_level_large_layout.dart';
 part 'build_protect_your_device_form.dart';

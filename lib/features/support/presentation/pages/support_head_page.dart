@@ -1,5 +1,5 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/features/support/presentation/layouts/large/support_large_page.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/features/support/presentation/layouts/large/support_large_page.dart';
 import 'package:flutter/material.dart';
 
 class SupportHeadPage extends StatelessWidget {

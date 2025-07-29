@@ -1,10 +1,10 @@
-import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
-import 'package:blocker_windows/core/resources/data_state.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/features/ainna_protection/data/repositories/run_batches.dart';
-import 'package:blocker_windows/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
+import 'package:Ainaa/config/dependency_injection/dependency_injection.dart';
+import 'package:Ainaa/core/resources/data_state.dart';
+import 'package:Ainaa/core/types/localized_string.dart';
+import 'package:Ainaa/features/ainna_protection/data/repositories/run_batches.dart';
+import 'package:Ainaa/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
+import 'package:Ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:Ainaa/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 

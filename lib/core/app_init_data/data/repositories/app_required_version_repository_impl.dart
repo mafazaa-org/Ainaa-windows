@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:blocker_windows/config/exceptions/fetch_exceptions.dart';
-import 'package:blocker_windows/core/app_init_data/data/models/app_required_version_model.dart';
-import 'package:blocker_windows/core/app_init_data/domain/repositories/app_required_version_repository.dart';
-import 'package:blocker_windows/core/constants/app_urls.dart';
-import 'package:blocker_windows/core/resources/data_state.dart';
+import 'package:Ainaa/config/exceptions/fetch_exceptions.dart';
+import 'package:Ainaa/core/app_init_data/data/models/app_required_version_model.dart';
+import 'package:Ainaa/core/app_init_data/domain/repositories/app_required_version_repository.dart';
+import 'package:Ainaa/core/constants/app_urls.dart';
+import 'package:Ainaa/core/resources/data_state.dart';
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';

@@ -1,5 +1,5 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:Ainaa/config/extensions/context_extension.dart';
+import 'package:Ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class BuildWantSpecificAppActivationLabel extends StatelessWidget {
