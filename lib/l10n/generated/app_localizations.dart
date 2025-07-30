@@ -331,6 +331,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'حدثت شيء ما، حاول مره اخري'**
   String get something_went_wrong;
+
+  /// No description provided for @script_failed.
+  ///
+  /// In en, this message translates to:
+  /// **'حدث خطأ أثناء تشغيل التفعيل.'**
+  String get script_failed;
 }
 
 class _AppLocalizationsDelegate

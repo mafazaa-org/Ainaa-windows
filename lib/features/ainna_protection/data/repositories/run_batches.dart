@@ -54,7 +54,7 @@ Future<void> _runBatchScript(String args) async {
 
     final exitCode = await process.exitCode;
     if (exitCode != 0) {
-      throw UploadException('Script failed: ${process.stderr}');
+      throw UploadException('Script failed');
     }
     logger.i('Process exited with code $exitCode');
   } catch (e) {

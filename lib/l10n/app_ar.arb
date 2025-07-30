@@ -77,5 +77,7 @@
   "update":"تحديث",
   "@update":{},
   "something_went_wrong":"حدثت شيء ما، حاول مره اخري",
-  "@something_went_wrong":{}
+  "@something_went_wrong":{},
+  "script_failed":"حدث خطأ أثناء تشغيل التفعيل.",
+  "@script_failed":{}
 }

@@ -132,4 +132,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get something_went_wrong => 'حدثت شيء ما، حاول مره اخري';
+
+  @override
+  String get script_failed => 'حدث خطأ أثناء تشغيل التفعيل.';
 }
