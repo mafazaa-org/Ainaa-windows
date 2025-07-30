@@ -14,13 +14,17 @@ class AinaaDomainProtectionCubit
   AinaaDomainProtectionCubit(this._repository)
     : super(AinaaDomainProtectionState());
 
-  Future<void> domainProtection(String url) async {
+  Future<bool> domainProtection(String url) async {
     final logger = Logger();
+    var isSuccess = false;
     emit(state.copyWith(isProcessing: true));
     try {
       final result = await _repository.domainProtection(url);
       result.when(
-        success: (value) => emit(state.copyWith(protectedDomain: value)),
+        success: (value) {
+          emit(state.copyWith(protectedDomain: value));
+          isSuccess = true;
+        },
         failure: (error) => emit(state.copyWith(errorMessage: error)),
       );
     } catch (e) {
@@ -28,6 +32,7 @@ class AinaaDomainProtectionCubit
       final errorMessage = LocalizedString.fromArString(e.toString());
       emit(state.copyWith(errorMessage: errorMessage));
     }
+    return isSuccess;
   }
 
   void restErrorMsg() {

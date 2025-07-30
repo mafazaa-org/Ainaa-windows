@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    _preloadImages();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _preloadImages());
     context.read<GetAppRequiredVersionCubit>().loadAppVersion();
     context.read<GetAppMetaDataCubit>().loadInitialMetaData();
   }

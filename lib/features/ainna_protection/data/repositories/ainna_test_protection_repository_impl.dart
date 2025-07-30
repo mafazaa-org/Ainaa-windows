@@ -54,10 +54,10 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
   Future<AinnaDomainProtectActionStatus> domainProtection(String url) async {
     logger.i('url: $url');
     await Future.delayed(const Duration(seconds: 2));
-    // return Future.value(Success(url));
-    final error = LocalizedString.fromArString(
-      errorMockData.responseTimeOut['ar'],
-    );
-    return Future.value(Failure(error));
+    return Future.value(Success(url));
+    // final error = LocalizedString.fromArString(
+    //   errorMockData.responseTimeOut['ar'],
+    // );
+    // return Future.value(Failure(error));
   }
 }

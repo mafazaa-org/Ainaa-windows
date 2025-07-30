@@ -24,13 +24,12 @@ class _BuildTopLayout extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // SizedBox(height: AppSpacing.sm),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AppTextGradientPrimary(
+                Text(
                   appLocalizations.report_problem,
-                  textStyle: context.textStyles.headingLarge,
+                  style: context.textStyles.headingLarge,
                 ),
                 Visibility(
                   visible: isPopUp,
@@ -44,7 +43,6 @@ class _BuildTopLayout extends StatelessWidget {
               ],
             ),
             Divider(color: context.theme.dividerColor, thickness: 1),
-            // SizedBox(height: AppSpacing.sm),
           ],
         ),
       ),
