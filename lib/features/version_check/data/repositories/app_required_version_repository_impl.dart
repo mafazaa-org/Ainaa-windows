@@ -32,7 +32,7 @@ class AppRequiredVersionRepositoryImpl extends AppRequiredVersionRepository {
       );
     } catch (e) {
       logger.e(e.toString());
-      return Failure(FetchException(e.toString()));
+      return Failure(FetchException('something went wrong'));
     }
   }
 }
