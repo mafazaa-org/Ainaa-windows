@@ -1,6 +1,6 @@
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 
-class ErrorMapper {
+class AppErrorMapper {
   static String map(String code, AppLocalizations appLocalizations) {
     switch (code) {
       case 'something went wrong':
