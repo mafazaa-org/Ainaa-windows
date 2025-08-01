@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 final class AppStyles {
+  ///circular 2
+  static BorderRadius get borderRadiusXXS => BorderRadius.circular(2);
+
   ///circular 6
   static BorderRadius get borderRadiusXS => BorderRadius.circular(6);
 
