@@ -1,6 +1,5 @@
 import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
 import 'package:blocker_windows/core/resources/data_state.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
 import 'package:blocker_windows/features/ainna_protection/data/mock_data/ainna_protection_error_mock_data_impl.dart';
 import 'package:blocker_windows/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
 import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';

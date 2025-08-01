@@ -1,9 +1,10 @@
 part of 'build_report_form_layout.dart';
 
 class _BuildEmailAddressFieldLayout extends StatelessWidget {
-  const _BuildEmailAddressFieldLayout(this.appLocalizations);
+  const _BuildEmailAddressFieldLayout(this.appLocalizations, this.provider);
 
   final AppLocalizations appLocalizations;
+  final ReportProblemFormProvider provider;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class _BuildEmailAddressFieldLayout extends StatelessWidget {
       hintText: appLocalizations.please_enter_email_address,
       validator:
           (value) => TextFormValidations.emailAddress(appLocalizations, value),
-      onChanged: (value) {},
+      onChanged: provider.setEmailAddress,
     );
   }
 }

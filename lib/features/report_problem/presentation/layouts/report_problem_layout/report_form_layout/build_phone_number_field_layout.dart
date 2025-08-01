@@ -1,9 +1,10 @@
 part of 'build_report_form_layout.dart';
 
 class _BuildPhoneNumberFieldLayout extends StatelessWidget {
-  const _BuildPhoneNumberFieldLayout(this.appLocalizations);
+  const _BuildPhoneNumberFieldLayout(this.appLocalizations, this.provider);
 
   final AppLocalizations appLocalizations;
+  final ReportProblemFormProvider provider;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class _BuildPhoneNumberFieldLayout extends StatelessWidget {
       hintText: appLocalizations.please_enter_phone_number,
       validator:
           (value) => TextFormValidations.phoneNumber(appLocalizations, value),
-      onChanged: (value) {},
+      onChanged: provider.setPhoneNumber,
     );
   }
 }

@@ -53,7 +53,7 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
   TextStyle get displaySmall => TextStyle(
     fontSize: 12.0.h,
     fontWeight: FontWeight.w700,
-    color: Colors.black87,
+    color: appTextColors.textSecondary,
   );
 
   TextStyle get bodyLarge => TextStyle(
