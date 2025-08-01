@@ -120,6 +120,9 @@ final class AppTheme {
       iconTheme: iconThemeData,
       iconButtonTheme: iconButtonTheme,
       secondaryHeaderColor: appColors.decoration,
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: appColors.mediumOverlay,
+      ),
       // textButtonTheme: TextButtonThemeData(
       //   style: TextButton.styleFrom(
       //     minimumSize: Size.zero, // allows text to control height

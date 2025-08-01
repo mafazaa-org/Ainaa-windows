@@ -131,8 +131,32 @@ class AppLocalizationsAr extends AppLocalizations {
   String get update => 'تحديث';
 
   @override
+  String get required_field => 'هذا الحقل مطلوب';
+
+  @override
+  String get name_not_in_range => 'الأسم يجب أن يكون بين ٢ و٢٤ حرف';
+
+  @override
+  String get paragraph_not_in_range => 'النص يجب أن يكون بين ٥ و١٠٠ حرف';
+
+  @override
+  String get email_invalid => 'البريد الإلكتروني غير صالح';
+
+  @override
   String get something_went_wrong => 'حدثت شيء ما، حاول مره اخري';
 
   @override
-  String get script_failed => 'حدث خطأ أثناء تشغيل التفعيل.';
+  String get script_failed => 'حدث خطأ أثناء تشغيل التفعيل';
+
+  @override
+  String get invalid_input =>
+      'بعض البيانات مفقودة. تحقق من الحقول وأعد المحاولة';
+
+  @override
+  String get no_internet_connection =>
+      'حدثت مشكلة في الاتصال. تأكد من اتصالك بالإنترنت';
+
+  @override
+  String get report_problem_sent =>
+      'شكرًا لك! تم إرسال المشكلة وسنقوم بمراجعتها قريبًا.';
 }

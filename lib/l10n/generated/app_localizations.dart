@@ -326,6 +326,30 @@ abstract class AppLocalizations {
   /// **'تحديث'**
   String get update;
 
+  /// No description provided for @required_field.
+  ///
+  /// In en, this message translates to:
+  /// **'هذا الحقل مطلوب'**
+  String get required_field;
+
+  /// No description provided for @name_not_in_range.
+  ///
+  /// In en, this message translates to:
+  /// **'الأسم يجب أن يكون بين ٢ و٢٤ حرف'**
+  String get name_not_in_range;
+
+  /// No description provided for @paragraph_not_in_range.
+  ///
+  /// In en, this message translates to:
+  /// **'النص يجب أن يكون بين ٥ و١٠٠ حرف'**
+  String get paragraph_not_in_range;
+
+  /// No description provided for @email_invalid.
+  ///
+  /// In en, this message translates to:
+  /// **'البريد الإلكتروني غير صالح'**
+  String get email_invalid;
+
   /// No description provided for @something_went_wrong.
   ///
   /// In en, this message translates to:
@@ -337,6 +361,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'حدث خطأ أثناء تشغيل التفعيل.'**
   String get script_failed;
+
+  /// No description provided for @invalid_input.
+  ///
+  /// In en, this message translates to:
+  /// **'عض البيانات مفقودة. تحقق من الحقول وأعد المحاولة.'**
+  String get invalid_input;
+
+  /// No description provided for @no_internet_connection.
+  ///
+  /// In en, this message translates to:
+  /// **'حدثت مشكلة في الاتصال. تأكد من اتصالك بالإنترنت.'**
+  String get no_internet_connection;
+
+  /// No description provided for @report_problem_sent.
+  ///
+  /// In en, this message translates to:
+  /// **'شكرًا لك! تم إرسال المشكلة وسنقوم بمراجعتها قريبًا.'**
+  String get report_problem_sent;
 }
 
 class _AppLocalizationsDelegate

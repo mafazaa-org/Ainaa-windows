@@ -86,16 +86,26 @@ class AppTextFormField extends StatelessWidget {
     required Widget? suffixIcon,
   }) {
     return InputDecoration(
-      hintText: hintText,
-      errorText: errorText,
-      hintStyle: context.textStyles.bodySmall.copyWith(
-        color: context.theme.hintColor,
+      // hintText: hintText,
+      hint: Padding(
+        padding: EdgeInsets.symmetric(horizontal: AppSpacing.xs),
+        child: Text(
+          hintText ?? '',
+          style: context.textStyles.bodySmall.copyWith(
+            color: context.theme.hintColor,
+          ),
+        ),
       ),
+      errorText: errorText,
+      // hintStyle: context.textStyles.bodySmall.copyWith(
+      //   color: context.theme.hintColor,
+      // ),
       suffixIcon: suffixIcon,
       isDense: true,
+      isCollapsed: false,
       contentPadding: EdgeInsets.symmetric(
         vertical: AppSpacing.sl,
-        horizontal: AppSpacing.sl,
+        horizontal: AppSpacing.sm,
       ),
     );
   }

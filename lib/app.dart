@@ -6,7 +6,6 @@ import 'package:blocker_windows/features/version_check/presentation/get_app_vers
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_domain_protection_cubit/ainaa_domain_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
-import 'package:blocker_windows/features/app_meta_data/presentation/pages/init_page.dart';
 import 'package:blocker_windows/features/version_check/presentation/pages/splash_page.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';

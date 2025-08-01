@@ -50,7 +50,7 @@ class BuildFailureLayout extends StatelessWidget {
     final appLocalization = AppLocalizations.of(context)!;
     return Scaffold(
       body: Text(
-        AppErrorMapper.map(code, appLocalization),
+        AppErrorWrapper.map(code, appLocalization),
         textAlign: TextAlign.center,
       ),
     );

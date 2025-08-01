@@ -3,9 +3,14 @@ import 'package:blocker_windows/constants/app_icons.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/constants/app_styles.dart';
 import 'package:blocker_windows/core/shared_widgets/app_elevated_button.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/report_problem_layout/report_form_layout/build_report_form_layout.dart';
+import 'package:blocker_windows/core/shared_widgets/show_app_snack_bar.dart';
+import 'package:blocker_windows/features/report_problem/presentation/cubit/report_problem_cubit.dart';
+import 'package:blocker_windows/features/report_problem/presentation/layouts/report_problem_layout/report_form_layout/build_report_form_layout.dart';
+import 'package:blocker_windows/features/report_problem/presentation/providers/report_problem_form_provider.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 part 'build_top_layout.dart';
 part 'build_bottom_layout.dart';
@@ -54,6 +59,7 @@ class BuildReportProblemLayout extends StatelessWidget {
               _BuildBottomLayout(
                 bottomContentHeight: bottomContentHeight,
                 horizontalSpace: horizontalSpace,
+                formKey: formKey,
               ),
             ],
           ),
