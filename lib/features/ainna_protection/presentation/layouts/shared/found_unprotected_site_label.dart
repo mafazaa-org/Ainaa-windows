@@ -27,7 +27,7 @@ class FoundUnprotectedSiteLabel extends StatelessWidget {
               hoverColor: context.theme.hoverColor,
               borderRadius: AppStyles.borderRadiusXXS,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: AppSpacing.sm),
+                padding: EdgeInsets.symmetric(horizontal: AppSpacing.xs),
                 child: Text(
                   appLocalizations.tel_us,
                   style: context.textStyles.textActionSecondary,
