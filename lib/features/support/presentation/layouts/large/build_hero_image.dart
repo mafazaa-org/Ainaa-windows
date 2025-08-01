@@ -40,6 +40,7 @@ class _BuildHeroImage extends StatelessWidget {
               children: [
                 AppIconButton(
                   icon: AppIcons.back,
+                  color: context.appTextColors.textActionPrimary,
                   onPressed: () => Navigator.maybePop(context),
                 ),
                 AppLogo(useAlternative: true),
