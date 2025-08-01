@@ -1,6 +1,5 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/constants/app_styles.dart';
+import 'package:blocker_windows/core/shared_widgets/app_text_button.dart';
 import 'package:blocker_windows/features/report_problem/presentation/layouts/report_problem_layout/report_problem_head.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
@@ -22,17 +21,9 @@ class FoundUnprotectedSiteLabel extends StatelessWidget {
             style: context.textStyles.bodyLarge,
           ),
           Material(
-            child: InkWell(
+            child: AppTextButton(
               onTap: () => showReportProblem(context),
-              hoverColor: context.theme.hoverColor,
-              borderRadius: AppStyles.borderRadiusXXS,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: AppSpacing.xs),
-                child: Text(
-                  appLocalizations.tel_us,
-                  style: context.textStyles.textActionSecondary,
-                ),
-              ),
+              text: appLocalizations.tel_us,
             ),
           ),
         ],
