@@ -2,7 +2,6 @@ import 'package:bloc/bloc.dart';
 import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
 import 'package:blocker_windows/features/app_meta_data/domain/entities/app_meta_data_entity.dart';
 import 'package:blocker_windows/features/app_meta_data/domain/repositories/app_meta_data_repository.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,12 +22,7 @@ class GetAppMetaDataCubit extends Cubit<AppMetaDataState> {
 
       result.when(
         success: (value) => emit(AppMetaDataFetchedState(value)),
-        failure:
-            (error) => emit(
-              AppMetaDataFailedState(
-                LocalizedString.fromArString(error.message),
-              ),
-            ),
+        failure: (error) => emit(AppMetaDataFailedState(error.code)),
       );
     } catch (e) {
       // check if AinaaProtectionCubit in an active state
@@ -38,9 +32,7 @@ class GetAppMetaDataCubit extends Cubit<AppMetaDataState> {
       if (ainaaProtectionState is AinaaProtectionInactive) {
         emit(AppMetaDataOfflineState());
       } else {
-        emit(
-          AppMetaDataFailedState(LocalizedString.fromArString(e.toString())),
-        );
+        emit(AppMetaDataFailedState('no_internet_connection'));
       }
     }
   }

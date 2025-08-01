@@ -12,10 +12,10 @@ final class AppMetaDataInitialState extends AppMetaDataState {}
 final class AppMetaDataLoadingState extends AppMetaDataState {}
 
 final class AppMetaDataFailedState extends AppMetaDataState {
-  final LocalizedString message;
-  const AppMetaDataFailedState(this.message);
+  final String code;
+  const AppMetaDataFailedState(this.code);
   @override
-  List<Object> get props => [message];
+  List<Object> get props => [code];
 }
 
 final class AppMetaDataOfflineState extends AppMetaDataState {}

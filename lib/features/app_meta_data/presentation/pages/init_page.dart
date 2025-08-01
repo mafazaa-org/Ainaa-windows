@@ -1,9 +1,10 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
+import 'package:blocker_windows/core/utils/app_error_wrapper.dart';
 import 'package:blocker_windows/features/app_meta_data/presentation/get_app_meta_data_cubit/get_app_meta_data_cubit.dart';
 import 'package:blocker_windows/features/app_meta_data/domain/entities/app_meta_data_entity.dart';
 import 'package:blocker_windows/core/shared_widgets/app_loading_layout.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/pages/ainna_protection_page.dart';
+import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -20,8 +21,9 @@ class InitPage extends StatelessWidget {
             AppMetaDataFetchedState(appMetaData: final appMetaData) =>
               _BuildFetchedStateLayout(appMetaData: appMetaData),
             AppMetaDataLoadingState() => AppLoadingLayout(),
-            AppMetaDataFailedState(message: final message) =>
-              BuildFailureLayout(message: message),
+            AppMetaDataFailedState(code: final code) => BuildFailureLayout(
+              code: code,
+            ),
           },
     );
   }
@@ -39,13 +41,19 @@ class _BuildFetchedStateLayout extends StatelessWidget {
 }
 
 class BuildFailureLayout extends StatelessWidget {
-  const BuildFailureLayout({super.key, required this.message});
+  const BuildFailureLayout({super.key, required this.code});
 
-  final LocalizedString message;
+  final String code;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text(message.get(), textAlign: TextAlign.center));
+    final appLocalization = AppLocalizations.of(context)!;
+    return Scaffold(
+      body: Text(
+        AppErrorMapper.map(code, appLocalization),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }
 

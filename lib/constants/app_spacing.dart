@@ -1,4 +1,7 @@
 final class AppSpacing {
+  ///2.0
+  static const xxs = 2.0;
+
   ///4.0
   static const xs = 4.0;
 

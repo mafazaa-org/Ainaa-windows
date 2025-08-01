@@ -1,6 +1,6 @@
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 
-class ErrorMapper {
+final class AppErrorWrapper {
   static String map(String code, AppLocalizations appLocalizations) {
     switch (code) {
       case 'something went wrong':
@@ -15,4 +15,6 @@ class ErrorMapper {
         return appLocalizations.something_went_wrong;
     }
   }
+
+  const AppErrorWrapper._();
 }
