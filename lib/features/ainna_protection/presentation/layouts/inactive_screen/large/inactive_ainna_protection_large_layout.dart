@@ -1,5 +1,6 @@
 import 'package:blocker_windows/config/extensions/context_extension.dart';
 import 'package:blocker_windows/constants/app_spacing.dart';
+import 'package:blocker_windows/core/shared_widgets/app_version_layout.dart';
 import 'package:blocker_windows/core/shared_widgets/app_logo_background.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/phone_number_form/build_phone_number_form_layout.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/shared.dart';
@@ -26,8 +27,7 @@ class InactiveAinnaProtectionLargeLayout extends StatelessWidget {
         SingleChildScrollView(
           padding: EdgeInsets.symmetric(
             horizontal: width * .05,
-            vertical: AppSpacing.lg,
-          ),
+          ).copyWith(top: AppSpacing.lg),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: AppSpacing.md,
@@ -40,6 +40,7 @@ class InactiveAinnaProtectionLargeLayout extends StatelessWidget {
                   _BuildProtectYourDeviceForm(width),
                 ],
               ),
+              AppVersionLayout(),
             ],
           ),
         ),
