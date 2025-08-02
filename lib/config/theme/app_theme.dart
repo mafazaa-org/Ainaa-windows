@@ -130,8 +130,8 @@ final class AppTheme {
       //     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
       //   ),
       // ),
-      // Texts colors
       extensions: <ThemeExtension<dynamic>>[
+        AppColors.light,
         AppTextColors.light,
         AppTextStyles(AppTextColors.light),
       ],

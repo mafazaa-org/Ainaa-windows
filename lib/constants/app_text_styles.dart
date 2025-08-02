@@ -50,9 +50,21 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     color: appTextColors.textSecondary,
   );
 
+  TextStyle get displaySmallMedium => TextStyle(
+    fontSize: 16.0.h,
+    fontWeight: FontWeight.w700,
+    color: appTextColors.textSecondary,
+  );
+
   TextStyle get displaySmall => TextStyle(
     fontSize: 12.0.h,
     fontWeight: FontWeight.w700,
+    color: appTextColors.textSecondary,
+  );
+
+  TextStyle get bodyHuge => TextStyle(
+    fontSize: 40.0.h,
+    fontWeight: FontWeight.w400,
     color: appTextColors.textSecondary,
   );
 

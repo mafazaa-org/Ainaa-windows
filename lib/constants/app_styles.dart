@@ -38,5 +38,8 @@ final class AppStyles {
     offset: Offset(0, 4),
   );
 
+  static Border borderBoxXXS({required Color color}) =>
+      Border.all(color: color, width: 0.5);
+
   const AppStyles._();
 }
