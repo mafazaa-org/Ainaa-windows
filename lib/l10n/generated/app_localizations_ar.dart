@@ -105,7 +105,17 @@ class AppLocalizationsAr extends AppLocalizations {
   String get confirm_activate_protection => 'فعّل الحماية';
 
   @override
+  String get want_to_reactivate_protection =>
+      'هل ترغب في إعاده تفعيل الحماية على جهازك؟';
+
+  @override
+  String get confirm_reactivate_protection => 'اعد تفعّبل الحماية';
+
+  @override
   String get later => 'لاحقًا';
+
+  @override
+  String get dismiss => 'تراجع';
 
   @override
   String get ok => 'حسنا';
@@ -159,4 +169,13 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get report_problem_sent =>
       'شكرًا لك! تم إرسال المشكلة وسنقوم بمراجعتها قريبًا.';
+
+  @override
+  String get check_high_protection => 'تفعيل الحمايه العالية';
+
+  @override
+  String get check_youtube_protection => 'تفعيل الوضع الآمن لليوتيوب';
+
+  @override
+  String get check_cant_undo => 'لا يمكن الغاءه فيها بعد';
 }

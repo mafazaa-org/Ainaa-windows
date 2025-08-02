@@ -4,7 +4,7 @@ import 'package:blocker_windows/constants/app_spacing.dart';
 import 'package:blocker_windows/core/shared_widgets/ainna_icon.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
 import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/confirm_ainna_protection.dart';
+import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/confirm_activate_ainna_protection.dart';
 import 'package:blocker_windows/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,7 +31,7 @@ class BuildAinnaProtectionButton extends StatelessWidget {
                     optionBatchPath != null &&
                     phoneNumber != null
                 ? () {
-                  confirmAinnaProtection(
+                  confirmActivateAinnaProtection(
                     context,
                     onConfirm: () {
                       getIt<AinaaProtectionCubit>().activate(

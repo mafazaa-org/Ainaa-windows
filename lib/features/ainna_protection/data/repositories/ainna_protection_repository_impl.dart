@@ -17,7 +17,7 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
   Future<AinnaProtectActionStatus> activate({
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
-    required String activationBatchPath,
+    // required String activationBatchPath,
     required String phoneNumber,
   }) async {
     try {
@@ -52,7 +52,7 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
   Future<AinnaProtectActionStatus> reactivate({
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
-    required String activationBatchPath,
+    // required String activationBatchPath,
   }) {
     try {
       // TODO: test reactivate the batch in windows

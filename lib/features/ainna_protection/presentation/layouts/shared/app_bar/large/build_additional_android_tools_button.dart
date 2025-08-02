@@ -15,7 +15,8 @@ class _BuildAdditionalAndroidToolsButton extends StatelessWidget {
         alignment: AlignmentDirectional.centerEnd,
         width: screenWidth * .25,
         child: Text(
-          appLocalizations.additional_android_tools,
+          'Test Reset',
+          // appLocalizations.additional_android_tools,
           style: context.textStyles.navLabel,
         ),
       ),

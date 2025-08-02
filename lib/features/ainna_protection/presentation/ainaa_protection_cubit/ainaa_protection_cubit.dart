@@ -22,12 +22,13 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
     String activationBatchPath,
     String phoneNumber,
   ) async {
+    final options = {AinnaProtectionAdditionalOption.youtube};
     try {
       emit(AinaaProtectionInactive(isLoading: true));
       final response = await _repository.activate(
         activationType: activationType,
-        options: {},
-        activationBatchPath: activationBatchPath,
+        options: options,
+        // activationBatchPath: activationBatchPath,
         phoneNumber: phoneNumber,
       );
       response.when(
@@ -37,8 +38,7 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
                 activatedAt: DateTime.now(),
                 activationType: activationType,
                 activationBatchPath: activationBatchPath,
-                //TODO: config adding a multiple options
-                options: {},
+                options: options,
               ),
             ),
         failure: (error) => emit(AinaaProtectionInactive(errorMessage: error)),
@@ -66,16 +66,30 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
     }
   }
 
-  Future<void> reactivate() async {
+  Future<void> reactivate(
+    AinnaActivationType activationType,
+    bool withYoutubeProtection,
+  ) async {
     if (state case AinaaProtectionActive activeState) {
+      final AinnaProtectionAdditionalOptions options =
+          withYoutubeProtection
+              ? {AinnaProtectionAdditionalOption.youtube}
+              : {};
       emit(activeState.copyWith(isLoading: true));
       final response = await _repository.reactivate(
-        activationType: activeState.activationType,
-        options: activeState.options,
-        activationBatchPath: activeState.activationBatchPath,
+        activationType: activationType,
+        options: options,
+        // activationBatchPath: activeState.activationBatchPath,
       );
       response.when(
-        success: (_) => emit(activeState.copyWith(isLoading: false)),
+        success:
+            (_) => emit(
+              activeState.copyWith(
+                activationType: activationType,
+                options: options,
+                isLoading: false,
+              ),
+            ),
         failure: (error) => emit(activeState.copyWith(errorMessage: error)),
       );
     }

@@ -278,11 +278,29 @@ abstract class AppLocalizations {
   /// **'فعّل الحماية'**
   String get confirm_activate_protection;
 
+  /// No description provided for @want_to_reactivate_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'هل ترغب في إعاده تفعيل الحماية على جهازك؟'**
+  String get want_to_reactivate_protection;
+
+  /// No description provided for @confirm_reactivate_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'اعد تفعّبل الحماية'**
+  String get confirm_reactivate_protection;
+
   /// No description provided for @later.
   ///
   /// In en, this message translates to:
   /// **'لاحقًا'**
   String get later;
+
+  /// No description provided for @dismiss.
+  ///
+  /// In en, this message translates to:
+  /// **'تراجع'**
+  String get dismiss;
 
   /// No description provided for @ok.
   ///
@@ -379,6 +397,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'شكرًا لك! تم إرسال المشكلة وسنقوم بمراجعتها قريبًا.'**
   String get report_problem_sent;
+
+  /// No description provided for @check_high_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'تفعيل الحمايه العالية'**
+  String get check_high_protection;
+
+  /// No description provided for @check_youtube_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'تفعيل الوضع الآمن لليوتيوب'**
+  String get check_youtube_protection;
+
+  /// No description provided for @check_cant_undo.
+  ///
+  /// In en, this message translates to:
+  /// **'لا يمكن الغاءه فيها بعد'**
+  String get check_cant_undo;
 }
 
 class _AppLocalizationsDelegate

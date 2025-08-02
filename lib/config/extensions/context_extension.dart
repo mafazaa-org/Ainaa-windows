@@ -1,3 +1,4 @@
+import 'package:blocker_windows/constants/app_colors.dart';
 import 'package:blocker_windows/constants/app_constants.dart';
 import 'package:blocker_windows/constants/app_text_colors.dart';
 import 'package:blocker_windows/constants/app_text_styles.dart';
@@ -18,7 +19,8 @@ extension ContextEx on BuildContext {
   bool get isTabletOrDesktop => isDesktop || isTablet;
 
   ThemeData get theme => Theme.of(this);
-  AppTextColors get appTextColors => Theme.of(this).extension<AppTextColors>()!;
-  AppTextStyles get textStyles => Theme.of(this).extension<AppTextStyles>()!;
+  AppColors get appColors => theme.extension<AppColors>()!;
+  AppTextColors get appTextColors => theme.extension<AppTextColors>()!;
+  AppTextStyles get textStyles => theme.extension<AppTextStyles>()!;
   // AppTextColors get AppTextColors => Theme.of(this).extension<AppTextColors>()!;
 }

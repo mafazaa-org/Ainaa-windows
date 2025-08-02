@@ -43,6 +43,7 @@ class AppDialogLayout extends StatelessWidget {
   final String? subText;
   final String actionText;
   final String? cancelText;
+  final Widget? body;
   final void Function()? onPressed;
   final void Function()? onCancelPressed;
 
@@ -58,6 +59,7 @@ class AppDialogLayout extends StatelessWidget {
     required this.onPressed,
     this.cancelText,
     this.onCancelPressed,
+    this.body,
   });
 
   @override
@@ -80,7 +82,8 @@ class AppDialogLayout extends StatelessWidget {
           subText != null
               ? Text(subText!, style: context.textStyles.bodyMedium)
               : SizedBox.shrink(),
-          SizedBox.shrink(),
+          body ?? SizedBox.shrink(),
+
           Row(
             spacing: AppSpacing.sl,
             children: [

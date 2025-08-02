@@ -10,13 +10,13 @@ abstract class AinnaProtectionRepository {
   Future<AinnaProtectActionStatus> activate({
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
-    required String activationBatchPath,
+    // required String activationBatchPath,
     required String phoneNumber,
   });
   Future<AinnaProtectActionStatus> reactivate({
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
-    required String activationBatchPath,
+    // required String activationBatchPath,
   });
   Future<AinnaProtectActionStatus> deactivate();
 

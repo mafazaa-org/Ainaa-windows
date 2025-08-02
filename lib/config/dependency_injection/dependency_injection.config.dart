@@ -9,18 +9,24 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_protection_repository_impl.dart';
-import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_test_protection_repository_impl.dart';
+import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_protection_repository_impl.dart'
+    as _i640;
+import 'package:blocker_windows/features/ainna_protection/data/repositories/ainna_test_protection_repository_impl.dart'
+    as _i714;
 import 'package:blocker_windows/features/ainna_protection/domain/repositories/ainna_protection_repository.dart'
     as _i304;
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_domain_protection_cubit/ainaa_domain_protection_cubit.dart'
     as _i401;
 import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart'
     as _i384;
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
-import 'package:blocker_windows/features/app_meta_data/data/repositories/app_meta_data_test_repository_impl.dart';
-import 'package:blocker_windows/features/app_meta_data/domain/repositories/app_meta_data_repository.dart';
-import 'package:blocker_windows/features/app_meta_data/presentation/get_app_meta_data_cubit/get_app_meta_data_cubit.dart';
+import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart'
+    as _i912;
+import 'package:blocker_windows/features/app_meta_data/data/repositories/app_meta_data_test_repository_impl.dart'
+    as _i397;
+import 'package:blocker_windows/features/app_meta_data/domain/repositories/app_meta_data_repository.dart'
+    as _i1072;
+import 'package:blocker_windows/features/app_meta_data/presentation/get_app_meta_data_cubit/get_app_meta_data_cubit.dart'
+    as _i848;
 import 'package:blocker_windows/features/report_problem/data/repositories/report_problem_repository_impl.dart'
     as _i495;
 import 'package:blocker_windows/features/report_problem/data/repositories/report_problem_repository_test_impl.dart'
@@ -48,23 +54,29 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
-    gh.lazySingleton<ChosenProtectionProvider>(
-      () => ChosenProtectionProvider(),
-    );
-    gh.singleton<_i304.AinnaProtectionRepository>(
-      () => AinnaTestProtectionRepositoryImpl(),
-      registerFor: {_dev},
+    gh.lazySingleton<_i912.ChosenProtectionProvider>(
+      () => _i912.ChosenProtectionProvider(),
     );
     gh.singleton<_i68.AppRequiredVersionRepository>(
       () => _i192.AppRequiredVersionRepositoryImpl(),
+    );
+    gh.singleton<_i1072.AppMetaDataRepository>(
+      () => _i397.AppMetaDataTestRepositoryImpl(),
     );
     gh.singleton<_i105.ReportProblemRepository>(
       () => _i22.ReportProblemRepositoryTestImpl(),
       registerFor: {_dev},
     );
-    gh.singleton<AppMetaDataRepository>(() => AppMetaDataTestRepositoryImpl());
-    gh.singleton<GetAppMetaDataCubit>(
-      () => GetAppMetaDataCubit(gh<AppMetaDataRepository>()),
+    gh.singleton<_i304.AinnaProtectionRepository>(
+      () => _i714.AinnaTestProtectionRepositoryImpl(),
+      registerFor: {_dev},
+    );
+    gh.singleton<_i848.GetAppMetaDataCubit>(
+      () => _i848.GetAppMetaDataCubit(gh<_i1072.AppMetaDataRepository>()),
+    );
+    gh.singleton<_i304.AinnaProtectionRepository>(
+      () => _i640.AinnaProtectionRepositoryImpl(),
+      registerFor: {_prod},
     );
     gh.singleton<_i105.ReportProblemRepository>(
       () => _i495.ReportProblemRepositoryImpl(),
@@ -72,10 +84,6 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i241.ReportProblemCubit>(
       () => _i241.ReportProblemCubit(gh<_i105.ReportProblemRepository>()),
-    );
-    gh.singleton<_i304.AinnaProtectionRepository>(
-      () => AinnaProtectionRepositoryImpl(),
-      registerFor: {_prod},
     );
     gh.singleton<_i401.AinaaDomainProtectionCubit>(
       () => _i401.AinaaDomainProtectionCubit(

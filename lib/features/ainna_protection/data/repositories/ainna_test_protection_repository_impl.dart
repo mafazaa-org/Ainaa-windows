@@ -16,11 +16,11 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
   Future<AinnaProtectActionStatus> activate({
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
-    required String activationBatchPath,
+    // required String activationBatchPath,
     required String phoneNumber,
   }) async {
     logger.i(
-      'activationBatchPath: $activationBatchPath \n activationType: ${activationType.name} \n options: $options',
+      'ACTIVATE:\n activationType: ${activationType.name} \n options: $options',
     );
     await Future.delayed(const Duration(seconds: 2));
     // await submitPhoneNumberViaForm(phoneNumber);
@@ -40,10 +40,10 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
   Future<AinnaProtectActionStatus> reactivate({
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
-    required String activationBatchPath,
+    // required String activationBatchPath,
   }) async {
     logger.i(
-      'activationBatchPath: $activationBatchPath \n activationType: ${activationType.name} \n options: $options',
+      'REACTIVATE:\n activationType: ${activationType.name} \n options: $options',
     );
     await Future.delayed(const Duration(seconds: 2));
     return Future.value(Success(true));
