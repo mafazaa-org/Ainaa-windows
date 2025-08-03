@@ -24,5 +24,5 @@ void main() async {
   //observe all app blocs
   Bloc.observer = const AppBlocObserver();
 
-  runApp(const App());
+  runApp(App());
 }

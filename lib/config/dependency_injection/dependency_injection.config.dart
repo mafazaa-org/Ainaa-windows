@@ -35,6 +35,11 @@ import 'package:blocker_windows/features/report_problem/domain/repositories/repo
     as _i105;
 import 'package:blocker_windows/features/report_problem/presentation/cubit/report_problem_cubit.dart'
     as _i241;
+import 'package:blocker_windows/features/support/data/repositories/support_repository_impl.dart'
+    as _i575;
+import 'package:blocker_windows/features/support/domain/repositories/support_repository.dart'
+    as _i518;
+import 'package:blocker_windows/features/support/presentation/cubit/support_us_cubit.dart';
 import 'package:blocker_windows/features/version_check/data/repositories/app_required_version_repository_impl.dart'
     as _i192;
 import 'package:blocker_windows/features/version_check/domain/repositories/app_required_version_repository.dart'
@@ -60,6 +65,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i68.AppRequiredVersionRepository>(
       () => _i192.AppRequiredVersionRepositoryImpl(),
     );
+    gh.singleton<_i518.SupportRepository>(() => _i575.SupportRepositoryImpl());
     gh.singleton<_i1072.AppMetaDataRepository>(
       () => _i397.AppMetaDataTestRepositoryImpl(),
     );
@@ -70,6 +76,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i304.AinnaProtectionRepository>(
       () => _i714.AinnaTestProtectionRepositoryImpl(),
       registerFor: {_dev},
+    );
+    gh.singleton<SupportUsCubit>(
+      () => SupportUsCubit(gh<_i518.SupportRepository>()),
     );
     gh.singleton<_i848.GetAppMetaDataCubit>(
       () => _i848.GetAppMetaDataCubit(gh<_i1072.AppMetaDataRepository>()),
