@@ -33,7 +33,7 @@ class _BuildHeroImage extends StatelessWidget {
             textDirection: TextDirection.rtl,
             top: AppSpacing.md,
             end: AppSpacing.xxl,
-            start: AppSpacing.sm,
+            start: AppSpacing.lg,
             height: 43.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
