@@ -1,7 +1,7 @@
-import 'package:blocker_windows/core/resources/data_state.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
+import 'package:ainaa/core/resources/data_state.dart';
+import 'package:ainaa/core/types/localized_string.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 
 typedef AinnaProtectActionStatus = Result<dynamic, LocalizedString>;
 typedef AinnaDomainProtectActionStatus = Result<String, LocalizedString>;

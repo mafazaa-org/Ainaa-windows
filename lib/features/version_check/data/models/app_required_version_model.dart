@@ -1,7 +1,7 @@
-import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_needs_update_entity.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_required_version_entity.dart';
-import 'package:blocker_windows/features/version_check/data/models/app_needs_update_model.dart';
+import 'package:ainaa/constants/app_constants.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_needs_update_entity.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_required_version_entity.dart';
+import 'package:ainaa/features/version_check/data/models/app_needs_update_model.dart';
 
 class AppRequiredVersionModel {
   final String latestVersion;

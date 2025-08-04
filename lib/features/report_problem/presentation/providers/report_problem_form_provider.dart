@@ -1,4 +1,4 @@
-import 'package:blocker_windows/features/report_problem/domain/entities/report_problem_entity.dart';
+import 'package:ainaa/features/report_problem/domain/entities/report_problem_entity.dart';
 import 'package:flutter/foundation.dart';
 
 class ReportProblemFormProvider extends ChangeNotifier {

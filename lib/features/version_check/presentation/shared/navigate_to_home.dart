@@ -1,4 +1,4 @@
-import 'package:blocker_windows/features/app_meta_data/presentation/pages/init_page.dart';
+import 'package:ainaa/features/app_meta_data/presentation/pages/init_page.dart';
 import 'package:flutter/material.dart'
     show Navigator, BuildContext, PageRouteBuilder, FadeTransition;
 

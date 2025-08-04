@@ -1,6 +1,6 @@
-import 'package:blocker_windows/app.dart';
-import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
-import 'package:blocker_windows/core/settings/app_bloc_observer.dart';
+import 'package:ainaa/app.dart';
+import 'package:ainaa/config/dependency_injection/dependency_injection.dart';
+import 'package:ainaa/core/settings/app_bloc_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';

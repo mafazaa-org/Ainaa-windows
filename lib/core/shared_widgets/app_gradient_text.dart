@@ -1,4 +1,4 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
 
 @Deprecated('Replaced by: Text("...", style: context.textStyles.headingLarge)')

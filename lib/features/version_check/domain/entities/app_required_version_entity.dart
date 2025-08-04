@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
 
-import 'package:blocker_windows/features/version_check/domain/entities/app_needs_update_entity.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_needs_update_entity.dart';
 
 class AppRequiredVersion extends Equatable {
   final String latestVersion;

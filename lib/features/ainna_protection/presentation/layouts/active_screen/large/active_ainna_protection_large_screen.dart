@@ -1,9 +1,9 @@
-import 'package:blocker_windows/constants/app_images_url.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/core/shared_widgets/app_version_layout.dart';
-import 'package:blocker_windows/core/shared_widgets/app_logo_background.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/shared/content/build_content_layout.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/shared/found_unprotected_site_label.dart';
+import 'package:ainaa/constants/app_images_url.dart';
+import 'package:ainaa/constants/app_spacing.dart';
+import 'package:ainaa/core/shared_widgets/app_version_layout.dart';
+import 'package:ainaa/core/shared_widgets/app_logo_background.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/active_screen/shared/content/build_content_layout.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/shared/found_unprotected_site_label.dart';
 import 'package:flutter/material.dart';
 
 class ActiveAinnaProtectionLargeLayout extends StatelessWidget {

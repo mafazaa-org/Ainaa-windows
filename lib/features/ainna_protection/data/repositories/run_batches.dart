@@ -1,10 +1,9 @@
 import 'dart:convert' show utf8;
-import 'dart:io' show File, Directory, Process;
+import 'dart:io' show Directory, File, Process;
 
-import 'package:blocker_windows/config/exceptions/upload_exception.dart';
-import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
+import 'package:ainaa/config/exceptions/upload_exception.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_protection_additional_option.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:logger/logger.dart';
 
@@ -27,27 +26,34 @@ Future<void> runDomainProtectionEmbeddedBatchFile(String url) async {
 
 Future<void> _runBatchScript(String args) async {
   final logger = Logger();
-  final tempDir = Directory.systemTemp;
-  final tempBatch = File('${tempDir.path}\\${AppConstants.batchName}');
-  final domainsFile = File('${tempDir.path}\\domains.txt');
-  final youtubeFile = File('${tempDir.path}\\youtube.txt');
+
+  final tempDir = Directory.systemTemp.createTempSync('ainaa_batch_');
+  final destDir = Directory(tempDir.path);
 
   try {
-    // Load all required files from assets and copy to temp
-    final batchContent = await rootBundle.loadString(AppConstants.batchUrl);
-    final domainsContent = await rootBundle.loadString(AppConstants.domainsUrl);
-    final youtubeContent = await rootBundle.loadString(AppConstants.youtubeUrl);
-
-    // Write all files to temp directory
-    await tempBatch.writeAsString(batchContent, flush: true);
-    await domainsFile.writeAsString(domainsContent, flush: true);
-    await youtubeFile.writeAsString(youtubeContent, flush: true);
-
     // Execute with UAC elevation from the temp directory
-    final process = await Process.start('cmd.exe', [
-      '/k',
-      '${tempBatch.path} $args',
-    ], runInShell: true);
+
+    // Copy batch files from assets/batch to the temp directory
+    final batchAssets = [
+      'protect.bat',
+      'domains.txt',
+      'youtube.txt',
+    ]; // Add more batch files if needed
+    for (final fileName in batchAssets) {
+      final assetPath = 'assets/batch/$fileName';
+      final newFile = File('${destDir.path}\\$fileName');
+      await newFile.writeAsString(
+        await rootBundle.loadString(assetPath),
+        flush: true,
+      );
+    }
+
+    final process = await Process.start(
+      'cmd.exe',
+      ['/c', 'protect.bat $args'],
+      runInShell: true,
+      workingDirectory: destDir.path,
+    );
 
     process.stdout.transform(utf8.decoder).listen(logger.i);
     process.stderr.transform(utf8.decoder).listen(logger.w);
@@ -61,8 +67,9 @@ Future<void> _runBatchScript(String args) async {
     logger.e('Error executing batch file: $e');
     rethrow;
   } finally {
-    await tempBatch.delete();
-    await domainsFile.delete();
-    await youtubeFile.delete();
+    if (await destDir.exists()) {
+      logger.i("deleting the temp dir");
+      await destDir.delete(recursive: true);
+    }
   }
 }

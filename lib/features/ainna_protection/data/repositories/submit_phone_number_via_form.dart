@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/constants/app_urls.dart';
+import 'package:ainaa/core/constants/app_urls.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 

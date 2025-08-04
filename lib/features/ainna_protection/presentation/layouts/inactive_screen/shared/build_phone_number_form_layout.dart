@@ -1,9 +1,9 @@
-// import 'package:blocker_windows/config/extensions/context_extension.dart';
-// import 'package:blocker_windows/constants/app_icons.dart';
-// import 'package:blocker_windows/constants/app_spacing.dart';
-// import 'package:blocker_windows/core/utils/text_form_validations.dart';
-// import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
-// import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+// import 'package:ainaa/config/extensions/context_extension.dart';
+// import 'package:ainaa/constants/app_icons.dart';
+// import 'package:ainaa/constants/app_spacing.dart';
+// import 'package:ainaa/core/utils/text_form_validations.dart';
+// import 'package:ainaa/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
+// import 'package:ainaa/l10n/generated/app_localizations.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';

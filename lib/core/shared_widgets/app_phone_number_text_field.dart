@@ -1,9 +1,9 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/constants/app_styles.dart';
-import 'package:blocker_windows/core/utils/text_form_validations.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
+import 'package:ainaa/constants/app_constants.dart';
+import 'package:ainaa/constants/app_spacing.dart';
+import 'package:ainaa/constants/app_styles.dart';
+import 'package:ainaa/core/utils/text_form_validations.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';

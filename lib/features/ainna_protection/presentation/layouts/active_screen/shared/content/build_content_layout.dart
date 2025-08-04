@@ -1,6 +1,6 @@
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/reactivate_layout/reactive_ainna_protection_layout.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/shared/content/build_protect_website.dart';
+import 'package:ainaa/constants/app_spacing.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/active_screen/reactivate_layout/reactive_ainna_protection_layout.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/active_screen/shared/content/build_protect_website.dart';
 import 'package:flutter/material.dart';
 
 class BuildContentLayout extends StatelessWidget {

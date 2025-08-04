@@ -1,4 +1,4 @@
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 
 final class TextFormValidations {
   static String? phoneNumber(AppLocalizations appLocalizations, String? value) {

@@ -1,10 +1,10 @@
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/core/shared_widgets/app_check_box_tile.dart';
-import 'package:blocker_windows/core/shared_widgets/app_confirm_popup.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_protection_additional_option.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/constants/app_spacing.dart';
+import 'package:ainaa/core/shared_widgets/app_check_box_tile.dart';
+import 'package:ainaa/core/shared_widgets/app_confirm_popup.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_protection_additional_option.dart';
+import 'package:ainaa/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

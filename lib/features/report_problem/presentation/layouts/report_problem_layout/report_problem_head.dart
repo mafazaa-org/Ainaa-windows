@@ -1,8 +1,8 @@
-import 'package:blocker_windows/config/dependency_injection/dependency_injection.dart';
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/features/report_problem/presentation/cubit/report_problem_cubit.dart';
-import 'package:blocker_windows/features/report_problem/presentation/layouts/report_problem_layout/build_report_problem_layout.dart';
-import 'package:blocker_windows/features/report_problem/presentation/providers/report_problem_form_provider.dart';
+import 'package:ainaa/config/dependency_injection/dependency_injection.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
+import 'package:ainaa/features/report_problem/presentation/cubit/report_problem_cubit.dart';
+import 'package:ainaa/features/report_problem/presentation/layouts/report_problem_layout/build_report_problem_layout.dart';
+import 'package:ainaa/features/report_problem/presentation/providers/report_problem_form_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';

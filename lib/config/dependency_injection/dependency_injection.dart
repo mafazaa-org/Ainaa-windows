@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:blocker_windows/config/dependency_injection/dependency_injection.config.dart';
+import 'package:ainaa/config/dependency_injection/dependency_injection.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 

@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_needs_update_entity.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_required_version_entity.dart';
-import 'package:blocker_windows/features/version_check/domain/repositories/app_required_version_repository.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_needs_update_entity.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_required_version_entity.dart';
+import 'package:ainaa/features/version_check/domain/repositories/app_required_version_repository.dart';
+import 'package:ainaa/core/types/localized_string.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';

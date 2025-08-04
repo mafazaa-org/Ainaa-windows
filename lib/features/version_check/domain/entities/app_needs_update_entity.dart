@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
 
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:ainaa/core/types/localized_string.dart';
 
 abstract class AppNeedsUpdate extends Equatable {
   final bool isNecessaryUpdate;

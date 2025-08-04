@@ -1,6 +1,6 @@
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/inactive_ainna_protection_head_skelton.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/build_protection_option_layout.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/inactive_screen/inactive_ainna_protection_head_skelton.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/inactive_screen/providers/chosen_protection_provider.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/inactive_screen/shared/build_protection_option_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

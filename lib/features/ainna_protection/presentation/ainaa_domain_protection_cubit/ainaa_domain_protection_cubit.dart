@@ -1,5 +1,5 @@
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
+import 'package:ainaa/core/types/localized_string.dart';
+import 'package:ainaa/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
 import 'package:equatable/equatable.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:injectable/injectable.dart';

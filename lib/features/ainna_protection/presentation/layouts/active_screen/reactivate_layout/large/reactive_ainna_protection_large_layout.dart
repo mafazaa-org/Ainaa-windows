@@ -1,4 +1,4 @@
-part of 'package:blocker_windows/features/ainna_protection/presentation/layouts/active_screen/reactivate_layout/reactive_ainna_protection_layout.dart';
+part of 'package:ainaa/features/ainna_protection/presentation/layouts/active_screen/reactivate_layout/reactive_ainna_protection_layout.dart';
 
 class ReactiveAinnaProtectionLargeLayout extends StatelessWidget {
   final AinaaProtectionActive activeState;

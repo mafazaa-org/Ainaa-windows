@@ -1,7 +1,7 @@
-import 'package:blocker_windows/config/exceptions/fetch_exceptions.dart';
-import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_required_version_entity.dart';
-import 'package:blocker_windows/core/resources/data_state.dart';
+import 'package:ainaa/config/exceptions/fetch_exceptions.dart';
+import 'package:ainaa/constants/app_constants.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_required_version_entity.dart';
+import 'package:ainaa/core/resources/data_state.dart';
 
 typedef GetAppRequiredVersion = Result<AppRequiredVersion, FetchException>;
 

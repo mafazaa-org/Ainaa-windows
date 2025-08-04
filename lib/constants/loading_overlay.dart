@@ -1,5 +1,5 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/core/shared_widgets/app_loading_layout.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
+import 'package:ainaa/core/shared_widgets/app_loading_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 

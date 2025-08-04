@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:blocker_windows/features/support/domain/repositories/support_repository.dart';
+import 'package:ainaa/features/support/domain/repositories/support_repository.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
 

@@ -1,5 +1,5 @@
-import 'package:blocker_windows/features/version_check/domain/entities/app_needs_update_entity.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_needs_update_entity.dart';
+import 'package:ainaa/core/types/localized_string.dart';
 
 abstract class AppNeedsUpdateModel {
   final bool isNecessaryUpdate;

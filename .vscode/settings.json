@@ -1,8 +1,20 @@
 {
-    "cSpell.words": [
-        "Ainaa",
-        "almarai",
-        "runas",
-        "ادعمنا"
-    ]
+	"cSpell.words": ["Ainaa", "almarai", "runas", "ادعمنا"],
+	"files.associations": {
+		"*.py": "python",
+		"*.tf": "terraform",
+		"*.md": "markdown",
+		"*.json": "json",
+		"ter": "shellscript",
+		"*.bat": "bat",
+		"ans": "shellscript",
+		"linux": "shellscript",
+		"*.code-workspace": "jsonc",
+		"*.yaml": "yaml",
+		"*.list": "plaintext",
+		".env.j2": "jinja",
+		"*.tfvars": "plaintext",
+		"new": "cpp"
+	},
+	"cmake.ignoreCMakeListsMissing": true
 }

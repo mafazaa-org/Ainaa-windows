@@ -1,6 +1,6 @@
-import 'package:blocker_windows/features/app_meta_data/domain/entities/entities.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/features/ainna_protection/enums/ainna_activation_type.dart';
+import 'package:ainaa/features/app_meta_data/domain/entities/entities.dart';
+import 'package:ainaa/core/types/localized_string.dart';
+import 'package:ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
 
 typedef AinnaProtectionLevelModels = List<AinnaProtectionLevelModel>;
 

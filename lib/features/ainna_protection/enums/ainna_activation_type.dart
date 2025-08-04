@@ -1,4 +1,4 @@
-import 'package:blocker_windows/core/types/localized_string.dart';
+import 'package:ainaa/core/types/localized_string.dart';
 
 enum AinnaActivationType {
   high('العالية'),

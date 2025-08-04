@@ -1,6 +1,6 @@
-import 'package:blocker_windows/core/shared_widgets/app_confirm_popup.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/core/shared_widgets/app_confirm_popup.dart';
+import 'package:ainaa/core/types/localized_string.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class AinnaProtectionErrorLayout extends StatelessWidget {

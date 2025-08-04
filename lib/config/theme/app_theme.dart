@@ -1,8 +1,8 @@
-import 'package:blocker_windows/constants/app_colors.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/constants/app_styles.dart';
-import 'package:blocker_windows/constants/app_text_colors.dart';
-import 'package:blocker_windows/constants/app_text_styles.dart';
+import 'package:ainaa/constants/app_colors.dart';
+import 'package:ainaa/constants/app_spacing.dart';
+import 'package:ainaa/constants/app_styles.dart';
+import 'package:ainaa/constants/app_text_colors.dart';
+import 'package:ainaa/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

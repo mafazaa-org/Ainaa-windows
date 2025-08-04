@@ -1,10 +1,10 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/dialog_overlay.dart';
-import 'package:blocker_windows/core/shared_widgets/app_confirm_popup.dart';
-import 'package:blocker_windows/core/utils/app_error_wrapper.dart';
-import 'package:blocker_windows/features/support/presentation/cubit/support_us_cubit.dart';
-import 'package:blocker_windows/features/support/presentation/layouts/large/support_large_page.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
+import 'package:ainaa/constants/dialog_overlay.dart';
+import 'package:ainaa/core/shared_widgets/app_confirm_popup.dart';
+import 'package:ainaa/core/utils/app_error_wrapper.dart';
+import 'package:ainaa/features/support/presentation/cubit/support_us_cubit.dart';
+import 'package:ainaa/features/support/presentation/layouts/large/support_large_page.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

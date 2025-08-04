@@ -1,9 +1,9 @@
-import 'package:blocker_windows/constants/dialog_overlay.dart';
-import 'package:blocker_windows/core/shared_widgets/app_confirm_popup.dart';
-import 'package:blocker_windows/core/types/localized_string.dart';
-import 'package:blocker_windows/core/utils/open_link.dart';
-import 'package:blocker_windows/features/version_check/presentation/shared/navigate_to_home.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/constants/dialog_overlay.dart';
+import 'package:ainaa/core/shared_widgets/app_confirm_popup.dart';
+import 'package:ainaa/core/types/localized_string.dart';
+import 'package:ainaa/core/utils/open_link.dart';
+import 'package:ainaa/features/version_check/presentation/shared/navigate_to_home.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class OptionallyUpdateAppLayout extends StatelessWidget {

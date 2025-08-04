@@ -1,10 +1,10 @@
-import 'package:blocker_windows/config/exceptions/fetch_exceptions.dart';
-import 'package:blocker_windows/features/version_check/data/models/app_needs_update_model.dart';
-import 'package:blocker_windows/features/version_check/data/models/app_required_version_model.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_needs_update_entity.dart';
-import 'package:blocker_windows/features/version_check/domain/entities/app_required_version_entity.dart';
-import 'package:blocker_windows/features/version_check/domain/repositories/app_required_version_repository.dart';
-import 'package:blocker_windows/core/resources/data_state.dart';
+import 'package:ainaa/config/exceptions/fetch_exceptions.dart';
+import 'package:ainaa/features/version_check/data/models/app_needs_update_model.dart';
+import 'package:ainaa/features/version_check/data/models/app_required_version_model.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_needs_update_entity.dart';
+import 'package:ainaa/features/version_check/domain/entities/app_required_version_entity.dart';
+import 'package:ainaa/features/version_check/domain/repositories/app_required_version_repository.dart';
+import 'package:ainaa/core/resources/data_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:http/http.dart' as http;

@@ -1,6 +1,6 @@
-import 'package:blocker_windows/core/constants/app_urls.dart';
-import 'package:blocker_windows/core/utils/open_link.dart';
-import 'package:blocker_windows/features/support/domain/repositories/support_repository.dart';
+import 'package:ainaa/core/constants/app_urls.dart';
+import 'package:ainaa/core/utils/open_link.dart';
+import 'package:ainaa/features/support/domain/repositories/support_repository.dart';
 import 'package:injectable/injectable.dart';
 
 @Singleton(as: SupportRepository)

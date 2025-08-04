@@ -2,7 +2,7 @@
 
 import 'package:mocktail/mocktail.dart';
 
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 
 class AppMockLocalizationAr extends Mock implements AppLocalizations {
   // final String local => ;

@@ -1,8 +1,8 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/constants/app_spacing.dart';
-import 'package:blocker_windows/features/app_meta_data/domain/entities/ainna_protection_level_entity.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/card_layout/build_card_icon.dart';
-import 'package:blocker_windows/features/ainna_protection/presentation/layouts/inactive_screen/shared/card_layout/build_card_tag_layout.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
+import 'package:ainaa/constants/app_spacing.dart';
+import 'package:ainaa/features/app_meta_data/domain/entities/ainna_protection_level_entity.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/inactive_screen/shared/card_layout/build_card_icon.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/inactive_screen/shared/card_layout/build_card_tag_layout.dart';
 import 'package:flutter/material.dart';
 
 class BuildCardLayout extends StatelessWidget {

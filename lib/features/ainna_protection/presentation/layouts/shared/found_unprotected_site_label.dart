@@ -1,7 +1,7 @@
-import 'package:blocker_windows/config/extensions/context_extension.dart';
-import 'package:blocker_windows/core/shared_widgets/app_text_button.dart';
-import 'package:blocker_windows/features/report_problem/presentation/layouts/report_problem_layout/report_problem_head.dart';
-import 'package:blocker_windows/l10n/generated/app_localizations.dart';
+import 'package:ainaa/config/extensions/context_extension.dart';
+import 'package:ainaa/core/shared_widgets/app_text_button.dart';
+import 'package:ainaa/features/report_problem/presentation/layouts/report_problem_layout/report_problem_head.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class FoundUnprotectedSiteLabel extends StatelessWidget {

@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "blocker_windows" "\0"
+            VALUE "CompanyName", "مفازا" "\0"
+            VALUE "FileDescription", "عينا سلسبيلا" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "blocker_windows" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "blocker_windows.exe" "\0"
-            VALUE "ProductName", "blocker_windows" "\0"
+            VALUE "InternalName", "عينا سلسبيلا" "\0"
+            VALUE "LegalCopyright", "© مفازا 2025. جميع الحقوق محفوظة" "\0"
+            VALUE "OriginalFilename", "ainaa.exe" "\0"
+            VALUE "ProductName", "عينا سلسبيلا" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,7 +1,7 @@
-import 'package:blocker_windows/constants/app_colors.dart';
-import 'package:blocker_windows/constants/app_constants.dart';
-import 'package:blocker_windows/constants/app_text_colors.dart';
-import 'package:blocker_windows/constants/app_text_styles.dart';
+import 'package:ainaa/constants/app_colors.dart';
+import 'package:ainaa/constants/app_constants.dart';
+import 'package:ainaa/constants/app_text_colors.dart';
+import 'package:ainaa/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 enum DeviceType { mobile, tablet, desktop }
