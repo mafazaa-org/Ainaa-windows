@@ -1,9 +1,11 @@
 import 'package:ainaa/app.dart';
+import 'package:ainaa/app_enviroments.dart';
 import 'package:ainaa/config/dependency_injection/dependency_injection.dart';
 import 'package:ainaa/core/settings/app_bloc_observer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:injectable/injectable.dart' as appEnv;
 import 'package:path_provider/path_provider.dart';
 
 void main() async {
@@ -16,7 +18,7 @@ void main() async {
     ),
   );
 
-  await configurationDependency(Env.dev);
+  await configurationDependency(AppEnvironment.appEnv);
 
   //text styling according to sp
   await ScreenUtil.ensureScreenSize();
