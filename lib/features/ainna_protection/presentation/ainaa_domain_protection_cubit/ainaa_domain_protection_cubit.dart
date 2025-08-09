@@ -1,6 +1,7 @@
 import 'package:ainaa/core/types/localized_string.dart';
 import 'package:ainaa/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
@@ -43,15 +44,18 @@ class AinaaDomainProtectionCubit
   AinaaDomainProtectionState? fromJson(Map<String, dynamic> json) {
     if (json.containsKey('protectedDomains') &&
         json['protectedDomains'] is List<String>) {
+      debugPrint('domains added: ${json['protectedDomains']}');
       return AinaaDomainProtectionState(
         protectedDomains: json['protectedDomains'],
       );
     }
+    debugPrint('no domains added');
     return AinaaDomainProtectionState();
   }
 
   @override
   Map<String, dynamic>? toJson(AinaaDomainProtectionState state) {
+    debugPrint('have domains: ${state.protectedDomains}');
     return {'protectedDomains': state.protectedDomains};
   }
 }

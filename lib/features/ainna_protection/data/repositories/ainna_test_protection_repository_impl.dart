@@ -1,5 +1,6 @@
 import 'package:ainaa/config/dependency_injection/dependency_injection.dart';
 import 'package:ainaa/core/resources/data_state.dart';
+import 'package:ainaa/core/types/localized_string.dart';
 import 'package:ainaa/features/ainna_protection/data/mock_data/ainna_protection_error_mock_data_impl.dart';
 import 'package:ainaa/features/ainna_protection/domain/repositories/ainna_protection_repository.dart';
 import 'package:ainaa/features/ainna_protection/enums/ainna_activation_type.dart';
@@ -53,10 +54,10 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
   Future<AinnaDomainProtectActionStatus> domainProtection(String url) async {
     logger.i('url: $url');
     await Future.delayed(const Duration(seconds: 2));
-    return Future.value(Success(url));
-    // final error = LocalizedString.fromArString(
-    //   errorMockData.responseTimeOut['ar'],
-    // );
-    // return Future.value(Failure(error));
+    // return Future.value(Success(url));
+    final error = LocalizedString.fromArString(
+      errorMockData.responseTimeOut['ar'],
+    );
+    return Future.value(Failure(error));
   }
 }
