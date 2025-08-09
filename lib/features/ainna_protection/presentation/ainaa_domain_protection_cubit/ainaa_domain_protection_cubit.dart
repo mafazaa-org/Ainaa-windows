@@ -44,18 +44,18 @@ class AinaaDomainProtectionCubit
   AinaaDomainProtectionState? fromJson(Map<String, dynamic> json) {
     if (json.containsKey('protectedDomains') &&
         json['protectedDomains'] is List<String>) {
-      debugPrint('domains added: ${json['protectedDomains']}');
+      // debugPrint('domains added: ${json['protectedDomains']}');
       return AinaaDomainProtectionState(
         protectedDomains: json['protectedDomains'],
       );
     }
-    debugPrint('no domains added');
+    // debugPrint('no domains added');
     return AinaaDomainProtectionState();
   }
 
   @override
   Map<String, dynamic>? toJson(AinaaDomainProtectionState state) {
-    debugPrint('have domains: ${state.protectedDomains}');
+    // debugPrint('have domains: ${state.protectedDomains}');
     return {'protectedDomains': state.protectedDomains};
   }
 }
