@@ -8,6 +8,7 @@
 
    # Prod mode (simulated)
    flutter run --dart-define=APP_ENV=prod
+   ```
 
 ***or***
 
@@ -41,6 +42,7 @@
       }
     ]
   }
+  ```
 3.How to Use:
 -Open VS Code's Debug Panel
 -Select configuration:
@@ -48,6 +50,7 @@
   Run - Prod Mode for production testing
 
 ***Windows Production Build***
-  '''batch
+  ```batch
   flutter build windows --release --dart-define=APP_ENV=prod
+  ```
 
