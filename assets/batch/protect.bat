@@ -121,20 +121,12 @@ goto :start
 
         call :log text "%text_to_add%" already exists in hosts file
 
-        endlocal
-        call :log :::: finish ::::
-        echo exiting
-        exit /b 1
     ) else (
-        :: Append the text to the file
 
         call :log appending %text_to_add% to hosts file
 
         echo %text_to_add%>>"%file_path%"
-        endlocal
-        call :log :::: finish ::::
-        echo exiting
-        exit /b 0
+        
     )
 
     endlocal

@@ -49,7 +49,7 @@ Name: "arabic"; MessagesFile: "compiler:Languages\Arabic.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion replacesameversion
 Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "O:\mafazaa\ainaa\windows\assets\batch\*"; DestDir: "{app}\batch"; Flags: ignoreversion recursesubdirs createallsubdirs
