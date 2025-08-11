@@ -44,10 +44,10 @@
   }
   ```
 3.How to Use:
--Open VS Code's Debug Panel
--Select configuration:
-  Run - Dev Mode for development
-  Run - Prod Mode for production testing
+   1.Open VS Code's Debug Panel (Ctrl+Shift+D)
+   2.Select configuration:
+     Run - Dev Mode for development
+     Run - Prod Mode for production testing
 
 ***Windows Production Build***
   ```batch
