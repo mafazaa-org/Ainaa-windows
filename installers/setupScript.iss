@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "عينا سلسبيلا"
-#define MyAppVersion "v0"
+#define MyAppVersion "v0.0.0"
 #define MyAppPublisher "مفازا"
 #define MyAppURL "https://ainaa.mafazaa.com"
 #define MyAppExeName "ainaa.exe"
@@ -52,7 +52,9 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion replacesameversion
 Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\flutter_windows.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "O:\mafazaa\ainaa\windows\build\windows\x64\runner\Release\url_launcher_windows_plugin.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "O:\mafazaa\ainaa\windows\assets\batch\*"; DestDir: "{app}\batch"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "O:\mafazaa\ainaa\windows\version"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Dirs]
