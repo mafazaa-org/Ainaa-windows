@@ -10,15 +10,15 @@ class _BuildAdditionalAndroidToolsButton extends StatelessWidget {
 
     return GestureDetector(
       // for debugging purposes
-      onTap: () => context.read<AinaaProtectionCubit>().resetState(),
+      // onTap: () => context.read<AinaaProtectionCubit>().resetState(),
       child: Container(
         alignment: AlignmentDirectional.centerEnd,
         width: screenWidth * .25,
-        child: Text(
-          'Test Reset',
-          // appLocalizations.additional_android_tools,
-          style: context.textStyles.navLabel,
-        ),
+        // child: Text(
+        //   'Test Reset',
+        //   // appLocalizations.additional_android_tools,
+        //   style: context.textStyles.navLabel,
+        // ),
       ),
     );
   }
