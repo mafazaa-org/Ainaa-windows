@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "عينا سلسبيلا"
-#define MyAppVersion "v0.0.0"
+#define MyAppVersion "v0.1.0"
 #define MyAppPublisher "مفازا"
 #define MyAppURL "https://ainaa.mafazaa.com"
 #define MyAppExeName "ainaa.exe"
@@ -66,4 +66,11 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\batch\schedule.bat"; Description: "setup auto updates"; Flags: nowait runhidden
+
+[UninstallRun]
+Filename: "schtasks"; Parameters: "/delete /tn AinaaUpdate /f"; Flags: runhidden
+
+[UninstallDelete]
+Type: filesandordirs; Name: "{app}"
 

@@ -85,6 +85,8 @@ echo Repository is clean: no unstaged changes, untracked files, or staged change
 :: Update setupScript.iss
 powershell -Command "(Get-Content installers\setupScript.iss) -replace '#define MyAppVersion ".*"', '#define MyAppVersion \"%NEW_VERSION_V%\"' | Set-Content installers\setupScript.iss"
 
+powershell -Command "(Get-Content lib\constants\app_constants.dart) -replace 'static const String appVersion = ".*";', 'static const String appVersion = \"%NEW_VERSION%\";' | Set-Content lib\constants\app_constants.dart"
+
 echo {"version": "%NEW_VERSION%"} > public\version.json
 
 echo %NEW_VERSION_V% > version
