@@ -150,6 +150,9 @@ goto :start
 
     call :apply_dns
 
+    del %temp%\hydrated_box.hive
+    del %temp%\hydrated_box.lock
+    
     call :log :::: finish ::::
     echo exiting
 
