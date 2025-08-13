@@ -4,7 +4,7 @@ final class AppConstants {
   static const String batchUrl = 'assets/batch/$batchName';
   static const String domainsUrl = 'assets/batch/domains.txt';
   static const String youtubeUrl = 'assets/batch/youtube.txt';
-  static const String appVersion = "0.1.0";
+  static const String appVersion = "0.1.1";
 
   static const double mobileMinWidth = 320.0;
   static const double mobileMaxWidth = 480.0;
