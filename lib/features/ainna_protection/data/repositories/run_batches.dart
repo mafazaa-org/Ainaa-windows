@@ -59,9 +59,6 @@ Future<void> _runBatchScript(String args) async {
     process.stderr.transform(utf8.decoder).listen(logger.w);
 
     final exitCode = await process.exitCode;
-    if (exitCode != 0) {
-      throw UploadException('Script failed');
-    }
     logger.i('Process exited with code $exitCode');
   } catch (e) {
     logger.e('Error executing batch file: $e');

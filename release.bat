@@ -98,11 +98,11 @@ iscc installers\setupScript.iss
 del version
 
 git add .
-git amend
+git commit -m "updated version info to %NEW_VERSION_V%"
 
 git tag %NEW_VERSION_V% -f
-git push upstream -f
-git push --tags upstream -f
+git push upstream
+git push --tags upstream
 
 echo %NEW_VERSION_V% > version
 
