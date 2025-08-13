@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "عينا سلسبيلا"
-#define MyAppVersion "v0.1.1"
+#define MyAppVersion "v0.1.2"
 #define MyAppPublisher "مفازا"
 #define MyAppURL "https://ainaa.mafazaa.com"
 #define MyAppExeName "ainaa.exe"
