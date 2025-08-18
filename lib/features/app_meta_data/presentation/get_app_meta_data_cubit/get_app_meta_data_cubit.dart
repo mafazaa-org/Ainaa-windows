@@ -32,7 +32,7 @@ class GetAppMetaDataCubit extends Cubit<AppMetaDataState> {
       if (ainaaProtectionState is AinaaProtectionInactive) {
         emit(AppMetaDataOfflineState());
       } else {
-        emit(AppMetaDataFailedState('no_internet_connection'));
+        emit(AppMetaDataFailedState('no internet connection'));
       }
     }
   }

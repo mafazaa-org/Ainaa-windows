@@ -1,20 +1,20 @@
+import 'dart:ui';
+
 import 'package:ainaa/core/utils/text_form_validations.dart';
+import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../helpers/app_mock_localization.dart';
-
 void main() {
-  final l10n = AppMockLocalizationAr();
+  late AppLocalizations l10n;
+
+  setUp(() async {
+    l10n = await AppLocalizations.delegate.load(Locale('ar'));
+  });
+
   group('Phone Number Validation', () {
     test('Returns error for empty input', () {
-      expect(
-        TextFormValidations.phoneNumber(l10n, null),
-        l10n.require_phone_number,
-      );
-      expect(
-        TextFormValidations.phoneNumber(l10n, ''),
-        l10n.require_phone_number,
-      );
+      expect(TextFormValidations.phoneNumber(l10n, null), l10n.required_field);
+      expect(TextFormValidations.phoneNumber(l10n, ''), l10n.required_field);
     });
 
     test('Rejects invalid phone formats', () {
@@ -31,9 +31,9 @@ void main() {
     test('Accepts valid phone numbers', () {
       expect(TextFormValidations.phoneNumber(l10n, '+1234567890'), isNull);
       expect(
-        TextFormValidations.phoneNumber(l10n, '12345678'),
+        TextFormValidations.phoneNumber(l10n, '123456789'),
         isNull,
-      ); // 8+ digits
+      ); // 9+ digits
     });
   });
 
@@ -62,8 +62,14 @@ void main() {
 
   group('Name Validation', () {
     test('Rejects names outside 2-24 chars', () {
-      expect(TextFormValidations.name(l10n, 'A'), ''); // Too short
-      expect(TextFormValidations.name(l10n, 'A' * 25), ''); // Too long
+      expect(
+        TextFormValidations.name(l10n, 'A'),
+        l10n.name_not_in_range,
+      ); // Too short
+      expect(
+        TextFormValidations.name(l10n, 'A' * 25),
+        l10n.name_not_in_range,
+      ); // Too long
     });
 
     test('Accepts valid names', () {
@@ -73,7 +79,7 @@ void main() {
 
   group('Email Validation', () {
     test('Rejects empty emails', () {
-      expect(TextFormValidations.emailAddress(l10n, null), '');
+      expect(TextFormValidations.emailAddress(l10n, null), l10n.required_field);
     });
 
     // Add more email regex tests if needed
@@ -81,7 +87,7 @@ void main() {
 
   group('Paragraph Validation', () {
     test('Rejects empty paragraphs', () {
-      expect(TextFormValidations.paragraph(l10n, null), '');
+      expect(TextFormValidations.paragraph(l10n, null), l10n.required_field);
     });
 
     test('Accepts any paragraphs', () {

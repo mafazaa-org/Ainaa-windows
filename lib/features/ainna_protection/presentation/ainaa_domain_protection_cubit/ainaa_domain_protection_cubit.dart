@@ -13,9 +13,9 @@ class AinaaDomainProtectionCubit
   final AinnaProtectionRepository _repository;
   AinaaDomainProtectionCubit(this._repository)
     : super(AinaaDomainProtectionState());
+  final logger = Logger();
 
   Future<bool> domainProtection(String url) async {
-    final logger = Logger();
     var isSuccess = false;
     emit(state.copyWith(isProcessing: true));
     try {
@@ -43,6 +43,7 @@ class AinaaDomainProtectionCubit
   AinaaDomainProtectionState? fromJson(Map<String, dynamic> json) {
     if (json.containsKey('protectedDomains') &&
         json['protectedDomains'] is List<String>) {
+      logger.i('protectedDomains: ${json['protectedDomains']}');
       return AinaaDomainProtectionState(
         protectedDomains: json['protectedDomains'],
       );
@@ -52,6 +53,7 @@ class AinaaDomainProtectionCubit
 
   @override
   Map<String, dynamic>? toJson(AinaaDomainProtectionState state) {
+    logger.i('protectedDomains: ${state.protectedDomains}');
     return {'protectedDomains': state.protectedDomains};
   }
 }

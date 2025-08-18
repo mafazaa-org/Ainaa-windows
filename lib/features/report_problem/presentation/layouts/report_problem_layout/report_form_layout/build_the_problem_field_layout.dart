@@ -1,7 +1,11 @@
 part of 'build_report_form_layout.dart';
 
-class _BuildTheProblemFieldLayout extends StatelessWidget {
-  const _BuildTheProblemFieldLayout(this.appLocalizations, this.provider);
+class BuildTheProblemFieldLayout extends StatelessWidget {
+  const BuildTheProblemFieldLayout(
+    this.appLocalizations,
+    this.provider, {
+    super.key,
+  });
 
   final AppLocalizations appLocalizations;
   final ReportProblemFormProvider provider;

@@ -53,7 +53,14 @@ class _ReportFormButton extends StatelessWidget {
             getReportProblemData,
           );
         } else {
-          showAppSnackbar(context, appLocalizations.invalid_input);
+          DialogOverlay.show(
+            context,
+            child: AppDialogLayout(
+              text: appLocalizations.invalid_input,
+              actionText: appLocalizations.ok,
+              onPressed: DialogOverlay.hide,
+            ),
+          );
         }
       },
       text: appLocalizations.send,

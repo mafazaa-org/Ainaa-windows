@@ -1,7 +1,11 @@
 part of 'build_report_form_layout.dart';
 
-class _BuildEmailAddressFieldLayout extends StatelessWidget {
-  const _BuildEmailAddressFieldLayout(this.appLocalizations, this.provider);
+class BuildEmailAddressFieldLayout extends StatelessWidget {
+  const BuildEmailAddressFieldLayout(
+    this.appLocalizations,
+    this.provider, {
+    super.key,
+  });
 
   final AppLocalizations appLocalizations;
   final ReportProblemFormProvider provider;

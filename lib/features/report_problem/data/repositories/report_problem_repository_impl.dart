@@ -38,7 +38,7 @@ class ReportProblemRepositoryImpl extends ReportProblemRepository {
         return Failure(UploadException('something went wrong'));
       }
     } catch (e) {
-      return Failure(UploadException('no_internet_connection'));
+      return Failure(UploadException('no internet connection'));
     }
   }
 }

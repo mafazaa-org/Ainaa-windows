@@ -5,7 +5,7 @@ final class AppErrorWrapper {
     switch (code) {
       case 'something went wrong':
         return appLocalizations.something_went_wrong;
-      case 'no_internet_connection':
+      case 'no internet connection':
         return appLocalizations.no_internet_connection;
       case 'Script failed':
         return appLocalizations.script_failed;

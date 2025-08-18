@@ -20,7 +20,7 @@ class ReportProblemCubit extends Cubit<ReportProblemState> {
         failure: (e) => emit(ReportProblemFailed(e.code)),
       );
     } catch (e) {
-      emit(ReportProblemFailed('no_internet_connection'));
+      emit(ReportProblemFailed('no internet connection'));
     }
   }
 

@@ -1,7 +1,11 @@
 part of 'build_report_form_layout.dart';
 
-class _BuildPhoneNumberFieldLayout extends StatelessWidget {
-  const _BuildPhoneNumberFieldLayout(this.appLocalizations, this.provider);
+class BuildPhoneNumberFieldLayout extends StatelessWidget {
+  const BuildPhoneNumberFieldLayout(
+    this.appLocalizations,
+    this.provider, {
+    super.key,
+  });
 
   final AppLocalizations appLocalizations;
   final ReportProblemFormProvider provider;

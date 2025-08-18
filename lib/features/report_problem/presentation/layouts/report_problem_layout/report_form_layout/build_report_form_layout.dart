@@ -11,10 +11,12 @@ import 'package:ainaa/features/report_problem/presentation/providers/report_prob
 import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 part 'build_name_field_layout.dart';
 part 'build_the_problem_field_layout.dart';
 part 'build_phone_number_field_layout.dart';
 part 'build_email_address_field_layout.dart';
+part 'build_report_problem_error_layout.dart';
 
 class BuildReportFormLayout extends StatelessWidget {
   const BuildReportFormLayout({
@@ -50,7 +52,7 @@ class BuildReportFormLayout extends StatelessWidget {
               })(),
             ReportProblemFailed(code: final code) => DialogOverlay.show(
               context,
-              child: _BuildReportProblemErrorLayout(code, appLocalizations),
+              child: BuildReportProblemErrorLayout(code, appLocalizations),
             ),
             _ => (),
           },
@@ -65,34 +67,15 @@ class BuildReportFormLayout extends StatelessWidget {
             child: Column(
               spacing: AppSpacing.sl,
               children: [
-                _BuildNameFieldLayout(appLocalizations, provider),
-                _BuildPhoneNumberFieldLayout(appLocalizations, provider),
-                _BuildEmailAddressFieldLayout(appLocalizations, provider),
-                _BuildTheProblemFieldLayout(appLocalizations, provider),
+                BuildNameFieldLayout(appLocalizations, provider),
+                BuildPhoneNumberFieldLayout(appLocalizations, provider),
+                BuildEmailAddressFieldLayout(appLocalizations, provider),
+                BuildTheProblemFieldLayout(appLocalizations, provider),
               ],
             ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class _BuildReportProblemErrorLayout extends StatelessWidget {
-  const _BuildReportProblemErrorLayout(this.code, this.appLocalizations);
-
-  final String code;
-  final AppLocalizations appLocalizations;
-
-  @override
-  Widget build(BuildContext context) {
-    return AppDialogLayout(
-      text: AppErrorWrapper.map(code, appLocalizations),
-      actionText: appLocalizations.ok,
-      onPressed: () {
-        LoadingOverlay.hide();
-        DialogOverlay.hide();
-      },
     );
   }
 }
