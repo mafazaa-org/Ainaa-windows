@@ -13,19 +13,21 @@ void showAppSnackbar(
     builder:
         (context) => Positioned(
           bottom: AppSpacing.minHorizontal,
-          // left: AppSpacing.minHorizontal,
           right: AppSpacing.minHorizontal,
           width: context.screenWidth * .25,
-          child: Material(
-            elevation: 8,
-            borderRadius: AppStyles.borderRadiusM,
-            color: context.theme.snackBarTheme.backgroundColor,
-            child: Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: AppSpacing.md,
-                vertical: AppSpacing.sl,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minWidth: 200, maxWidth: 300),
+            child: Material(
+              elevation: 8,
+              borderRadius: AppStyles.borderRadiusM,
+              color: context.theme.snackBarTheme.backgroundColor,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppSpacing.md,
+                  vertical: AppSpacing.sl,
+                ),
+                child: Text(message, style: context.textStyles.displayMedium),
               ),
-              child: Text(message, style: context.textStyles.displayMedium),
             ),
           ),
         ),

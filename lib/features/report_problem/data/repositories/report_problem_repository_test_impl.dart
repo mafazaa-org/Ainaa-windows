@@ -15,7 +15,7 @@ class ReportProblemRepositoryTestImpl extends ReportProblemRepository {
     Logger logger = Logger();
     logger.i('Report Data: ${problem.toString()}');
     Future.delayed(Duration(seconds: 3));
-    // return Success(null);
-    return Failure(UploadException('invalid report'));
+    return Success(null);
+    // return Failure(UploadException('invalid report'));
   }
 }
