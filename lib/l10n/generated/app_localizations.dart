@@ -194,6 +194,18 @@ abstract class AppLocalizations {
   /// **'حفظ'**
   String get save;
 
+  /// No description provided for @confirm_specific_app_activation.
+  ///
+  /// In en, this message translates to:
+  /// **'هل أنت متأكد أنك تريد تفعيل الحماية على:'**
+  String get confirm_specific_app_activation;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'نعم'**
+  String get confirm;
+
   /// No description provided for @report_problem.
   ///
   /// In en, this message translates to:

@@ -44,7 +44,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get want_specific_app_activation =>
-      'هل  تريد تفعيل الحماية على تطبيق معين؟';
+      'هل تريد تفعيل الحماية على موقع محدد؟';
 
   @override
   String get please_enter_needed_specific_app_activation_url =>
@@ -58,6 +58,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get save => 'حفظ';
+
+  @override
+  String get confirm_specific_app_activation =>
+      'هل أنت متأكد أنك تريد تفعيل الحماية على:';
+
+  @override
+  String get confirm => 'نعم';
 
   @override
   String get report_problem => 'الإبلاغ عن مشكلة';

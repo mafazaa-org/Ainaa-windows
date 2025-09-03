@@ -20,15 +20,21 @@ class _BuildProtectDomainButton extends StatelessWidget {
         text: appLocalizations.save,
         onPressed:
             (isValid && value != null)
-                ? () async {
-                  final isSuccess = await context
-                      .read<AinaaDomainProtectionCubit>()
-                      .domainProtection(value!);
-                  if (isSuccess) {
-                    controller.clear();
-                    field.reset();
-                  }
-                }
+                ? () => showConfirmDomainProtectionDialog(
+                  context,
+                  appLocalizations,
+                  domains: [value!],
+                  onPressed: () async {
+                    Navigator.pop(context);
+                    final isSuccess = await context
+                        .read<AinaaDomainProtectionCubit>()
+                        .domainProtection(value!);
+                    if (isSuccess) {
+                      controller.clear();
+                      field.reset();
+                    }
+                  },
+                )
                 : null,
       ),
     );

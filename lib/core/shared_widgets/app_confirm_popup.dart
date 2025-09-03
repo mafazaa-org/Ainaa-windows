@@ -39,7 +39,8 @@ import 'package:flutter/material.dart';
 ///
 
 class AppDialogLayout extends StatelessWidget {
-  final String text;
+  final String? text;
+  final Widget? title;
   final String? subText;
   final String actionText;
   final String? cancelText;
@@ -53,14 +54,15 @@ class AppDialogLayout extends StatelessWidget {
 
   const AppDialogLayout({
     super.key,
-    required this.text,
+    this.text,
+    this.title,
     this.subText,
     required this.actionText,
     required this.onPressed,
     this.cancelText,
     this.onCancelPressed,
     this.body,
-  });
+  }) : assert(title != null || text != null);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +80,7 @@ class AppDialogLayout extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(text, style: context.textStyles.displayMedium),
+          title ?? Text(text!, style: context.textStyles.displayMedium),
           subText != null
               ? Text(subText!, style: context.textStyles.bodyMedium)
               : SizedBox.shrink(),

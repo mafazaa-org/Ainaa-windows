@@ -60,6 +60,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get save => 'حفظ';
 
   @override
+  String get confirm_specific_app_activation =>
+      'هل أنت متأكد أنك تريد تفعيل الحماية على:';
+
+  @override
+  String get confirm => 'نعم';
+
+  @override
   String get report_problem => 'الإبلاغ عن مشكلة';
 
   @override
