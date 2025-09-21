@@ -16,10 +16,9 @@ class BuildPhoneNumberTextFiledLayout extends StatelessWidget {
         if (phoneNumber != null && dialCode != null) {
           phoneNumber = phoneNumber!.substring(dialCode!.length);
           // debugPrint('dialCode: $dialCode');
-          context.read<ChosenProtectionProvider>().updatePhoneNumber(
-            phoneNumber,
-          );
-          //TODO: send the phone number and country dial code
+          // context.read<ChosenProtectionProvider>().updatePhoneNumber(
+          //   phoneNumber,
+          // );
         }
       },
     );

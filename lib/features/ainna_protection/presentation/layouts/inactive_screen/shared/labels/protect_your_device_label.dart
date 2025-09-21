@@ -9,14 +9,14 @@ class ProtectYourDeviceLabel extends StatelessWidget {
     return Center(
       child: Text.rich(
         TextSpan(
-          text: '${appLocalizations.protect_your_device_now}\n',
+          text: appLocalizations.protect_your_device_now,
           style: context.textStyles.headingExtraLarge,
-          children: [
-            TextSpan(
-              text: appLocalizations.enter_phone_number_desc,
-              style: context.textStyles.bodyLarge,
-            ),
-          ],
+          // children: [
+          //   TextSpan(
+          //     text: '\n${appLocalizations.enter_phone_number_desc}',
+          //     style: context.textStyles.bodyLarge,
+          //   ),
+          // ],
         ),
         textAlign: TextAlign.center,
       ),
