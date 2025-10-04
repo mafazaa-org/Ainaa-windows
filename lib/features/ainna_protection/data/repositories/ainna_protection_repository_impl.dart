@@ -18,7 +18,7 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     // required String activationBatchPath,
-    required String phoneNumber,
+    // required String phoneNumber,
   }) async {
     try {
       await runAinnaActivateEmbeddedBatchFile(
@@ -26,7 +26,7 @@ class AinnaProtectionRepositoryImpl extends AinnaProtectionRepository {
         options: options,
         // activationBatchPath: activationBatchPath,
       );
-      await submitPhoneNumberViaForm(phoneNumber);
+      // await submitPhoneNumberViaForm(phoneNumber);
       return Future.value(Success(true));
     } catch (e) {
       logger.w('Failed activate, to run .bat file: ${e.runtimeType}, $e');

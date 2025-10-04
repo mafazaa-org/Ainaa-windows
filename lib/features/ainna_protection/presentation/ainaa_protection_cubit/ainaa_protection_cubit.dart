@@ -20,7 +20,7 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
   Future<void> activate(
     AinnaActivationType activationType,
     String activationBatchPath,
-    String phoneNumber,
+    // String phoneNumber,
   ) async {
     final options = {AinnaProtectionAdditionalOption.youtube};
     try {
@@ -29,7 +29,7 @@ class AinaaProtectionCubit extends HydratedCubit<AinaaProtectionState> {
         activationType: activationType,
         options: options,
         // activationBatchPath: activationBatchPath,
-        phoneNumber: phoneNumber,
+        // phoneNumber: phoneNumber,
       );
       response.when(
         success:

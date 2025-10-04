@@ -17,7 +17,7 @@ class AinnaTestProtectionRepositoryImpl implements AinnaProtectionRepository {
     required AinnaActivationType activationType,
     required AinnaProtectionAdditionalOptions options,
     // required String activationBatchPath,
-    required String phoneNumber,
+    // required String phoneNumber,
   }) async {
     logger.i(
       'ACTIVATE:\n activationType: ${activationType.name} \n options: $options',
