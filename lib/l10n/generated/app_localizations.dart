@@ -194,6 +194,18 @@ abstract class AppLocalizations {
   /// **'حفظ'**
   String get save;
 
+  /// No description provided for @confirm_specific_app_activation.
+  ///
+  /// In en, this message translates to:
+  /// **'هل أنت متأكد أنك تريد تفعيل الحماية على:'**
+  String get confirm_specific_app_activation;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'نعم'**
+  String get confirm;
+
   /// No description provided for @report_problem.
   ///
   /// In en, this message translates to:
@@ -260,17 +272,29 @@ abstract class AppLocalizations {
   /// **'سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.'**
   String get will_contact_you_soon;
 
-  /// No description provided for @want_to_activate_protection.
+  /// No description provided for @alert_before_activating.
   ///
   /// In en, this message translates to:
-  /// **'هل ترغب في تفعيل الحماية على جهازك؟'**
-  String get want_to_activate_protection;
+  /// **'تنويه هام قبل تفعيل الحماية'**
+  String get alert_before_activating;
+
+  /// No description provided for @read_desc_carefully.
+  ///
+  /// In en, this message translates to:
+  /// **'يرجى قراءة هذا التنويه بعناية وفهمه بالكامل قبل المتابعة في تفعيل حماية عينا سلسبيلا على جهازك.'**
+  String get read_desc_carefully;
 
   /// No description provided for @want_to_activate_protection_desc.
   ///
   /// In en, this message translates to:
-  /// **'بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.'**
+  /// **'سيتم تقييد المستخدم عن طريق منع حذف الحماية لضمان فاعلية الخدمة، لذلك، فإن موافقتك على تفعيل الحماية تعتبر موافقة صريحة منك على تفعيل خاصية تقييد الحذف والالتزام بجميع قيود الحماية المترتبة عليها، إذا كنت موافقًا ومستعدًا لتطبيق هذه الإجراءات والقيود بشكل دائم على جهازك، يمكنك المتابعة لتفعيل حماية عينا سلسبيلا.'**
   String get want_to_activate_protection_desc;
+
+  /// No description provided for @want_to_activate_protection.
+  ///
+  /// In en, this message translates to:
+  /// **'هل ترغب في المتابعة وتفعيل الحماية الآن؟'**
+  String get want_to_activate_protection;
 
   /// No description provided for @confirm_activate_protection.
   ///

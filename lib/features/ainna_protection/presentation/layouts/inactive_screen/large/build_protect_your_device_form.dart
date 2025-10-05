@@ -13,7 +13,8 @@ class _BuildProtectYourDeviceForm extends StatelessWidget {
       children: [
         ProtectYourDeviceLabel(),
         SizedBox(height: AppSpacing.sm),
-        BuildPhoneNumberFormLayout(width: width),
+        // BuildPhoneNumberFormLayout(width: width),
+        BuildAinnaProtectionButton(width: width),
         FoundUnprotectedSiteLabel(),
       ],
     );

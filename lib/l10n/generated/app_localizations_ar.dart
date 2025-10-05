@@ -44,7 +44,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get want_specific_app_activation =>
-      'هل  تريد تفعيل الحماية على تطبيق معين؟';
+      'هل تريد تفعيل الحماية على موقع محدد؟';
 
   @override
   String get please_enter_needed_specific_app_activation_url =>
@@ -58,6 +58,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get save => 'حفظ';
+
+  @override
+  String get confirm_specific_app_activation =>
+      'هل أنت متأكد أنك تريد تفعيل الحماية على:';
+
+  @override
+  String get confirm => 'نعم';
 
   @override
   String get report_problem => 'الإبلاغ عن مشكلة';
@@ -94,12 +101,19 @@ class AppLocalizationsAr extends AppLocalizations {
       'سنتواصل معك عبر البريد الإلكتروني أو الهاتف في أقرب وقت.';
 
   @override
-  String get want_to_activate_protection =>
-      'هل ترغب في تفعيل الحماية على جهازك؟';
+  String get alert_before_activating => 'تنويه هام قبل تفعيل الحماية';
+
+  @override
+  String get read_desc_carefully =>
+      'يرجى قراءة هذا التنويه بعناية وفهمه بالكامل قبل المتابعة في تفعيل حماية عينا سلسبيلا على جهازك.';
 
   @override
   String get want_to_activate_protection_desc =>
-      'بمجرد الموافقة، سيتم تفعيل الحماية الفورية لضمان أمان جهازك أثناء التصفح.';
+      'سيتم تقييد المستخدم عن طريق منع حذف الحماية لضمان فاعلية الخدمة، لذلك، فإن موافقتك على تفعيل الحماية تعتبر موافقة صريحة منك على تفعيل خاصية تقييد الحذف والالتزام بجميع قيود الحماية المترتبة عليها، إذا كنت موافقًا ومستعدًا لتطبيق هذه الإجراءات والقيود بشكل دائم على جهازك، يمكنك المتابعة لتفعيل حماية عينا سلسبيلا.';
+
+  @override
+  String get want_to_activate_protection =>
+      'هل ترغب في المتابعة وتفعيل الحماية الآن؟';
 
   @override
   String get confirm_activate_protection => 'فعّل الحماية';

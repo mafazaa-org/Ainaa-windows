@@ -13,23 +13,31 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class BuildAinnaProtectionButton extends StatelessWidget {
   // final GlobalKey<FormState> formKey;
   // final bool isFieldValid;
-  const BuildAinnaProtectionButton({super.key});
+  final double width;
+  const BuildAinnaProtectionButton({super.key, required this.width});
   @override
   Widget build(BuildContext context) {
     final chosenProtectionProvider = context.watch<ChosenProtectionProvider>();
-    final isValidNumber = chosenProtectionProvider.validPhoneNumber;
     final activationType = chosenProtectionProvider.chosenOption;
     final optionBatchPath = chosenProtectionProvider.optionBatchPath;
-    final phoneNumber = chosenProtectionProvider.phoneNumber;
-    return SizedBox(
+    // final isValidNumber = chosenProtectionProvider.validPhoneNumber;
+    // final phoneNumber = chosenProtectionProvider.phoneNumber;
+    return Container(
       height: 72.spMin,
       width: double.maxFinite,
+      padding: EdgeInsets.symmetric(
+        horizontal:
+            context.isMobile
+                ? AppSpacing.sm
+                : context.isTablet
+                ? width * .15
+                : width * .25,
+      ),
       child: ElevatedButton(
         onPressed:
-            isValidNumber &&
-                    activationType != null &&
-                    optionBatchPath != null &&
-                    phoneNumber != null
+            // isValidNumber &&
+            //         phoneNumber != null &&
+            activationType != null && optionBatchPath != null
                 ? () {
                   confirmActivateAinnaProtection(
                     context,
@@ -37,7 +45,7 @@ class BuildAinnaProtectionButton extends StatelessWidget {
                       getIt<AinaaProtectionCubit>().activate(
                         activationType,
                         optionBatchPath,
-                        phoneNumber,
+                        // phoneNumber,
                       );
                     },
                   );

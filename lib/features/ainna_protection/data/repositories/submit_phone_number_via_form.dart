@@ -2,6 +2,7 @@ import 'package:ainaa/core/constants/app_urls.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
+@Deprecated('This function is no longer needed. Do not use it.')
 Future<void> submitPhoneNumberViaForm(String phoneNumber) async {
   // debugPrint('in submitPhoneNumberViaForm');
   try {

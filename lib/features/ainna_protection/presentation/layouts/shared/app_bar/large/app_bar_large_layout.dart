@@ -3,12 +3,12 @@ import 'package:ainaa/constants/app_spacing.dart';
 import 'package:ainaa/core/shared_widgets/app_logo.dart';
 import 'package:ainaa/core/shared_widgets/sharpe_line_painter.dart';
 import 'package:ainaa/features/ainna_protection/presentation/ainaa_protection_cubit/ainaa_protection_cubit.dart';
+import 'package:ainaa/features/ainna_protection/presentation/layouts/shared/app_bar/large/build_deactivate_protection_button.dart';
 import 'package:ainaa/features/support/presentation/pages/support_head_page.dart';
 import 'package:ainaa/l10n/generated/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-part 'build_additional_android_tools_button.dart';
 part 'build_support_us_button.dart';
 
 class AppBarLargeLayout extends StatelessWidget {
@@ -28,7 +28,7 @@ class AppBarLargeLayout extends StatelessWidget {
             children: [
               _BuildSupportUsButton(),
               Flexible(child: AppLogo()),
-              _BuildAdditionalAndroidToolsButton(),
+              BuildDeactivateProtectionButton(),
             ],
           ),
           CustomPaint(
